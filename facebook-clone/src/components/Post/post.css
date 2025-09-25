@@ -1,0 +1,72 @@
+.addPost {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.postTop {
+    display: flex;
+    align-items: center;
+}
+
+.postPic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.postInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #e9eff1;
+}
+
+.postHr {
+    margin: 10px 0;
+    border: 0.5px solid #ccc;
+}
+
+.postBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.postOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.addPhoto {
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.addLocation {
+    color: #2196F3;
+    margin-right: 5px;
+}
+
+.addPhotoOptionText {
+    font-size: 14px;
+    color: #555;
+}

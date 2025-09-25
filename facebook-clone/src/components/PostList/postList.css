@@ -1,0 +1,49 @@
+.addPost {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.postListContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.postListItem {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.postListItem:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.postListHeader {
+    display: flex;
+    align-items: center;
+}
+
+.postListHeader img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.postListContent {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.postListFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
