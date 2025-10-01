@@ -1,0 +1,66 @@
+.online-friends {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.online-friends-header {
+  margin-bottom: 15px;
+}
+
+.online-friends-header h3 {
+  color: #65676b;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.online-friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.friend-item:hover {
+  background-color: #f2f2f2;
+}
+
+.friend-avatar {
+  position: relative;
+  margin-right: 12px;
+}
+
+.friend-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #42b883;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.friend-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #050505;
+}
