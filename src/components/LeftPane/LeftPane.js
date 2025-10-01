@@ -63,44 +63,44 @@ export default function LeftPane() {
           </div>
           <div className="PageList">
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=100&h=100&fit=crop" alt="Tech Innovators" className="pagePic" />
+            <span className="PageName">Tech Innovators</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop" alt="Foodie Paradise" className="pagePic" />
+            <span className="PageName">Foodie Paradise</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=100&h=100&fit=crop" alt="Adventure Seekers" className="pagePic" />
+            <span className="PageName">Adventure Seekers</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop" alt="Fitness Journey" className="pagePic" />
+            <span className="PageName">Fitness Journey</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=100&h=100&fit=crop" alt="Photography Hub" className="pagePic" />
+            <span className="PageName">Photography Hub</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop" alt="Book Lovers Club" className="pagePic" />
+            <span className="PageName">Book Lovers Club</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=100&h=100&fit=crop" alt="Music Vibes" className="pagePic" />
+            <span className="PageName">Music Vibes</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=100&h=100&fit=crop" alt="Home & Design" className="pagePic" />
+            <span className="PageName">Home & Design</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=100&h=100&fit=crop" alt="Health & Wellness" className="pagePic" />
+            <span className="PageName">Health & Wellness</span>
           </li>
           <li className="pageListItem">
-            <img src="/images/1.png" alt="" className="pagePic" />
-            <span className="PageName">Travel With TD</span>
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=100&h=100&fit=crop" alt="Nature Lovers" className="pagePic" />
+            <span className="PageName">Nature Lovers</span>
           </li>
           </div>
 
