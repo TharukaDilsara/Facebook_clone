@@ -1,46 +1,93 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import MessageIcon from '@mui/icons-material/Message';
-import SettingsIcon from '@mui/icons-material/Settings';
+import HomeIcon from '@mui/icons-material/Home';
+import PeopleIcon from '@mui/icons-material/People';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import GroupsIcon from '@mui/icons-material/Groups';
+import AppsIcon from '@mui/icons-material/Apps';
+import ChatIcon from '@mui/icons-material/Chat';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import "./NavBar.css"
 
 
 export default function NavBar() {
+  const [activeTab, setActiveTab] = useState('home');
+
   return (
     <div className="navBarBox">
+        {/* Left Section - Logo and Search */}
         <div className="navBarLeft">
-            <span className="logo">FaceBook</span>
-        </div>
-        <div className="navBarCenter">
+            <div className="facebookLogo">
+                <span className="fbLogo">facebook</span>
+            </div>
             <div className="searchBarBox">
-                <SearchIcon className='searchIcon'></SearchIcon>
-                <input placeholder='Search for your friend' className="searchInput" />
-                
-
+                <SearchIcon className='searchIcon' />
+                <input 
+                    placeholder='Search Facebook' 
+                    className="searchInput" 
+                />
             </div>
         </div>
-        <div className="navBarRight">
-            <div className="navBarLinks">
-                <span className="navBarLink">HomePage</span>
-                <span className="navBarLink">Profile</span>
 
+        {/* Center Section - Navigation Icons */}
+        <div className="navBarCenter">
+            <div className="navTabs">
+                <div 
+                    className={`navTab ${activeTab === 'home' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('home')}
+                >
+                    <HomeIcon className="navIcon" />
+                </div>
+                <div 
+                    className={`navTab ${activeTab === 'friends' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('friends')}
+                >
+                    <PeopleIcon className="navIcon" />
+                </div>
+                <div 
+                    className={`navTab ${activeTab === 'watch' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('watch')}
+                >
+                    <OndemandVideoIcon className="navIcon" />
+                </div>
+                <div 
+                    className={`navTab ${activeTab === 'marketplace' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('marketplace')}
+                >
+                    <StorefrontIcon className="navIcon" />
+                </div>
+                <div 
+                    className={`navTab ${activeTab === 'groups' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('groups')}
+                >
+                    <GroupsIcon className="navIcon" />
+                </div>
             </div>
-            <div className="navBarIcons">
-                <div className="navBarIcon">
-                    <PersonIcon className='personIcon'></PersonIcon>
-                    <span className="iconTags">3</span>
+        </div>
+
+        {/* Right Section - Menu, Messenger, Notifications, Profile */}
+        <div className="navBarRight">
+            <div className="rightIcons">
+                <div className="iconButton">
+                    <AppsIcon className="rightIcon" />
                 </div>
-                <div className="navBarIcon">
-                    <MessageIcon className='messageIcon'></MessageIcon>
-                    <span className="iconTags">5</span>
+                <div className="iconButton">
+                    <ChatIcon className="rightIcon" />
                 </div>
-                <div className="navBarIcon">
-                    <SettingsIcon className='settingIcon'></SettingsIcon>
-                    <span className="iconTags">2</span>
+                <div className="iconButton">
+                    <NotificationsIcon className="rightIcon" />
+                    <span className="notificationBadge">3</span>
                 </div>
-                <div className="pic">
-                    <img src="/images/1.png" alt="" className="profilePicImg" />
+                <div className="profileSection">
+                    <img 
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" 
+                        alt="Profile" 
+                        className="profileImage" 
+                    />
+                    <ArrowDropDownIcon className="dropdownIcon" />
                 </div>
             </div>
         </div>

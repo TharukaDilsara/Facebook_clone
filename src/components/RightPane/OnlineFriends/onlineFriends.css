@@ -1,9 +1,13 @@
 .online-friends {
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   padding: 15px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.online-friends:first-child {
+  margin-top: 0;
 }
 
 .online-friends-header {

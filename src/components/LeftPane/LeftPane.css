@@ -1,8 +1,26 @@
 .leftPaneBox{
-   flex: 2;
+   flex: 1.5;
+   max-width: 280px;
    height: calc(100vh - 50px);
    overflow: scroll;
+   background-color: #ffffff;
+   margin: 0 !important;
+   padding: 0 !important;
+   border: none;
+   outline: none;
+}
 
+/* Responsive design */
+@media (max-width: 1200px) {
+    .leftPaneBox {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .leftPaneBox {
+        display: none;
+    }
 }
 
 ;::-webkit-scrollbar{
@@ -16,7 +34,8 @@
 }
 
 .leftPaneContainer{
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
+    margin: 0;
 
 }
 
@@ -26,10 +45,15 @@
     list-style: none;
 }
 
+.leftPaneMenu .leftPaneMenuItem:first-child {
+    margin-top: 0;
+}
+
 .leftPaneMenuItem{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 0;
 
 }
 

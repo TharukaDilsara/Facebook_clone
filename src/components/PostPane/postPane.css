@@ -1,4 +1,62 @@
-.postPaneBox{
-    
-    flex: 5;
+.postPaneBox {
+    flex: 7;
+    padding: 0 30px;
+    background-color: #f0f2f5;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 !important;
+    border: none;
+    outline: none;
+}
+
+/* Scrollbar styling */
+.postPaneBox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.postPaneBox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.postPaneBox::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.postPaneBox::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+.postPaneBox > * {
+    margin-top: 20px;
+}
+
+.postPaneBox > *:first-child {
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+    .postPaneBox {
+        flex: 8;
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .postPaneBox {
+        flex: 1;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .postPaneBox {
+        padding: 0 15px;
+    }
 }

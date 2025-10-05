@@ -1,14 +1,24 @@
 .addPost {
   width: 100%;
-  margin: 20px 0;
+  max-width: min(600px, 90vw);
+  margin: 10px 0 20px 0;
+}
+
+.addPost:first-child {
+  margin-top: 10px;
 }
 
 .addPostContainer {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.addPostContainer:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .addPostTop {
