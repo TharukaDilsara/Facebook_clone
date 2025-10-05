@@ -83,7 +83,7 @@ export default function NavBar() {
                 </div>
                 <div className="profileSection">
                     <img 
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" 
+                        src="/Images/1.png" 
                         alt="Profile" 
                         className="profileImage" 
                     />

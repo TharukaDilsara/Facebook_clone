@@ -40,6 +40,12 @@
     margin-top: 20px;
 }
 
+.postPaneBox > *:nth-child(2) {
+    margin-top: 15px;
+}
+
+/* Removed extra spacing rule */
+
 /* Responsive design */
 @media (max-width: 1100px) {
     .postPaneBox {

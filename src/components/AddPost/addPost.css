@@ -1,7 +1,7 @@
 .addPost {
   width: 100%;
   max-width: min(600px, 90vw);
-  margin: 10px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .addPost:first-child {
@@ -59,64 +59,67 @@
 .addPostBottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .addPostOptions {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex: 1;
+  gap: 4px;
+  width: 100%;
 }
 
 .addPostOption {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
   flex: 1;
   justify-content: center;
+  font-weight: 600;
 }
 
 .addPostOption:hover {
   background-color: #f0f2f5;
+  transform: translateY(-1px);
 }
 
-.addPhotoOptionText {
-  font-size: 14px;
-  font-weight: 500;
-  color: #65676b;
+.liveVideoOption {
+  color: #f02849;
+}
+
+.photoVideoOption {
+  color: #42b883;
+}
+
+.reelOption {
+  color: #e91e63;
+}
+
+.addOptionText {
+  font-size: 15px;
+  font-weight: 600;
   margin-left: 8px;
 }
 
-.addPhoto, .addLocation, .addEmoji, .addEvent, .addArticle {
-  font-size: 20px !important;
+.addLiveVideo {
+  font-size: 22px !important;
+  color: #f02849 !important;
 }
 
-.shareButton {
-  background-color: #1877f2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin-left: 15px;
+.addPhotoVideo {
+  font-size: 22px !important;
+  color: #42b883 !important;
 }
 
-.shareButton:hover:not(:disabled) {
-  background-color: #166fe5;
+.addReel {
+  font-size: 22px !important;
+  color: #e91e63 !important;
 }
 
-.shareButton:disabled {
-  background-color: #e4e6ea;
-  color: #bcc0c4;
-  cursor: not-allowed;
-}
+/* Removed share button styling as it's not needed in the new design */
 
 @media (max-width: 768px) {
   .addPostOptions {

@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import "./addPost.css"
-import PhotoIcon from '@mui/icons-material/Photo';
-import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import EventIcon from '@mui/icons-material/Event';
-import ArticleIcon from '@mui/icons-material/Article';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
+import MovieIcon from '@mui/icons-material/Movie';
 
 export default function AddPost() {
   const [postText, setPostText] = useState('');
@@ -23,7 +21,7 @@ export default function AddPost() {
            <div className="addPostTop">
                 <img src="/Images/1.png" alt="" className="addPostPic" />
                 <input 
-                  placeholder='What in Your Mind' 
+                  placeholder="What's on your mind, Tharuka?" 
                   type="text" 
                   className="addPostInput"
                   value={postText}
@@ -33,44 +31,25 @@ export default function AddPost() {
             <hr className='postHr'/> 
             <div className="addPostBottom">
                 <div className="addPostOptions">
-                    <div className="addPostOption">
-                        <PhotoIcon className='addPhoto' style={{color: '#45bd62'}}></PhotoIcon>
-                        <span className="addPhotoOptionText">
-                            Photo/Video
+                    <div className="addPostOption liveVideoOption">
+                        <VideocamIcon className='addLiveVideo'></VideocamIcon>
+                        <span className="addOptionText">
+                            Live video
                         </span>
                     </div>
-                    <div className="addPostOption">
-                        <AddLocationAltIcon className='addLocation' style={{color: '#ff5722'}}></AddLocationAltIcon>
-                        <span className="addPhotoOptionText">
-                            Check In
+                    <div className="addPostOption photoVideoOption">
+                        <PhotoLibraryIcon className='addPhotoVideo'></PhotoLibraryIcon>
+                        <span className="addOptionText">
+                            Photo/video
                         </span>
                     </div>
-                    <div className="addPostOption">
-                        <EmojiEmotionsIcon className='addEmoji' style={{color: '#f7b928'}}></EmojiEmotionsIcon>
-                        <span className="addPhotoOptionText">
-                            Feeling/Activity
-                        </span>
-                    </div>
-                    <div className="addPostOption">
-                        <EventIcon className='addEvent' style={{color: '#f02849'}}></EventIcon>
-                        <span className="addPhotoOptionText">
-                            Live Event
-                        </span>
-                    </div>
-                    <div className="addPostOption">
-                        <ArticleIcon className='addArticle' style={{color: '#1976d2'}}></ArticleIcon>
-                        <span className="addPhotoOptionText">
-                            Write Article
+                    <div className="addPostOption reelOption">
+                        <MovieIcon className='addReel'></MovieIcon>
+                        <span className="addOptionText">
+                            Reel
                         </span>
                     </div>
                 </div>
-                <button 
-                  className="shareButton" 
-                  onClick={handlePost}
-                  disabled={!postText.trim()}
-                >
-                  Share
-                </button>
             </div>
         </div>
     </div>
