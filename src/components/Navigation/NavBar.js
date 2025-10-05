@@ -10,11 +10,21 @@ import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ProfileDropdown from './ProfileDropdown/ProfileDropdown';
 import "./NavBar.css"
 
 
 export default function NavBar() {
   const [activeTab, setActiveTab] = useState('home');
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
+  const closeProfileDropdown = () => {
+    setIsProfileDropdownOpen(false);
+  };
 
   return (
     <div className="navBarBox">
@@ -81,7 +91,7 @@ export default function NavBar() {
                     <NotificationsIcon className="rightIcon" />
                     <span className="notificationBadge">3</span>
                 </div>
-                <div className="profileSection">
+                <div className="profileSection" onClick={toggleProfileDropdown}>
                     <img 
                         src="/Images/1.png" 
                         alt="Profile" 
@@ -91,6 +101,12 @@ export default function NavBar() {
                 </div>
             </div>
         </div>
+        
+        {/* Profile Dropdown */}
+        <ProfileDropdown 
+          isOpen={isProfileDropdownOpen} 
+          onClose={closeProfileDropdown} 
+        />
     </div>
   )
 }
