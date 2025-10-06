@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './profileDropdown.css'
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -6,9 +6,20 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import FeedbackIcon from '@mui/icons-material/Feedback';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GroupIcon from '@mui/icons-material/Group';
+import SettingsSubmenu from './SettingsSubmenu/SettingsSubmenu';
 
 export default function ProfileDropdown({ isOpen, onClose }) {
+  const [showSettingsSubmenu, setShowSettingsSubmenu] = useState(false);
+
   if (!isOpen) return null;
+
+  const handleSettingsClick = () => {
+    setShowSettingsSubmenu(true);
+  };
+
+  const handleBackToMain = () => {
+    setShowSettingsSubmenu(false);
+  };
 
   const profiles = [
     {
@@ -30,7 +41,8 @@ export default function ProfileDropdown({ isOpen, onClose }) {
       id: 1,
       icon: <SettingsIcon />,
       title: 'Settings & privacy',
-      hasArrow: true
+      hasArrow: true,
+      onClick: handleSettingsClick
     },
     {
       id: 2,
@@ -80,7 +92,7 @@ export default function ProfileDropdown({ isOpen, onClose }) {
         {/* Menu Items Section */}
         <div className="menuSection">
           {menuItems.map((item) => (
-            <div key={item.id} className="menuItem">
+            <div key={item.id} className="menuItem" onClick={item.onClick}>
               <div className="menuItemLeft">
                 <div className="menuItemIcon">
                   {item.icon}
@@ -103,6 +115,12 @@ export default function ProfileDropdown({ isOpen, onClose }) {
         <div className="dropdownFooter">
           <span>Privacy · Terms · Advertising · Ad choices · Cookies · More</span>
         </div>
+
+        {/* Settings Submenu */}
+        <SettingsSubmenu 
+          isOpen={showSettingsSubmenu} 
+          onBack={handleBackToMain} 
+        />
       </div>
     </div>
   )
