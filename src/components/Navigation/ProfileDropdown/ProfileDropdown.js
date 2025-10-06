@@ -7,9 +7,15 @@ import FeedbackIcon from '@mui/icons-material/Feedback';
 import LogoutIcon from '@mui/icons-material/Logout';
 import GroupIcon from '@mui/icons-material/Group';
 import SettingsSubmenu from './SettingsSubmenu/SettingsSubmenu';
+import HelpSubmenu from './HelpSubmenu/HelpSubmenu';
+import DisplaySubmenu from './DisplaySubmenu/DisplaySubmenu';
+import FeedbackModal from './FeedbackModal/FeedbackModal';
 
 export default function ProfileDropdown({ isOpen, onClose }) {
   const [showSettingsSubmenu, setShowSettingsSubmenu] = useState(false);
+  const [showHelpSubmenu, setShowHelpSubmenu] = useState(false);
+  const [showDisplaySubmenu, setShowDisplaySubmenu] = useState(false);
+  const [showFeedbackModal, setShowFeedbackModal] = useState(false);
 
   if (!isOpen) return null;
 
@@ -17,8 +23,26 @@ export default function ProfileDropdown({ isOpen, onClose }) {
     setShowSettingsSubmenu(true);
   };
 
+  const handleHelpClick = () => {
+    setShowHelpSubmenu(true);
+  };
+
+  const handleDisplayClick = () => {
+    setShowDisplaySubmenu(true);
+  };
+
+  const handleFeedbackClick = () => {
+    setShowFeedbackModal(true);
+  };
+
   const handleBackToMain = () => {
     setShowSettingsSubmenu(false);
+    setShowHelpSubmenu(false);
+    setShowDisplaySubmenu(false);
+  };
+
+  const handleCloseFeedback = () => {
+    setShowFeedbackModal(false);
   };
 
   const profiles = [
@@ -48,20 +72,23 @@ export default function ProfileDropdown({ isOpen, onClose }) {
       id: 2,
       icon: <HelpOutlineIcon />,
       title: 'Help & support',
-      hasArrow: true
+      hasArrow: true,
+      onClick: handleHelpClick
     },
     {
       id: 3,
       icon: <Brightness4Icon />,
       title: 'Display & accessibility',
-      hasArrow: true
+      hasArrow: true,
+      onClick: handleDisplayClick
     },
     {
       id: 4,
       icon: <FeedbackIcon />,
       title: 'Give feedback',
       subtitle: 'CTRL B',
-      hasArrow: false
+      hasArrow: false,
+      onClick: handleFeedbackClick
     },
     {
       id: 5,
@@ -120,6 +147,24 @@ export default function ProfileDropdown({ isOpen, onClose }) {
         <SettingsSubmenu 
           isOpen={showSettingsSubmenu} 
           onBack={handleBackToMain} 
+        />
+
+        {/* Help Submenu */}
+        <HelpSubmenu 
+          isOpen={showHelpSubmenu} 
+          onBack={handleBackToMain} 
+        />
+
+        {/* Display Submenu */}
+        <DisplaySubmenu 
+          isOpen={showDisplaySubmenu} 
+          onBack={handleBackToMain} 
+        />
+
+        {/* Feedback Modal */}
+        <FeedbackModal 
+          isOpen={showFeedbackModal} 
+          onClose={handleCloseFeedback} 
         />
       </div>
     </div>

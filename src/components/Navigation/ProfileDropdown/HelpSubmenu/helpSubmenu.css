@@ -1,0 +1,139 @@
+.helpSubmenuContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slideInFromRight 0.15s ease-out;
+  z-index: 12;
+  height: 100%;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Header */
+.helpSubmenuHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e4e6ea;
+  background-color: #f8f9fa;
+}
+
+.helpBackButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e4e6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.2s;
+}
+
+.helpBackButton:hover {
+  background-color: #d8dadf;
+}
+
+.helpBackIcon {
+  color: #050505;
+  font-size: 20px !important;
+}
+
+.helpSubmenuTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #050505;
+  margin: 0;
+}
+
+/* Menu Items */
+.helpSubmenuItems {
+  padding: 8px;
+  flex: 1;
+}
+
+.helpSubmenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.helpSubmenuItem:hover {
+  background-color: #f0f2f5;
+}
+
+.helpSubmenuItemLeft {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.helpSubmenuItemIcon {
+  width: 36px;
+  height: 36px;
+  background-color: #f0f2f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.helpSubmenuItemIcon svg {
+  color: #65676b;
+  font-size: 20px !important;
+}
+
+.helpSubmenuItemTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #050505;
+}
+
+.helpSubmenuItemArrow {
+  font-size: 18px;
+  color: #65676b;
+  font-weight: bold;
+}
+
+/* Footer */
+.helpSubmenuFooter {
+  padding: 12px 16px;
+  border-top: 1px solid #e4e6ea;
+  background-color: #f8f9fa;
+  margin-top: auto;
+}
+
+.helpSubmenuFooter span {
+  font-size: 12px;
+  color: #65676b;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .helpSubmenuTitle {
+    font-size: 18px;
+  }
+  
+  .helpSubmenuItemTitle {
+    font-size: 14px;
+  }
+}
