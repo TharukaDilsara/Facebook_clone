@@ -8,10 +8,10 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import AppsIcon from '@mui/icons-material/Apps';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ProfileDropdown from './ProfileDropdown/ProfileDropdown';
 import AppsMenu from './AppsMenu/AppsMenu';
+import Marketplace from './Marketplace/Marketplace';
 import "./NavBar.css"
 
 
@@ -19,10 +19,12 @@ export default function NavBar() {
   const [activeTab, setActiveTab] = useState('home');
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isAppsMenuOpen, setIsAppsMenuOpen] = useState(false);
+  const [isMarketplaceOpen, setIsMarketplaceOpen] = useState(false);
 
   const toggleProfileDropdown = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
     setIsAppsMenuOpen(false); // Close apps menu when opening profile dropdown
+    setIsMarketplaceOpen(false); // Close marketplace when opening profile dropdown
   };
 
   const closeProfileDropdown = () => {
@@ -32,10 +34,22 @@ export default function NavBar() {
   const toggleAppsMenu = () => {
     setIsAppsMenuOpen(!isAppsMenuOpen);
     setIsProfileDropdownOpen(false); // Close profile dropdown when opening apps menu
+    setIsMarketplaceOpen(false); // Close marketplace when opening apps menu
   };
 
   const closeAppsMenu = () => {
     setIsAppsMenuOpen(false);
+  };
+
+  const handleMarketplaceClick = () => {
+    setIsMarketplaceOpen(true);
+    setIsProfileDropdownOpen(false); // Close profile dropdown
+    setIsAppsMenuOpen(false); // Close apps menu
+    setActiveTab('marketplace');
+  };
+
+  const closeMarketplace = () => {
+    setIsMarketplaceOpen(false);
   };
 
   return (
@@ -77,7 +91,7 @@ export default function NavBar() {
                 </div>
                 <div 
                     className={`navTab ${activeTab === 'marketplace' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('marketplace')}
+                    onClick={handleMarketplaceClick}
                 >
                     <StorefrontIcon className="navIcon" />
                 </div>
@@ -124,6 +138,12 @@ export default function NavBar() {
         <AppsMenu 
           isOpen={isAppsMenuOpen} 
           onClose={closeAppsMenu} 
+        />
+
+        {/* Marketplace */}
+        <Marketplace 
+          isOpen={isMarketplaceOpen} 
+          onClose={closeMarketplace} 
         />
     </div>
   )
