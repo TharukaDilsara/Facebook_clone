@@ -11,19 +11,31 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ProfileDropdown from './ProfileDropdown/ProfileDropdown';
+import AppsMenu from './AppsMenu/AppsMenu';
 import "./NavBar.css"
 
 
 export default function NavBar() {
   const [activeTab, setActiveTab] = useState('home');
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isAppsMenuOpen, setIsAppsMenuOpen] = useState(false);
 
   const toggleProfileDropdown = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
+    setIsAppsMenuOpen(false); // Close apps menu when opening profile dropdown
   };
 
   const closeProfileDropdown = () => {
     setIsProfileDropdownOpen(false);
+  };
+
+  const toggleAppsMenu = () => {
+    setIsAppsMenuOpen(!isAppsMenuOpen);
+    setIsProfileDropdownOpen(false); // Close profile dropdown when opening apps menu
+  };
+
+  const closeAppsMenu = () => {
+    setIsAppsMenuOpen(false);
   };
 
   return (
@@ -81,7 +93,7 @@ export default function NavBar() {
         {/* Right Section - Menu, Messenger, Notifications, Profile */}
         <div className="navBarRight">
             <div className="rightIcons">
-                <div className="iconButton">
+                <div className="iconButton" onClick={toggleAppsMenu}>
                     <AppsIcon className="rightIcon" />
                 </div>
                 <div className="iconButton">
@@ -106,6 +118,12 @@ export default function NavBar() {
         <ProfileDropdown 
           isOpen={isProfileDropdownOpen} 
           onClose={closeProfileDropdown} 
+        />
+
+        {/* Apps Menu */}
+        <AppsMenu 
+          isOpen={isAppsMenuOpen} 
+          onClose={closeAppsMenu} 
         />
     </div>
   )

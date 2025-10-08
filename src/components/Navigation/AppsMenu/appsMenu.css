@@ -1,0 +1,286 @@
+.appsMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(244, 244, 244, 0.8);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10002;
+  animation: fadeIn 0.2s ease-out;
+  padding-top: 70px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appsMenuContainer {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  width: 900px;
+  max-width: 95vw;
+  max-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.2s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appsMenuContent {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.appsMenuContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.appsMenuContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.appsMenuContent::-webkit-scrollbar-thumb {
+  background-color: #bcc0c4;
+  border-radius: 4px;
+}
+
+.appsMenuContent::-webkit-scrollbar-thumb:hover {
+  background-color: #a8abaf;
+}
+
+.appsMenuHeader {
+  margin-bottom: 16px;
+}
+
+.appsMenuTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #050505;
+  margin: 0;
+}
+
+.appsMenuSearch {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.appsMenuSearch .searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #65676b;
+}
+
+.appsMenuSearch .searchInput {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: none;
+  border-radius: 50px;
+  background-color: #f0f2f5;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.appsMenuSearch .searchInput::placeholder {
+  color: #65676b;
+}
+
+.appsMenuSections {
+  display: flex;
+  gap: 40px;
+}
+
+.appsMenuLeft {
+  flex: 2;
+}
+
+.appsMenuRight {
+  flex: 1;
+  min-width: 280px;
+}
+
+.menuSection {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.sectionItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menuItem:hover {
+  background-color: #f0f2f5;
+}
+
+.menuItem.large {
+  gap: 12px;
+}
+
+.menuItem.small {
+  flex-direction: column;
+  text-align: center;
+  padding: 16px 12px;
+  gap: 8px;
+}
+
+.menuItemIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menuItem.small .menuItemIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.menuItemIcon svg {
+  font-size: 20px;
+  color: white;
+}
+
+.menuItem.small .menuItemIcon svg {
+  font-size: 24px;
+}
+
+.menuItemContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.menuItemTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #050505;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.menuItem.small .menuItemTitle {
+  font-size: 13px;
+  margin: 0;
+}
+
+.menuItemDescription {
+  font-size: 13px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.createGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .appsMenuSections {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .appsMenuRight {
+    min-width: auto;
+  }
+  
+  .createGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .appsMenuContainer {
+    width: 100%;
+    margin: 0 16px;
+    max-height: calc(100vh - 120px);
+  }
+  
+  .appsMenuContent {
+    padding: 16px;
+  }
+  
+  .appsMenuTitle {
+    font-size: 24px;
+  }
+  
+  .appsMenuSections {
+    gap: 20px;
+  }
+  
+  .createGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .appsMenuOverlay {
+    padding-top: 60px;
+  }
+  
+  .appsMenuContainer {
+    margin: 0 8px;
+    border-radius: 0;
+    max-height: calc(100vh - 80px);
+  }
+  
+  .menuSection {
+    margin-bottom: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+  }
+  
+  .createGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
