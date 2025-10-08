@@ -112,10 +112,39 @@
 .appsMenuSections {
   display: flex;
   gap: 40px;
+  align-items: flex-start;
 }
 
 .appsMenuLeft {
   flex: 2;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom scrollbar for left menu */
+.appsMenuLeft::-webkit-scrollbar {
+  width: 12px;
+}
+
+.appsMenuLeft::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+.appsMenuLeft::-webkit-scrollbar-thumb {
+  background-color: #bcc0c4;
+  border-radius: 6px;
+  border: 2px solid #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.appsMenuLeft::-webkit-scrollbar-thumb:hover {
+  background-color: #a8abaf;
+}
+
+.appsMenuLeft::-webkit-scrollbar-thumb:active {
+  background-color: #65676b;
 }
 
 .appsMenuRight {
@@ -227,6 +256,10 @@
     gap: 24px;
   }
   
+  .appsMenuLeft {
+    max-height: calc(60vh - 100px);
+  }
+  
   .appsMenuRight {
     min-width: auto;
   }
@@ -255,6 +288,10 @@
     gap: 20px;
   }
   
+  .appsMenuLeft {
+    max-height: calc(50vh - 80px);
+  }
+  
   .createGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -269,6 +306,15 @@
     margin: 0 8px;
     border-radius: 0;
     max-height: calc(100vh - 80px);
+  }
+  
+  .appsMenuLeft {
+    max-height: calc(45vh - 60px);
+    padding-right: 4px;
+  }
+  
+  .appsMenuLeft::-webkit-scrollbar {
+    width: 8px;
   }
   
   .menuSection {

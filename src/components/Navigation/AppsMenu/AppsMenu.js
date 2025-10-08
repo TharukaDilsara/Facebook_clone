@@ -30,7 +30,6 @@ import BookIcon from '@mui/icons-material/Book';
 import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import StarIcon from '@mui/icons-material/Star';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import GroupIcon from '@mui/icons-material/Group';
 
 export default function AppsMenu({ isOpen, onClose }) {
