@@ -28,6 +28,18 @@ export default function VideoPage({ isOpen, onClose }) {
       title: 'Tashindu Dasanayake and others shared videos.',
       time: '3 hours ago',
       type: 'shared'
+    },
+    {
+      id: 3,
+      title: 'Videos from Tech Reviews and 5 others.',
+      time: '5 hours ago',
+      type: 'recommendation'
+    },
+    {
+      id: 4,
+      title: 'Live videos from Gaming Community.',
+      time: '8 hours ago',
+      type: 'live'
     }
   ];
 
@@ -42,8 +54,8 @@ export default function VideoPage({ isOpen, onClose }) {
   };
 
   return (
-    <div className="videoPageOverlay" onClick={onClose}>
-      <div className="videoPageContainer" onClick={(e) => e.stopPropagation()}>
+    <div className="videoPageFullScreen">
+      <div className="videoPageContainer">
         {/* Left Sidebar */}
         <div className="videoSidebar">
           <div className="videoHeader">
@@ -159,6 +171,117 @@ export default function VideoPage({ isOpen, onClose }) {
             </div>
 
             {/* Video Actions */}
+            <div className="videoActions">
+              <div className="videoAction">
+                <FavoriteIcon className="actionIcon" />
+                <span className="actionText">Like</span>
+              </div>
+              <div className="videoAction">
+                <ChatBubbleIcon className="actionIcon" />
+                <span className="actionText">Comment</span>
+              </div>
+              <div className="videoAction">
+                <ShareIcon className="actionIcon" />
+                <span className="actionText">Share</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Video Posts */}
+          <div className="videoPost">
+            <div className="videoPostHeader">
+              <div className="videoPostAuthor">
+                <div className="authorAvatar">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
+                    alt="Author" 
+                  />
+                </div>
+                <div className="authorInfo">
+                  <div className="authorName">
+                    Tech Reviews
+                    <span className="followButton">Follow</span>
+                  </div>
+                  <div className="postMeta">
+                    <span className="postDate">5 September</span>
+                    <PublicIcon className="publicIcon" />
+                  </div>
+                </div>
+              </div>
+              <MoreHorizIcon className="moreIcon" />
+            </div>
+
+            <div className="videoPostContent">
+              <p className="videoPostText">
+                Latest smartphone review - iPhone 15 Pro Max vs Samsung Galaxy S24 Ultra comparison! 📱✨
+              </p>
+            </div>
+
+            <div className="videoPlayerContainer">
+              <div className="videoThumbnail">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=450&fit=crop" alt="Video thumbnail" />
+                <div className="playButton">
+                  <PlayCircleIcon className="playIcon" />
+                </div>
+                <div className="videoOverlay"></div>
+              </div>
+            </div>
+
+            <div className="videoActions">
+              <div className="videoAction">
+                <FavoriteIcon className="actionIcon" />
+                <span className="actionText">Like</span>
+              </div>
+              <div className="videoAction">
+                <ChatBubbleIcon className="actionIcon" />
+                <span className="actionText">Comment</span>
+              </div>
+              <div className="videoAction">
+                <ShareIcon className="actionIcon" />
+                <span className="actionText">Share</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="videoPost">
+            <div className="videoPostHeader">
+              <div className="videoPostAuthor">
+                <div className="authorAvatar">
+                  <img 
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612b593?w=40&h=40&fit=crop&crop=face" 
+                    alt="Author" 
+                  />
+                </div>
+                <div className="authorInfo">
+                  <div className="authorName">
+                    Cooking Masters
+                    <span className="followButton">Follow</span>
+                  </div>
+                  <div className="postMeta">
+                    <span className="postDate">4 September</span>
+                    <PublicIcon className="publicIcon" />
+                  </div>
+                </div>
+              </div>
+              <MoreHorizIcon className="moreIcon" />
+            </div>
+
+            <div className="videoPostContent">
+              <p className="videoPostText">
+                How to make the perfect pasta in 15 minutes! 🍝 Easy recipe for beginners 👩‍🍳 <span className="videoPostHashtags">#cooking #pasta #recipe #food</span>
+              </p>
+            </div>
+
+            <div className="videoPlayerContainer">
+              <div className="videoThumbnail">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=450&fit=crop" alt="Video thumbnail" />
+                <div className="playButton">
+                  <PlayCircleIcon className="playIcon" />
+                </div>
+                <div className="videoOverlay"></div>
+              </div>
+            </div>
+
             <div className="videoActions">
               <div className="videoAction">
                 <FavoriteIcon className="actionIcon" />
