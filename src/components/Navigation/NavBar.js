@@ -12,6 +12,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ProfileDropdown from './ProfileDropdown/ProfileDropdown';
 import AppsMenu from './AppsMenu/AppsMenu';
 import Marketplace from './Marketplace/Marketplace';
+import VideoPage from './VideoPage/VideoPage';
 import "./NavBar.css"
 
 
@@ -20,11 +21,13 @@ export default function NavBar() {
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isAppsMenuOpen, setIsAppsMenuOpen] = useState(false);
   const [isMarketplaceOpen, setIsMarketplaceOpen] = useState(false);
+  const [isVideoPageOpen, setIsVideoPageOpen] = useState(false);
 
   const toggleProfileDropdown = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
     setIsAppsMenuOpen(false); // Close apps menu when opening profile dropdown
     setIsMarketplaceOpen(false); // Close marketplace when opening profile dropdown
+    setIsVideoPageOpen(false); // Close video page when opening profile dropdown
   };
 
   const closeProfileDropdown = () => {
@@ -35,6 +38,7 @@ export default function NavBar() {
     setIsAppsMenuOpen(!isAppsMenuOpen);
     setIsProfileDropdownOpen(false); // Close profile dropdown when opening apps menu
     setIsMarketplaceOpen(false); // Close marketplace when opening apps menu
+    setIsVideoPageOpen(false); // Close video page when opening apps menu
   };
 
   const closeAppsMenu = () => {
@@ -45,11 +49,24 @@ export default function NavBar() {
     setIsMarketplaceOpen(true);
     setIsProfileDropdownOpen(false); // Close profile dropdown
     setIsAppsMenuOpen(false); // Close apps menu
+    setIsVideoPageOpen(false); // Close video page
     setActiveTab('marketplace');
   };
 
   const closeMarketplace = () => {
     setIsMarketplaceOpen(false);
+  };
+
+  const handleVideoClick = () => {
+    setIsVideoPageOpen(true);
+    setIsProfileDropdownOpen(false); // Close profile dropdown
+    setIsAppsMenuOpen(false); // Close apps menu
+    setIsMarketplaceOpen(false); // Close marketplace
+    setActiveTab('watch');
+  };
+
+  const closeVideoPage = () => {
+    setIsVideoPageOpen(false);
   };
 
   return (
@@ -85,7 +102,7 @@ export default function NavBar() {
                 </div>
                 <div 
                     className={`navTab ${activeTab === 'watch' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('watch')}
+                    onClick={handleVideoClick}
                 >
                     <OndemandVideoIcon className="navIcon" />
                 </div>
@@ -144,6 +161,12 @@ export default function NavBar() {
         <Marketplace 
           isOpen={isMarketplaceOpen} 
           onClose={closeMarketplace} 
+        />
+
+        {/* Video Page */}
+        <VideoPage 
+          isOpen={isVideoPageOpen} 
+          onClose={closeVideoPage} 
         />
     </div>
   )
