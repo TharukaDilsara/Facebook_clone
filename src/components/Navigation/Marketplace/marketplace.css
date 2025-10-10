@@ -1,15 +1,21 @@
-.marketplaceOverlay {
+/* Marketplace Page Full Screen */
+.marketplacePageFullScreen {
   position: fixed;
-  top: 0;
+  top: 56px;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: calc(100vh - 56px);
+  background-color: #f0f2f5;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.marketplacePageContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10002;
-  animation: fadeIn 0.2s ease-out;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -21,33 +27,17 @@
   }
 }
 
-.marketplaceContainer {
-  background-color: #f0f2f5;
-  width: 95vw;
-  height: 90vh;
-  border-radius: 8px;
-  display: flex;
-  overflow: hidden;
-  animation: slideUp 0.3s ease-out;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Left Sidebar */
 .marketplaceSidebar {
-  width: 360px;
-  background-color: white;
-  padding: 20px;
+  width: 280px;
+  min-width: 280px;
+  background-color: #fff;
+  border-right: 1px solid #e4e6ea;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  height: 100%;
   overflow-y: auto;
-  flex-shrink: 0;
 }
 
 .marketplaceSidebar::-webkit-scrollbar {
@@ -65,9 +55,10 @@
 
 .marketplaceHeader {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
 }
 
 .marketplaceTitle {
@@ -77,51 +68,52 @@
   margin: 0;
 }
 
-.settingsIcon {
-  font-size: 24px;
+.marketplaceSettingsIcon {
+  font-size: 20px;
   color: #65676b;
   cursor: pointer;
+  background-color: #f0f2f5;
   padding: 8px;
   border-radius: 50%;
-  background-color: #e4e6eb;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
-.settingsIcon:hover {
-  background-color: #d8dadf;
+.marketplaceSettingsIcon:hover {
+  background-color: #e4e6ea;
 }
 
+/* Search Bar */
 .marketplaceSearch {
   position: relative;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
 }
 
-.marketplaceSearch .searchIcon {
+.searchIcon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 16px;
   color: #65676b;
 }
 
-.marketplaceSearch .searchInput {
+.searchInput {
   width: 100%;
-  padding: 10px 12px 10px 44px;
+  padding: 8px 12px 8px 40px;
   border: none;
-  border-radius: 50px;
   background-color: #f0f2f5;
+  border-radius: 20px;
   font-size: 15px;
   outline: none;
   box-sizing: border-box;
 }
 
-.marketplaceSearch .searchInput::placeholder {
+.searchInput::placeholder {
   color: #65676b;
 }
 
 .marketplaceMenu {
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
 }
 
 .menuItem {
@@ -137,6 +129,10 @@
 
 .menuItem:hover {
   background-color: #f0f2f5;
+}
+
+.menuItem.active {
+  background-color: #e7f3ff;
 }
 
 .menuItemLeft {
@@ -170,7 +166,8 @@
 }
 
 .createListingBtn {
-  width: 100%;
+  width: calc(100% - 40px);
+  margin: 0 20px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +181,6 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-bottom: 20px;
 }
 
 .createListingBtn:hover {
@@ -197,7 +193,7 @@
 
 .locationSection {
   border-top: 1px solid #e4e6eb;
-  padding-top: 16px;
+  padding: 16px 20px 0 20px;
 }
 
 .locationTitle {
@@ -236,22 +232,24 @@
   color: #65676b;
 }
 
-.marketplaceContent {
+/* Main Content Area */
+.marketplaceMainContent {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
   background-color: #f0f2f5;
+  height: 100%;
 }
 
-.marketplaceContent::-webkit-scrollbar {
+.marketplaceMainContent::-webkit-scrollbar {
   width: 8px;
 }
 
-.marketplaceContent::-webkit-scrollbar-track {
+.marketplaceMainContent::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.marketplaceContent::-webkit-scrollbar-thumb {
+.marketplaceMainContent::-webkit-scrollbar-thumb {
   background-color: #bcc0c4;
   border-radius: 4px;
 }

@@ -61,13 +61,13 @@ export default function Marketplace({ isOpen, onClose }) {
   ];
 
   return (
-    <div className="marketplaceOverlay" onClick={onClose}>
-      <div className="marketplaceContainer" onClick={(e) => e.stopPropagation()}>
+    <div className="marketplacePageFullScreen">
+      <div className="marketplacePageContainer">
         {/* Left Sidebar */}
         <div className="marketplaceSidebar">
           <div className="marketplaceHeader">
             <h1 className="marketplaceTitle">Marketplace</h1>
-            <SettingsIcon className="settingsIcon" />
+            <SettingsIcon className="marketplaceSettingsIcon" />
           </div>
 
           {/* Search Bar */}
@@ -82,7 +82,7 @@ export default function Marketplace({ isOpen, onClose }) {
 
           {/* Menu Items */}
           <div className="marketplaceMenu">
-            <div className="menuItem">
+            <div className="menuItem active">
               <div className="menuItemLeft">
                 <StorefrontIcon className="menuIcon browseIcon" />
                 <span className="menuText">Browse all</span>
@@ -147,7 +147,7 @@ export default function Marketplace({ isOpen, onClose }) {
         </div>
 
         {/* Main Content */}
-        <div className="marketplaceContent">
+        <div className="marketplaceMainContent">
           <div className="contentHeader">
             <h2 className="contentTitle">Today's picks</h2>
             <div className="locationBadge">
