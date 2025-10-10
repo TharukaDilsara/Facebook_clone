@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import NavBar from "./components/Navigation/NavBar";
 import VideoPage from "./components/Navigation/VideoPage/VideoPage";
 import Marketplace from "./components/Navigation/Marketplace/Marketplace";
+import Groups from "./pages/groups/Groups";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -13,6 +14,8 @@ function App() {
         return <VideoPage isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'marketplace':
         return <Marketplace isOpen={true} onClose={() => setCurrentPage('home')} />;
+      case 'groups':
+        return <Groups isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'home':
       default:
         return <Home />;

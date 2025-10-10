@@ -58,6 +58,13 @@ export default function NavBar({ currentPage, setCurrentPage }) {
     setIsAppsMenuOpen(false); // Close apps menu
   };
 
+  const handleGroupsClick = () => {
+    setCurrentPage('groups');
+    setIsProfileDropdownOpen(false); // Close profile dropdown
+    setIsAppsMenuOpen(false); // Close apps menu
+    setActiveTab('groups');
+  };
+
   return (
     <div className="navBarBox">
         {/* Left Section - Logo and Search */}
@@ -103,7 +110,7 @@ export default function NavBar({ currentPage, setCurrentPage }) {
                 </div>
                 <div 
                     className={`navTab ${activeTab === 'groups' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('groups')}
+                    onClick={handleGroupsClick}
                 >
                     <GroupsIcon className="navIcon" />
                 </div>
