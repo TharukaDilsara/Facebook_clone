@@ -4,6 +4,7 @@ import NavBar from "./components/Navigation/NavBar";
 import VideoPage from "./components/Navigation/VideoPage/VideoPage";
 import Marketplace from "./components/Navigation/Marketplace/Marketplace";
 import Groups from "./pages/groups/Groups";
+import Memories from "./pages/memories/Memories";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,9 +17,11 @@ function App() {
         return <Marketplace isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'groups':
         return <Groups isOpen={true} onClose={() => setCurrentPage('home')} />;
+      case 'memories':
+        return <Memories />;
       case 'home':
       default:
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
     }
   };
 

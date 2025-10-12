@@ -26,12 +26,14 @@ import ExtensionIcon from '@mui/icons-material/Extension';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 
-export default function LeftPane() {
+export default function LeftPane({ setCurrentPage }) {
   const [showMore, setShowMore] = useState(false);
   
   const handleMenuClick = (menuItem) => {
     console.log(`Clicked on ${menuItem}`);
-    // You can add navigation logic here later
+    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups')) {
+      setCurrentPage(menuItem);
+    }
   };
 
   const toggleShowMore = () => {

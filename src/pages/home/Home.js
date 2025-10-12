@@ -4,10 +4,10 @@ import PostPane from '../../components/PostPane/PostPane'
 import RightPane from '../../components/RightPane/RightPane'
 import "./home.css"
 
-export default function Home() {
+export default function Home({ setCurrentPage }) {
   return (
     <div className='bottomContainer'>
-      <LeftPane></LeftPane>
+      <LeftPane setCurrentPage={setCurrentPage}></LeftPane>
       <PostPane></PostPane>
       <RightPane></RightPane>
     </div>
