@@ -107,23 +107,93 @@ export default function Groups({ isOpen, onClose }) {
     setShowAllGroups(!showAllGroups);
   };
 
-  const samplePost = {
-    id: 1,
-    groupName: "kurunegala i phone Club",
-    author: "Shaminda Chanaka",
-    role: "Admin",
-    badge: "Rising contributor",
-    timeAgo: "15h",
-    content: "Check out these amazing iPhone deals! 📱✨",
-    images: [
-      "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1605236453806-b25e316dbdc0?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=300&fit=crop"
-    ],
-    likes: 12,
-    comments: 5,
-    shares: 2
-  };
+  const groupPosts = [
+    {
+      id: 1,
+      groupName: "kurunegala i phone Club",
+      author: "Shaminda Chanaka",
+      role: "Admin",
+      badge: "Rising contributor",
+      timeAgo: "15h",
+      content: "Check out these amazing iPhone deals! 📱✨",
+      images: [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1605236453806-b25e316dbdc0?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=300&fit=crop"
+      ],
+      likes: 12,
+      comments: 5,
+      shares: 2
+    },
+    {
+      id: 2,
+      groupName: "Tech Innovators Hub",
+      author: "Nimesh Perera",
+      role: "Moderator",
+      badge: "Top contributor",
+      timeAgo: "2h",
+      content: "We're hosting a virtual hackathon next week! Who's joining? 💻🚀",
+      images: [
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop"
+      ],
+      likes: 34,
+      comments: 12,
+      shares: 4
+    },
+    {
+      id: 3,
+      groupName: "Photography Enthusiasts",
+      author: "Dilani Fernando",
+      role: "Member",
+      badge: "",
+      timeAgo: "5h",
+      content: "Captured this beautiful sunset yesterday! 🌅📷",
+      images: [
+        "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop"
+      ],
+      likes: 56,
+      comments: 18,
+      shares: 7
+    },
+    {
+      id: 4,
+      groupName: "Startup Community Sri Lanka",
+      author: "Kasun Jayasuriya",
+      role: "Admin",
+      badge: "",
+      timeAgo: "8h",
+      content: "Our next meetup is scheduled for next Friday at Trace City! RSVP below.",
+      images: [
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1494790108755-2616b332c1c1?w=400&h=300&fit=crop"
+      ],
+      likes: 21,
+      comments: 7,
+      shares: 1
+    },
+    {
+      id: 5,
+      groupName: "Fitness & Health Community",
+      author: "Sajini Weerasinghe",
+      role: "Member",
+      badge: "Active poster",
+      timeAgo: "1d",
+      content: "Just finished a 10k run! Feeling great. 🏃‍♂️💪",
+      images: [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop"
+      ],
+      likes: 44,
+      comments: 9,
+      shares: 3
+    }
+  ];
 
   return (
     <div className="groupsPageFullScreen">
@@ -205,69 +275,77 @@ export default function Groups({ isOpen, onClose }) {
         <div className="groupsMainContent">
           {/* Feed Area */}
           <div className="groupsFeed">
-            {/* Sample Post */}
-            <div className="groupPost">
-              <div className="postHeader">
-                <div className="postGroupInfo">
-                  <div className="groupAvatar">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=40&h=40&fit=crop&crop=faces" alt="Group" />
+            {groupPosts.map((post) => (
+              <div className="groupPost" key={post.id}>
+                <div className="postHeader">
+                  <div className="postGroupInfo">
+                    <div className="groupAvatar">
+                      <img src={
+                        post.id === 1 ? "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=40&h=40&fit=crop&crop=faces"
+                        : post.id === 2 ? "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=40&h=40&fit=crop&crop=faces"
+                        : post.id === 3 ? "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=40&h=40&fit=crop&crop=faces"
+                        : post.id === 4 ? "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=faces"
+                        : post.id === 5 ? "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=40&h=40&fit=crop&crop=faces"
+                        : post.images[0]
+                      } alt="Group" />
+                    </div>
+                    <div className="postDetails">
+                      <div className="postGroupName">{post.groupName}</div>
+                      <div className="postAuthorInfo">
+                        <span className="authorName">{post.author}</span>
+                        {post.role && <span className="authorRole">• {post.role}</span>}
+                        {post.badge && <span className="authorBadge">⭐ {post.badge}</span>}
+                        <span className="postTime">• {post.timeAgo}</span>
+                        <span className="privacyIcon">🌐</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="postDetails">
-                    <div className="postGroupName">{samplePost.groupName}</div>
-                    <div className="postAuthorInfo">
-                      <span className="authorName">{samplePost.author}</span>
-                      <span className="authorRole">• {samplePost.role}</span>
-                      <span className="authorBadge">⭐ {samplePost.badge}</span>
-                      <span className="postTime">• {samplePost.timeAgo}</span>
-                      <span className="privacyIcon">🌐</span>
+                  <MoreHorizIcon className="postOptionsIcon" />
+                </div>
+
+                <div className="postContent">
+                  <p>{post.content}</p>
+                </div>
+
+                <div className="postImages">
+                  <div className="imageGrid">
+                    <div className="mainImage">
+                      <img src={post.images[0]} alt="Post content" />
+                    </div>
+                    <div className="sideImages">
+                      <img src={post.images[1]} alt="Post content" />
+                      <img src={post.images[2]} alt="Post content" />
                     </div>
                   </div>
                 </div>
-                <MoreHorizIcon className="postOptionsIcon" />
-              </div>
 
-              <div className="postContent">
-                <p>{samplePost.content}</p>
-              </div>
-
-              <div className="postImages">
-                <div className="imageGrid">
-                  <div className="mainImage">
-                    <img src={samplePost.images[0]} alt="Post content" />
+                <div className="postStats">
+                  <div className="likesCount">
+                    <FavoriteIcon className="likeIcon" />
+                    <span>{post.likes}</span>
                   </div>
-                  <div className="sideImages">
-                    <img src={samplePost.images[1]} alt="Post content" />
-                    <img src={samplePost.images[2]} alt="Post content" />
+                  <div className="commentsShares">
+                    <span>{post.comments} comments</span>
+                    <span>{post.shares} shares</span>
                   </div>
                 </div>
-              </div>
 
-              <div className="postStats">
-                <div className="likesCount">
-                  <FavoriteIcon className="likeIcon" />
-                  <span>{samplePost.likes}</span>
-                </div>
-                <div className="commentsShares">
-                  <span>{samplePost.comments} comments</span>
-                  <span>{samplePost.shares} shares</span>
+                <div className="postActions">
+                  <button className="actionBtn">
+                    <FavoriteIcon className="actionIcon" />
+                    Like
+                  </button>
+                  <button className="actionBtn">
+                    <ChatBubbleIcon className="actionIcon" />
+                    Comment
+                  </button>
+                  <button className="actionBtn">
+                    <ShareIcon className="actionIcon" />
+                    Share
+                  </button>
                 </div>
               </div>
-
-              <div className="postActions">
-                <button className="actionBtn">
-                  <FavoriteIcon className="actionIcon" />
-                  Like
-                </button>
-                <button className="actionBtn">
-                  <ChatBubbleIcon className="actionIcon" />
-                  Comment
-                </button>
-                <button className="actionBtn">
-                  <ShareIcon className="actionIcon" />
-                  Share
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
