@@ -1,114 +1,210 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./LeftPane.css"
-import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
 import GroupIcon from '@mui/icons-material/Group';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
-import FlagIcon from '@mui/icons-material/Flag';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import BuildIcon from '@mui/icons-material/Build';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import PhotoAlbumIcon from '@mui/icons-material/PhotoAlbum';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import PeopleIcon from '@mui/icons-material/People';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import HistoryIcon from '@mui/icons-material/History';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import EventIcon from '@mui/icons-material/Event';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ChatIcon from '@mui/icons-material/Chat';
+import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
+import PaymentIcon from '@mui/icons-material/Payment';
+import PagesIcon from '@mui/icons-material/Pages';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 export default function LeftPane() {
+  const [showMore, setShowMore] = useState(false);
+  
+  const handleMenuClick = (menuItem) => {
+    console.log(`Clicked on ${menuItem}`);
+    // You can add navigation logic here later
+  };
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <div className='leftPaneBox'>
       <div className='leftPaneContainer'>
         <div className="leftPaneMenu">
           
-          <li className="leftPaneMenuItem">
-            <MarkUnreadChatAltIcon className='leftPaneMenuIcon'></MarkUnreadChatAltIcon>
-            <span className="leftPaneMenuText">Messages</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <GroupIcon className='leftPaneMenuIcon'></GroupIcon>
-            <span className="leftPaneMenuText">Groups</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <RssFeedIcon className='leftPaneMenuIcon'></RssFeedIcon>
-            <span className="leftPaneMenuText">Feed</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <FlagIcon className='leftPaneMenuIcon'></FlagIcon>
-            <span className="leftPaneMenuText">Pages</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <CalendarMonthIcon className='leftPaneMenuIcon'></CalendarMonthIcon>
-            <span className="leftPaneMenuText">Events</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <BuildIcon className='leftPaneMenuIcon'></BuildIcon>
-            <span className="leftPaneMenuText">Settings</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <SportsEsportsIcon className='leftPaneMenuIcon'></SportsEsportsIcon>
-            <span className="leftPaneMenuText">Games</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <NewspaperIcon className='leftPaneMenuIcon'></NewspaperIcon>
-            <span className="leftPaneMenuText">News</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <WorkOutlineIcon className='leftPaneMenuIcon'></WorkOutlineIcon>
-            <span className="leftPaneMenuText">Jobs</span>
-          </li>
-          <li className="leftPaneMenuItem">
-            <AddShoppingCartIcon className='leftPaneMenuIcon'></AddShoppingCartIcon>
-            <span className="leftPaneMenuText">Market</span>
-          </li>
-          <hr></hr>
-          <div className="pagesYouLiked">
-            <h3>Pages You Liked</h3>
-          </div>
-          <div className="PageList">
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=100&h=100&fit=crop" alt="Tech Innovators" className="pagePic" />
-            <span className="PageName">Tech Innovators</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop" alt="Foodie Paradise" className="pagePic" />
-            <span className="PageName">Foodie Paradise</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=100&h=100&fit=crop" alt="Adventure Seekers" className="pagePic" />
-            <span className="PageName">Adventure Seekers</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop" alt="Fitness Journey" className="pagePic" />
-            <span className="PageName">Fitness Journey</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=100&h=100&fit=crop" alt="Photography Hub" className="pagePic" />
-            <span className="PageName">Photography Hub</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop" alt="Book Lovers Club" className="pagePic" />
-            <span className="PageName">Book Lovers Club</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=100&h=100&fit=crop" alt="Music Vibes" className="pagePic" />
-            <span className="PageName">Music Vibes</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=100&h=100&fit=crop" alt="Home & Design" className="pagePic" />
-            <span className="PageName">Home & Design</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=100&h=100&fit=crop" alt="Health & Wellness" className="pagePic" />
-            <span className="PageName">Health & Wellness</span>
-          </li>
-          <li className="pageListItem">
-            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=100&h=100&fit=crop" alt="Nature Lovers" className="pagePic" />
-            <span className="PageName">Nature Lovers</span>
-          </li>
+          {/* User Profile */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('profile')}>
+            <img 
+              src="/Images/1.png" 
+              alt="Tharuka Dilsara" 
+              className="userProfilePic" 
+            />
+            <span className="leftPaneMenuText">Tharuka Dilsara</span>
           </div>
 
+          {/* Meta AI */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('metaAI')}>
+            <div className="metaAiIcon">
+              <SmartToyIcon className='leftPaneMenuIcon metaIcon'></SmartToyIcon>
+            </div>
+            <span className="leftPaneMenuText">Meta AI</span>
+          </div>
+
+          {/* Friends */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('friends')}>
+            <PeopleIcon className='leftPaneMenuIcon friendsIcon'></PeopleIcon>
+            <span className="leftPaneMenuText">Friends</span>
+          </div>
+
+          {/* Professional dashboard */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('professional')}>
+            <BarChartIcon className='leftPaneMenuIcon professionalIcon'></BarChartIcon>
+            <span className="leftPaneMenuText">Professional dashboard</span>
+          </div>
+
+          {/* Feeds */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('feeds')}>
+            <RssFeedIcon className='leftPaneMenuIcon feedsIcon'></RssFeedIcon>
+            <span className="leftPaneMenuText">Feeds</span>
+          </div>
+
+          {/* Groups */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('groups')}>
+            <GroupIcon className='leftPaneMenuIcon groupsIcon'></GroupIcon>
+            <span className="leftPaneMenuText">Groups</span>
+          </div>
+
+          {/* Marketplace */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('marketplace')}>
+            <StorefrontIcon className='leftPaneMenuIcon marketplaceIcon'></StorefrontIcon>
+            <span className="leftPaneMenuText">Marketplace</span>
+          </div>
+
+          {/* Video */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('video')}>
+            <OndemandVideoIcon className='leftPaneMenuIcon videoIcon'></OndemandVideoIcon>
+            <span className="leftPaneMenuText">Video</span>
+          </div>
+
+          {/* Memories */}
+          <div className="leftPaneMenuItem" onClick={() => handleMenuClick('memories')}>
+            <PhotoAlbumIcon className='leftPaneMenuIcon memoriesIcon'></PhotoAlbumIcon>
+            <span className="leftPaneMenuText">Memories</span>
+          </div>
+
+          {/* Expandable Menu Items */}
+          {showMore && (
+            <div className="expandedMenuItems">
+              {/* Ad Centre */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('adCentre')}>
+                <CampaignIcon className='leftPaneMenuIcon adCentreIcon'></CampaignIcon>
+                <span className="leftPaneMenuText">Ad Centre</span>
+              </div>
+
+              {/* Ads Manager */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('adsManager')}>
+                <TrendingUpIcon className='leftPaneMenuIcon adsManagerIcon'></TrendingUpIcon>
+                <span className="leftPaneMenuText">Ads Manager</span>
+              </div>
+
+              {/* Birthdays */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('birthdays')}>
+                <CardGiftcardIcon className='leftPaneMenuIcon birthdaysIcon'></CardGiftcardIcon>
+                <span className="leftPaneMenuText">Birthdays</span>
+              </div>
+
+              {/* Chat with AIs */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('chatAIs')}>
+                <SupportAgentIcon className='leftPaneMenuIcon chatAIsIcon'></SupportAgentIcon>
+                <span className="leftPaneMenuText">Chat with AIs</span>
+              </div>
+
+              {/* Crisis Response */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('crisisResponse')}>
+                <ReportProblemIcon className='leftPaneMenuIcon crisisIcon'></ReportProblemIcon>
+                <span className="leftPaneMenuText">Crisis Response</span>
+              </div>
+
+              {/* Events */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('events')}>
+                <EventIcon className='leftPaneMenuIcon eventsIcon'></EventIcon>
+                <span className="leftPaneMenuText">Events</span>
+              </div>
+
+              {/* Gaming video */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('gamingVideo')}>
+                <SportsEsportsIcon className='leftPaneMenuIcon gamingIcon'></SportsEsportsIcon>
+                <span className="leftPaneMenuText">Gaming video</span>
+              </div>
+
+              {/* Messenger */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('messenger')}>
+                <ChatIcon className='leftPaneMenuIcon messengerIcon'></ChatIcon>
+                <span className="leftPaneMenuText">Messenger</span>
+              </div>
+
+              {/* Messenger Kids */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('messengerKids')}>
+                <ChildFriendlyIcon className='leftPaneMenuIcon messengerKidsIcon'></ChildFriendlyIcon>
+                <span className="leftPaneMenuText">Messenger Kids</span>
+              </div>
+
+              {/* Orders and payments */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('orders')}>
+                <PaymentIcon className='leftPaneMenuIcon ordersIcon'></PaymentIcon>
+                <span className="leftPaneMenuText">Orders and payments</span>
+              </div>
+
+              {/* Pages */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('pages')}>
+                <PagesIcon className='leftPaneMenuIcon pagesIcon'></PagesIcon>
+                <span className="leftPaneMenuText">Pages</span>
+              </div>
+
+              {/* Play games */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('playGames')}>
+                <ExtensionIcon className='leftPaneMenuIcon playGamesIcon'></ExtensionIcon>
+                <span className="leftPaneMenuText">Play games</span>
+              </div>
+
+              {/* Recent ad activity */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('recentAds')}>
+                <AssessmentIcon className='leftPaneMenuIcon recentAdsIcon'></AssessmentIcon>
+                <span className="leftPaneMenuText">Recent ad activity</span>
+              </div>
+
+              {/* Saved */}
+              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('saved')}>
+                <BookmarkIcon className='leftPaneMenuIcon savedIcon'></BookmarkIcon>
+                <span className="leftPaneMenuText">Saved</span>
+              </div>
+            </div>
+          )}
+
+          {/* See More / See Less Toggle */}
+          <div className="leftPaneMenuItem seeMore" onClick={toggleShowMore}>
+            <div className="seeMoreIcon">
+              {showMore ? 
+                <ExpandLessIcon className='leftPaneMenuIcon'></ExpandLessIcon> :
+                <ExpandMoreIcon className='leftPaneMenuIcon'></ExpandMoreIcon>
+              }
+            </div>
+            <span className="leftPaneMenuText">{showMore ? 'See less' : 'See more'}</span>
+          </div>
 
         </div>
       </div>
-      
-      
     </div>
   )
 }

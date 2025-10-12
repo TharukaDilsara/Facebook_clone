@@ -1,13 +1,15 @@
 .leftPaneBox{
    flex: 1.5;
    max-width: 280px;
-   height: calc(100vh - 50px);
-   overflow: scroll;
+   height: calc(100vh - 56px);
+   overflow-y: auto;
    background-color: #ffffff;
    margin: 0 !important;
    padding: 0 !important;
    border: none;
    outline: none;
+   position: sticky;
+   top: 56px;
 }
 
 /* Responsive design */
@@ -23,70 +25,219 @@
     }
 }
 
-;::-webkit-scrollbar{
-    width: 5px;
+.leftPaneBox::-webkit-scrollbar{
+    width: 6px;
 }
-;::-webkit-scrollbar-track{
-    background-color: #b8c0c7;
+.leftPaneBox::-webkit-scrollbar-track{
+    background-color: transparent;
 }
-;::-webkit-scrollbar-thumb{
-    background-color: #cfb2b2;
+.leftPaneBox::-webkit-scrollbar-thumb{
+    background-color: #bcc0c4;
+    border-radius: 3px;
 }
 
 .leftPaneContainer{
-    padding: 10px 20px 20px 20px;
+    padding: 8px 0;
     margin: 0;
-
 }
 
 .leftPaneMenu{
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.leftPaneMenu .leftPaneMenuItem:first-child {
-    margin-top: 0;
-}
-
+/* Menu Items */
 .leftPaneMenuItem{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 0;
-
-}
-
-.leftPaneMenuIcon{
-    margin-right: 20px;
-
-}
-
-.pagePic{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-
-.pagesYouLiked{
-    font-family: serif;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #575656;
-}
-.PageList{
-    padding: 0;
+    padding: 8px 8px 8px 16px;
     margin: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-height: 44px;
 }
 
-.pageListItem{
+.leftPaneMenuItem:hover{
+    background-color: #f0f2f5;
+}
+
+/* User Profile */
+.userProfilePic{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+/* Icons */
+.leftPaneMenuIcon{
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    color: #1877f2;
+    font-size: 20px !important;
+}
+
+/* Meta AI Icon */
+.metaAiIcon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(45deg, #0064e0, #42a5f5);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    justify-content: center;
+    margin-right: 12px;
 }
 
-.PageName{
-    margin-left: 10px;
+.metaIcon {
+    color: white !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+}
 
+/* Specific Icon Colors */
+.friendsIcon {
+    color: #42b883 !important;
+}
+
+.professionalIcon {
+    color: #7b68ee !important;
+}
+
+.feedsIcon {
+    color: #1877f2 !important;
+}
+
+.groupsIcon {
+    color: #1877f2 !important;
+}
+
+.marketplaceIcon {
+    color: #ff6b35 !important;
+}
+
+.videoIcon {
+    color: #e74c3c !important;
+}
+
+.memoriesIcon {
+    color: #1877f2 !important;
+}
+
+/* Extended Menu Item Colors */
+.adCentreIcon {
+    color: #00a8ff !important;
+}
+
+.adsManagerIcon {
+    color: #1877f2 !important;
+}
+
+.birthdaysIcon {
+    color: #ff6b6b !important;
+}
+
+.chatAIsIcon {
+    color: #4267b2 !important;
+}
+
+.crisisIcon {
+    color: #1877f2 !important;
+}
+
+.eventsIcon {
+    color: #ff6b35 !important;
+}
+
+.gamingIcon {
+    color: #00d2d3 !important;
+}
+
+.messengerIcon {
+    color: #0078ff !important;
+}
+
+.messengerKidsIcon {
+    color: #00c851 !important;
+}
+
+.ordersIcon {
+    color: #2e3440 !important;
+}
+
+.pagesIcon {
+    color: #ff7675 !important;
+}
+
+.playGamesIcon {
+    color: #6c5ce7 !important;
+}
+
+.recentAdsIcon {
+    color: #00cec9 !important;
+}
+
+.savedIcon {
+    color: #e84393 !important;
+}
+
+/* See More */
+.seeMore {
+    margin-top: 8px;
+}
+
+.seeMoreIcon {
+    width: 36px;
+    height: 36px;
+    background-color: #e4e6ea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.seeMoreIcon .leftPaneMenuIcon {
+    color: #65676b !important;
+    margin: 0 !important;
+    font-size: 20px !important;
+}
+
+/* Menu Text */
+.leftPaneMenuText{
+    font-size: 15px;
+    font-weight: 500;
+    color: #050505;
+    line-height: 1.33;
+}
+
+/* Expanded Menu Items */
+.expandedMenuItems {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth transitions for expand/collapse */
+.leftPaneMenuItem {
+    transition: all 0.2s ease;
+}
+
+.leftPaneMenuItem:active {
+    transform: scale(0.98);
 }

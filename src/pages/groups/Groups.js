@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SettingsIcon from '@mui/icons-material/Settings';
 import SearchIcon from '@mui/icons-material/Search';
 import GroupIcon from '@mui/icons-material/Group';
@@ -12,6 +12,8 @@ import ShareIcon from '@mui/icons-material/Share';
 import "./groups.css"
 
 export default function Groups({ isOpen, onClose }) {
+  const [showAllGroups, setShowAllGroups] = useState(false);
+  
   if (!isOpen) return null;
 
   const joinedGroups = [
@@ -28,8 +30,82 @@ export default function Groups({ isOpen, onClose }) {
       lastActive: "1 day ago", 
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=50&h=50&fit=crop&crop=faces",
       members: 5678
+    },
+    {
+      id: 3,
+      name: "Tech Innovators Hub",
+      lastActive: "2 hours ago",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=50&h=50&fit=crop&crop=faces",
+      members: 15420
+    },
+    {
+      id: 4,
+      name: "Photography Enthusiasts",
+      lastActive: "5 hours ago",
+      image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=50&h=50&fit=crop&crop=faces",
+      members: 8976
+    },
+    {
+      id: 5,
+      name: "Startup Community Sri Lanka",
+      lastActive: "8 hours ago",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=faces",
+      members: 12340
+    },
+    {
+      id: 6,
+      name: "Web Developers Network",
+      lastActive: "12 hours ago",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=faces",
+      members: 25789
+    },
+    {
+      id: 7,
+      name: "Digital Marketing Experts",
+      lastActive: "18 hours ago",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b332c1c1?w=50&h=50&fit=crop&crop=faces",
+      members: 9876
+    },
+    {
+      id: 8,
+      name: "Fitness & Health Community",
+      lastActive: "1 day ago",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=50&h=50&fit=crop&crop=faces",
+      members: 18456
+    },
+    {
+      id: 9,
+      name: "Food Lovers Colombo",
+      lastActive: "2 days ago",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=50&h=50&fit=crop&crop=faces",
+      members: 7234
+    },
+    {
+      id: 10,
+      name: "Travel Buddies LK",
+      lastActive: "3 days ago",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=50&h=50&fit=crop&crop=faces",
+      members: 11567
+    },
+    {
+      id: 11,
+      name: "Music Production Hub",
+      lastActive: "4 days ago",
+      image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=50&h=50&fit=crop&crop=faces",
+      members: 6789
+    },
+    {
+      id: 12,
+      name: "Home & Garden Design",
+      lastActive: "5 days ago",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=50&h=50&fit=crop&crop=faces",
+      members: 14523
     }
   ];
+
+  const toggleShowAllGroups = () => {
+    setShowAllGroups(!showAllGroups);
+  };
 
   const samplePost = {
     id: 1,
@@ -103,11 +179,13 @@ export default function Groups({ isOpen, onClose }) {
           <div className="joinedGroupsSection">
             <div className="sectionHeader">
               <h3 className="sectionTitle">Groups you've joined</h3>
-              <span className="seeAllLink">See all</span>
+              <span className="seeAllLink" onClick={toggleShowAllGroups}>
+                {showAllGroups ? 'See less' : 'See all'}
+              </span>
             </div>
             
             <div className="groupsList">
-              {joinedGroups.map((group) => (
+              {(showAllGroups ? joinedGroups : joinedGroups.slice(0, 2)).map((group) => (
                 <div key={group.id} className="groupItem">
                   <div className="groupImage">
                     <img src={group.image} alt={group.name} />
