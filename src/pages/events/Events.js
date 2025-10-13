@@ -146,6 +146,42 @@ export default function Events({ setCurrentPage }) {
               </div>
               <span>Crafts</span>
             </div>
+            
+            <div className="category-item">
+              <div className="category-icon dance">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 5.5V7.5L12.5 7L11.5 10L13.5 11.5C13.78 11.72 14 12.22 14 12.54V18H16V12.5L19.5 11L21 9ZM12.5 11.5L11.5 14L9 12V18H7V10.5L12.5 11.5Z"/>
+                </svg>
+              </div>
+              <span>Dance</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon drinks">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M5 3V7C5 8.1 5.9 9 7 9H10C11.1 9 12 8.1 12 7V3H13V7C13 8.66 11.66 10 10 10H7C5.34 10 4 8.66 4 7V3H5ZM7.5 15.5C7.5 16.33 8.17 17 9 17S10.5 16.33 10.5 15.5 9.83 14 9 14 7.5 14.67 7.5 15.5ZM12 13.5L11.5 12H5.5L5 13.5C4.5 14.5 4.5 15.5 5.5 16.5H12.5C13.5 15.5 13.5 14.5 13 13.5L12 13.5Z"/>
+                </svg>
+              </div>
+              <span>Drinks</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon fitness">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 12H4V14H2V12ZM5 11H7V15H5V11ZM8 10H10V16H8V10ZM11 9H13V17H11V9ZM14 8H16V18H14V8ZM17 7H19V19H17V7Z"/>
+                </svg>
+              </div>
+              <span>Fitness & workouts</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon foods">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M8.1 13.34L8.5 12.34C8.78 11.6 9.56 11.04 10.25 11.04S11.72 11.6 12 12.34L12.4 13.34C12.68 14.04 12.42 14.64 11.72 14.64H8.78C8.08 14.64 7.82 14.04 8.1 13.34ZM7 9V10H8V11H6C5.45 11 5 10.55 5 10V9C5 8.45 5.45 8 6 8H7V9ZM14 8V9H15V10C15 10.55 14.55 11 14 11H13V10H14V9ZM9 2V8H11V2C11 1.45 10.55 1 10 1S9 1.45 9 2Z"/>
+                </svg>
+              </div>
+              <span>Foods</span>
+            </div>
           </div>
         </div>
 

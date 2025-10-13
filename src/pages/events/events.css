@@ -333,6 +333,22 @@
   background-color: #66bb6a;
 }
 
+.category-icon.dance {
+  background-color: #ab47bc;
+}
+
+.category-icon.drinks {
+  background-color: #26c6da;
+}
+
+.category-icon.fitness {
+  background-color: #ef5350;
+}
+
+.category-icon.foods {
+  background-color: #ffa726;
+}
+
 .category-item span {
   font-size: 15px;
   color: #1c1e21;
