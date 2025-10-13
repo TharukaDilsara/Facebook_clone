@@ -15,9 +15,13 @@ import AppsIcon from '@mui/icons-material/Apps';
 import MessageIcon from '@mui/icons-material/Message';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-export default function Memories() {
+
+export default function Memories({ setCurrentPage }) {
   const handleBackClick = () => {
     window.history.back();
+  };
+  const handleHomeClick = () => {
+    if (setCurrentPage) setCurrentPage('home');
   };
 
   return (
@@ -37,7 +41,7 @@ export default function Memories() {
         </div>
         
         <div className="memories-navbar-center">
-          <div className="nav-icon-container active">
+          <div className="nav-icon-container active" onClick={handleHomeClick} style={{cursor:'pointer'}}>
             <HomeIcon className="nav-icon" />
           </div>
           <div className="nav-icon-container">
