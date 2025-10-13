@@ -349,6 +349,38 @@
   background-color: #ffa726;
 }
 
+.category-icon.games {
+  background-color: #5c6bc0;
+}
+
+.category-icon.gardening {
+  background-color: #4caf50;
+}
+
+.category-icon.health {
+  background-color: #f44336;
+}
+
+.category-icon.healthy-living {
+  background-color: #00bcd4;
+}
+
+.category-icon.home-garden {
+  background-color: #795548;
+}
+
+.category-icon.music {
+  background-color: #e91e63;
+}
+
+.category-icon.parties {
+  background-color: #ff5722;
+}
+
+.category-icon.professional {
+  background-color: #607d8b;
+}
+
 .category-item span {
   font-size: 15px;
   color: #1c1e21;
