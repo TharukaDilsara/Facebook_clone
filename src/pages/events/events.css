@@ -381,6 +381,34 @@
   background-color: #607d8b;
 }
 
+.category-icon.religions {
+  background-color: #9c27b0;
+}
+
+.category-icon.shopping {
+  background-color: #ff9800;
+}
+
+.category-icon.social-issues {
+  background-color: #2196f3;
+}
+
+.category-icon.sports {
+  background-color: #4caf50;
+}
+
+.category-icon.theatre {
+  background-color: #e91e63;
+}
+
+.category-icon.tv-films {
+  background-color: #673ab7;
+}
+
+.category-icon.visual-arts {
+  background-color: #ff5722;
+}
+
 .category-item span {
   font-size: 15px;
   color: #1c1e21;

@@ -254,6 +254,69 @@ export default function Events({ setCurrentPage }) {
               </div>
               <span>Professional networking</span>
             </div>
+            
+            <div className="category-item">
+              <div className="category-icon religions">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10,2C11.11,2 12,2.9 12,4C12,5.11 11.11,6 10,6C8.89,6 8,5.11 8,4C8,2.9 8.89,2 10,2M15.5,8.5C15.91,8.91 15.91,9.59 15.5,10L14,11.5V17C14,17.55 13.55,18 13,18H7C6.45,18 6,17.55 6,17V11.5L4.5,10C4.09,9.59 4.09,8.91 4.5,8.5C4.91,8.09 5.59,8.09 6,8.5L8,10.5H12L14,8.5C14.41,8.09 15.09,8.09 15.5,8.5Z"/>
+                </svg>
+              </div>
+              <span>Religions</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon shopping">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M7,18C5.9,18 5,17.1 5,16A2,2 0 0,1 7,14A2,2 0 0,1 9,16C9,17.1 8.1,18 7,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5H5.21L4.27,3H1M17,18C15.9,18 15,17.1 15,16A2,2 0 0,1 17,14A2,2 0 0,1 19,16C19,17.1 18.1,18 17,18Z"/>
+                </svg>
+              </div>
+              <span>Shopping</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon social-issues">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M16,4C18.2,4 20,5.8 20,8C20,10.2 18.2,12 16,12C13.8,12 12,10.2 12,8C12,5.8 13.8,4 16,4M16,6A2,2 0 0,0 14,8A2,2 0 0,0 16,10A2,2 0 0,0 18,8A2,2 0 0,0 16,6M4,4C6.2,4 8,5.8 8,8C8,10.2 6.2,12 4,12C1.8,12 0,10.2 0,8C0,5.8 1.8,4 4,4M4,6A2,2 0 0,0 2,8A2,2 0 0,0 4,10A2,2 0 0,0 6,8A2,2 0 0,0 4,6M10,14C12.2,14 14,15.8 14,18C14,20.2 12.2,22 10,22C7.8,22 6,20.2 6,18C6,15.8 7.8,14 10,14Z"/>
+                </svg>
+              </div>
+              <span>Social issues</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon sports">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12H16A4,4 0 0,0 12,8V6M12,8A4,4 0 0,1 16,12H14A2,2 0 0,0 12,10V8M12,10A2,2 0 0,1 14,12H12V10Z"/>
+                </svg>
+              </div>
+              <span>Sports</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon theatre">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M8.5,9A1.5,1.5 0 0,1 7,7.5A1.5,1.5 0 0,1 8.5,6A1.5,1.5 0 0,1 10,7.5A1.5,1.5 0 0,1 8.5,9M15.5,9A1.5,1.5 0 0,1 14,7.5A1.5,1.5 0 0,1 15.5,6A1.5,1.5 0 0,1 17,7.5A1.5,1.5 0 0,1 15.5,9M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                </svg>
+              </div>
+              <span>Theatre</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon tv-films">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M18,3V5H16V3H8V5H6V3H4A2,2 0 0,0 2,5V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V5A2,2 0 0,0 20,3H18M4,7H20V17H4V7M9,8A2,2 0 0,0 7,10V14A2,2 0 0,0 9,16H15A2,2 0 0,0 17,14V10A2,2 0 0,0 15,8H9M9,10H15V14H9V10Z"/>
+                </svg>
+              </div>
+              <span>TV and films</span>
+            </div>
+            
+            <div className="category-item">
+              <div className="category-icon visual-arts">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M12,2A2,2 0 0,1 14,4V8A2,2 0 0,1 12,10H10V8H12V4H10V2H12M8,4A2,2 0 0,1 10,2V4H8V8H10V10H8A2,2 0 0,1 6,8V4A2,2 0 0,1 8,4M18,10A2,2 0 0,1 20,12V16A2,2 0 0,1 18,18H14V16H18V12H14V10H18M6,12A2,2 0 0,1 4,10V12H6V16H4V18H6A2,2 0 0,1 8,16V12A2,2 0 0,1 6,12M12,12V14H10V16H12A2,2 0 0,1 14,18V16A2,2 0 0,1 12,14V12Z"/>
+                </svg>
+              </div>
+              <span>Visual arts</span>
+            </div>
           </div>
         </div>
 
