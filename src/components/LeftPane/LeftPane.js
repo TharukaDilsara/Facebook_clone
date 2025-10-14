@@ -31,7 +31,7 @@ export default function LeftPane({ setCurrentPage }) {
   
   const handleMenuClick = (menuItem) => {
     console.log(`Clicked on ${menuItem}`);
-    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events')) {
+    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events' || menuItem === 'friends')) {
       setCurrentPage(menuItem);
     }
   };

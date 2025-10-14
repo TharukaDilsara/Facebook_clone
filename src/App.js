@@ -6,6 +6,7 @@ import Marketplace from "./components/Navigation/Marketplace/Marketplace";
 import Groups from "./pages/groups/Groups";
 import Memories from "./pages/memories/Memories";
 import Events from "./pages/events/Events";
+import Friends from "./pages/friends/Friends";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -22,6 +23,8 @@ function App() {
         return <Memories setCurrentPage={setCurrentPage} />;
       case 'events':
         return <Events setCurrentPage={setCurrentPage} />;
+      case 'friends':
+        return <Friends setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
