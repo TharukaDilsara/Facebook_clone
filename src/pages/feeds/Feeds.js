@@ -18,6 +18,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import PublicIcon from '@mui/icons-material/Public';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import ShareIcon from '@mui/icons-material/Share';
 
 export default function Feeds({ setCurrentPage }) {
   const handleHomeClick = () => {
@@ -176,7 +179,7 @@ export default function Feeds({ setCurrentPage }) {
               </div>
             </div>
 
-            {/* Additional sample posts can be added here */}
+            {/* Tech News Post */}
             <div className="feed-post">
               <div className="post-header">
                 <div className="post-author-info">
@@ -204,8 +207,259 @@ export default function Feeds({ setCurrentPage }) {
 
               <div className="post-content">
                 <div className="post-text">
-                  <p>Latest technology updates and innovations in Sri Lanka's digital transformation journey.</p>
+                  <p>🚀 Breaking: Sri Lanka's first AI-powered startup accelerator launches in Colombo! 🇱🇰</p>
+                  <p>The new program will support 50+ local startups with cutting-edge technology and international partnerships. Applications open next month... <span className="see-more">See more</span></p>
                   <div className="translation-link">See translation</div>
+                </div>
+                <div className="post-image">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=300&fit=crop" 
+                    alt="Tech startup office"
+                    className="regular-post-image"
+                  />
+                </div>
+              </div>
+              
+              <div className="post-engagement">
+                <div className="engagement-buttons">
+                  <div className="engagement-button">
+                    <ThumbUpIcon />
+                    <span>Like</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ChatBubbleOutlineIcon />
+                    <span>Comment</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ShareIcon />
+                    <span>Share</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sports News Post */}
+            <div className="feed-post">
+              <div className="post-header">
+                <div className="post-author-info">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=60&h=60&fit=crop&crop=face" 
+                    alt="Sports Central" 
+                    className="author-avatar"
+                  />
+                  <div className="author-details">
+                    <div className="author-name">
+                      <span>Sports Central</span>
+                      <VerifiedIcon className="verified-icon" />
+                    </div>
+                    <div className="post-meta">
+                      <span>3h</span>
+                      <PublicIcon className="public-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div className="post-actions">
+                  <MoreHorizIcon className="more-icon" />
+                  <CloseIcon className="close-icon" />
+                </div>
+              </div>
+
+              <div className="post-content">
+                <div className="post-text">
+                  <p>🏏 MATCH RESULT: Sri Lanka defeats Australia by 7 wickets in the first ODI!</p>
+                  <p>Brilliant performance by the Sri Lankan team. Kusal Mendis scored an unbeaten century. Next match scheduled for Thursday at Pallekele.</p>
+                </div>
+                <div className="post-image">
+                  <img 
+                    src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=300&fit=crop" 
+                    alt="Cricket match"
+                    className="regular-post-image"
+                  />
+                </div>
+              </div>
+              
+              <div className="post-engagement">
+                <div className="engagement-buttons">
+                  <div className="engagement-button">
+                    <ThumbUpIcon />
+                    <span>Like</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ChatBubbleOutlineIcon />
+                    <span>Comment</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ShareIcon />
+                    <span>Share</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Travel Blog Post */}
+            <div className="feed-post">
+              <div className="post-header">
+                <div className="post-author-info">
+                  <img 
+                    src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60&h=60&fit=crop&crop=face" 
+                    alt="Sarah Travel" 
+                    className="author-avatar"
+                  />
+                  <div className="author-details">
+                    <div className="author-name">
+                      <span>Sarah's Travel Diaries</span>
+                    </div>
+                    <div className="post-meta">
+                      <span>5h</span>
+                      <PublicIcon className="public-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div className="post-actions">
+                  <MoreHorizIcon className="more-icon" />
+                  <CloseIcon className="close-icon" />
+                </div>
+              </div>
+
+              <div className="post-content">
+                <div className="post-text">
+                  <p>Just visited the breathtaking Sigiriya Rock Fortress! 🏰✨</p>
+                  <p>The ancient frescoes and the view from the top are absolutely incredible. If you're planning a trip to Sri Lanka, this should definitely be on your list! 📸</p>
+                  <p>#SriLanka #Sigiriya #Travel #Heritage</p>
+                </div>
+                <div className="post-image">
+                  <img 
+                    src="https://images.unsplash.com/photo-1566993263097-eb6c674c3077?w=600&h=400&fit=crop" 
+                    alt="Sigiriya Rock"
+                    className="regular-post-image"
+                  />
+                </div>
+              </div>
+              
+              <div className="post-engagement">
+                <div className="engagement-buttons">
+                  <div className="engagement-button">
+                    <ThumbUpIcon />
+                    <span>Like</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ChatBubbleOutlineIcon />
+                    <span>Comment</span>
+                  </div>
+                  <div className="engagement-button">
+                    <ShareIcon />
+                    <span>Share</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Business News Post */}
+            <div className="feed-post">
+              <div className="post-header">
+                <div className="post-author-info">
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" 
+                    alt="Business Today" 
+                    className="author-avatar"
+                  />
+                  <div className="author-details">
+                    <div className="author-name">
+                      <span>Business Today LK</span>
+                      <VerifiedIcon className="verified-icon" />
+                    </div>
+                    <div className="post-meta">
+                      <span>6h</span>
+                      <PublicIcon className="public-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div className="post-actions">
+                  <MoreHorizIcon className="more-icon" />
+                  <CloseIcon className="close-icon" />
+                </div>
+              </div>
+
+              <div className="post-content">
+                <div className="post-text">
+                  <p>📈 MARKET UPDATE: Colombo Stock Exchange shows positive trends this week</p>
+                  <p>Banking and telecom sectors lead the growth with significant gains. Expert analysis suggests continued growth momentum in Q4 2024... <span className="see-more">See more</span></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Food Blog Post */}
+            <div className="feed-post">
+              <div className="post-header">
+                <div className="post-author-info">
+                  <img 
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face" 
+                    alt="Foodie Adventures" 
+                    className="author-avatar"
+                  />
+                  <div className="author-details">
+                    <div className="author-name">
+                      <span>Foodie Adventures</span>
+                    </div>
+                    <div className="post-meta">
+                      <span>8h</span>
+                      <PublicIcon className="public-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div className="post-actions">
+                  <MoreHorizIcon className="more-icon" />
+                  <CloseIcon className="close-icon" />
+                </div>
+              </div>
+
+              <div className="post-content">
+                <div className="post-text">
+                  <p>🍛 Made authentic Sri Lankan rice and curry today! The aroma is filling the entire house 😍</p>
+                  <p>Recipe includes: Coconut rice, fish curry, dhal curry, pol sambol, and papadam. Nothing beats homemade Sri Lankan food! 🇱🇰❤️</p>
+                  <p>Who else loves cooking traditional dishes? Share your favorite recipes in the comments!</p>
+                </div>
+                <div className="post-image">
+                  <img 
+                    src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=600&h=400&fit=crop" 
+                    alt="Sri Lankan food"
+                    className="regular-post-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Education Post */}
+            <div className="feed-post">
+              <div className="post-header">
+                <div className="post-author-info">
+                  <img 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" 
+                    alt="EduLanka" 
+                    className="author-avatar"
+                  />
+                  <div className="author-details">
+                    <div className="author-name">
+                      <span>EduLanka</span>
+                      <VerifiedIcon className="verified-icon" />
+                    </div>
+                    <div className="post-meta">
+                      <span>12h</span>
+                      <PublicIcon className="public-icon" />
+                    </div>
+                  </div>
+                </div>
+                <div className="post-actions">
+                  <MoreHorizIcon className="more-icon" />
+                  <CloseIcon className="close-icon" />
+                </div>
+              </div>
+
+              <div className="post-content">
+                <div className="post-text">
+                  <p>🎓 SCHOLARSHIP ALERT: University of Colombo announces new merit scholarships for 2025!</p>
+                  <p>Applications open for undergraduate programs in Engineering, Medicine, and IT. Deadline: December 15, 2024. Full details available on our website.</p>
+                  <p>Don't miss this opportunity! Share with students who might benefit. 📚✨</p>
                 </div>
               </div>
             </div>
