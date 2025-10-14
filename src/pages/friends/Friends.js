@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './friends.css';
 import SearchIcon from '@mui/icons-material/Search';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
@@ -16,10 +16,27 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CloseIcon from '@mui/icons-material/Close';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 export default function Friends({ setCurrentPage }) {
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [notificationDotsEnabled, setNotificationDotsEnabled] = useState(true);
+  
   const handleHomeClick = () => {
     if (setCurrentPage) setCurrentPage('home');
+  };
+
+  const handleSettingsClick = () => {
+    setShowSettingsModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowSettingsModal(false);
+  };
+
+  const toggleNotificationDots = () => {
+    setNotificationDotsEnabled(!notificationDotsEnabled);
   };
 
   // Sample friend request data
@@ -140,7 +157,7 @@ export default function Friends({ setCurrentPage }) {
         <div className="friends-sidebar">
           <div className="friends-header">
             <h2>Friends</h2>
-            <SettingsIcon className="settings-icon" />
+            <SettingsIcon className="settings-icon" onClick={handleSettingsClick} />
           </div>
 
           <div className="friends-nav">
@@ -228,6 +245,40 @@ export default function Friends({ setCurrentPage }) {
           </div>
         </div>
       </div>
+
+      {/* Settings Modal */}
+      {showSettingsModal && (
+        <div className="settings-modal-overlay" onClick={handleCloseModal}>
+          <div className="settings-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="settings-modal-header">
+              <h3>Friends</h3>
+              <CloseIcon className="close-modal-icon" onClick={handleCloseModal} />
+            </div>
+            
+            <div className="settings-modal-content">
+              <div className="notification-settings-section">
+                <h4>Notification settings</h4>
+                <p className="settings-description">
+                  You can manage how you are notified about friends updates.
+                </p>
+                
+                <div className="settings-option">
+                  <div className="settings-option-left">
+                    <NotificationsIcon className="notification-settings-icon" />
+                    <span>Show notification dots</span>
+                  </div>
+                  <div 
+                    className={`toggle-switch ${notificationDotsEnabled ? 'active' : ''}`}
+                    onClick={toggleNotificationDots}
+                  >
+                    <div className="toggle-slider"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
