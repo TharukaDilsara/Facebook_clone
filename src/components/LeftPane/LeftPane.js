@@ -10,7 +10,6 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import HistoryIcon from '@mui/icons-material/History';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
@@ -31,8 +30,12 @@ export default function LeftPane({ setCurrentPage }) {
   
   const handleMenuClick = (menuItem) => {
     console.log(`Clicked on ${menuItem}`);
-    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events' || menuItem === 'friends' || menuItem === 'feeds')) {
-      setCurrentPage(menuItem);
+    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events' || menuItem === 'friends' || menuItem === 'feeds' || menuItem === 'games')) {
+      if (menuItem === 'playGames') {
+        setCurrentPage('games');
+      } else {
+        setCurrentPage(menuItem);
+      }
     }
   };
 
@@ -175,7 +178,7 @@ export default function LeftPane({ setCurrentPage }) {
               </div>
 
               {/* Play games */}
-              <div className="leftPaneMenuItem" onClick={() => handleMenuClick('playGames')}>
+              <div className="leftPaneMenuItem" onClick={() => setCurrentPage && setCurrentPage('games')}>
                 <ExtensionIcon className='leftPaneMenuIcon playGamesIcon'></ExtensionIcon>
                 <span className="leftPaneMenuText">Play games</span>
               </div>

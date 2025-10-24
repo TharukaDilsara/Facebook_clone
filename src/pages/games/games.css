@@ -1,0 +1,351 @@
+.games-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.games-sidebar {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.games-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.games-sidebar-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #050505;
+}
+
+.settings-icon {
+  color: #65676b;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.settings-icon:hover {
+  background-color: #f0f2f5;
+}
+
+.games-search {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #65676b;
+  font-size: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #65676b;
+}
+
+.games-menu {
+  margin-bottom: 30px;
+}
+
+.games-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 4px;
+}
+
+.games-menu-item:hover {
+  background-color: #f0f2f5;
+}
+
+.games-menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  color: #65676b;
+  font-size: 20px;
+}
+
+.games-menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.games-menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.your-games-section,
+.categories-section {
+  margin-bottom: 30px;
+}
+
+.your-games-section h3,
+.categories-section h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #050505;
+}
+
+.games-subtitle {
+  font-size: 13px;
+  color: #65676b;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.category-item {
+  padding: 8px 12px;
+  background-color: #f0f2f5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.category-item:hover {
+  background-color: #e4e6ea;
+}
+
+.category-item span {
+  font-size: 13px;
+  color: #050505;
+  font-weight: 500;
+}
+
+.games-main-content {
+  margin-left: 320px;
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.games-section {
+  margin-bottom: 40px;
+}
+
+.games-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #050505;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.games-grid.recently-played {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.game-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recently-played-card {
+  min-height: 120px;
+}
+
+.game-image-container {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.recently-played-card .game-image-container {
+  aspect-ratio: 16/9;
+}
+
+.game-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+}
+
+.game-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Game-specific backgrounds */
+.magic-puzzle-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.jigsaw-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.haha-swap-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.ai-avatar-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+}
+
+.bubble-shooter-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+.ludo-club-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
+}
+
+.candy-crush-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+}
+
+.words-friends-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%);
+}
+
+.solitaire-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+}
+
+.game-info {
+  padding: 12px;
+}
+
+.game-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #050505;
+}
+
+.game-category {
+  font-size: 12px;
+  color: #65676b;
+  background-color: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.game-rating {
+  margin-top: 6px;
+}
+
+.game-rating span {
+  font-size: 12px;
+  color: #65676b;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .games-sidebar {
+    width: 280px;
+  }
+  
+  .games-main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .games-container {
+    flex-direction: column;
+  }
+  
+  .games-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .games-main-content {
+    margin-left: 0;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+}

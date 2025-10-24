@@ -8,6 +8,7 @@ import Memories from "./pages/memories/Memories";
 import Events from "./pages/events/Events";
 import Friends from "./pages/friends/Friends";
 import Feeds from "./pages/feeds/Feeds";
+import Games from "./pages/games/Games";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -28,6 +29,8 @@ function App() {
         return <Friends setCurrentPage={setCurrentPage} />;
       case 'feeds':
         return <Feeds setCurrentPage={setCurrentPage} />;
+      case 'games':
+        return <Games setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
