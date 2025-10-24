@@ -1,0 +1,260 @@
+.gaming-notifications-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gaming-notifications-sidebar {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.gaming-notifications-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gaming-notifications-sidebar-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #050505;
+}
+
+.settings-icon {
+  color: #65676b;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.settings-icon:hover {
+  background-color: #f0f2f5;
+}
+
+.gaming-notifications-search {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #65676b;
+  font-size: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #65676b;
+}
+
+.gaming-notifications-menu {
+  margin-bottom: 30px;
+}
+
+.gaming-notifications-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 4px;
+}
+
+.gaming-notifications-menu-item:hover {
+  background-color: #f0f2f5;
+}
+
+.gaming-notifications-menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  color: #65676b;
+  font-size: 20px;
+}
+
+.gaming-notifications-menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.gaming-notifications-menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.your-games-section,
+.categories-section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: #050505;
+}
+
+.see-all {
+  font-size: 15px;
+  color: #1877f2;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.categories-section h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #050505;
+}
+
+.games-subtitle {
+  font-size: 13px;
+  color: #65676b;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.category-item {
+  padding: 8px 12px;
+  background-color: #f0f2f5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.category-item:hover {
+  background-color: #e4e6ea;
+}
+
+.category-item span {
+  font-size: 13px;
+  color: #050505;
+  font-weight: 500;
+}
+
+.gaming-notifications-main-content {
+  margin-left: 320px;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.notifications-empty-state {
+  text-align: center;
+  max-width: 400px;
+}
+
+.notifications-illustration {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.illustration-group {
+  opacity: 0.8;
+}
+
+.notifications-empty-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.notifications-empty-text p {
+  font-size: 16px;
+  color: #65676b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .gaming-notifications-sidebar {
+    width: 280px;
+  }
+  
+  .gaming-notifications-main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gaming-notifications-container {
+    flex-direction: column;
+  }
+  
+  .gaming-notifications-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .gaming-notifications-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .notifications-illustration svg {
+    width: 150px;
+    height: 112px;
+  }
+  
+  .notifications-empty-text h2 {
+    font-size: 20px;
+  }
+  
+  .notifications-empty-text p {
+    font-size: 14px;
+  }
+}

@@ -121,7 +121,7 @@ const Games = ({ setCurrentPage }) => {
             <BarChartIcon className="menu-icon" />
             <span>Gaming Activity</span>
           </div>
-          <div className="games-menu-item">
+          <div className="games-menu-item" onClick={() => setCurrentPage && setCurrentPage('gaming-notifications')}>
             <NotificationsIcon className="menu-icon" />
             <span>Notifications</span>
           </div>
