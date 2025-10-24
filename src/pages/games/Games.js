@@ -117,7 +117,7 @@ const Games = ({ setCurrentPage }) => {
             <SportsEsportsIcon className="menu-icon" />
             <span>Play games</span>
           </div>
-          <div className="games-menu-item">
+          <div className="games-menu-item" onClick={() => setCurrentPage && setCurrentPage('gaming-activity')}>
             <BarChartIcon className="menu-icon" />
             <span>Gaming Activity</span>
           </div>

@@ -1,0 +1,51 @@
+<!-- SVG for 4 Pics 1 Word game -->
+<svg width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fourPicsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7931e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4caf50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="url(#fourPicsGrad)" rx="12"/>
+  
+  <!-- Four picture frames -->
+  <rect x="20" y="30" width="60" height="45" fill="white" rx="4"/>
+  <rect x="100" y="30" width="60" height="45" fill="white" rx="4"/>
+  <rect x="20" y="95" width="60" height="45" fill="white" rx="4"/>
+  <rect x="100" y="95" width="60" height="45" fill="white" rx="4"/>
+  
+  <!-- Sample images in frames -->
+  <rect x="25" y="35" width="50" height="35" fill="#e3f2fd" rx="2"/>
+  <circle cx="50" cy="45" r="8" fill="#2196f3"/>
+  <rect x="40" y="55" width="20" height="10" fill="#2196f3" rx="2"/>
+  
+  <rect x="105" y="35" width="50" height="35" fill="#f3e5f5" rx="2"/>
+  <circle cx="130" cy="45" r="8" fill="#9c27b0"/>
+  <rect x="120" y="55" width="20" height="10" fill="#9c27b0" rx="2"/>
+  
+  <rect x="25" y="100" width="50" height="35" fill="#e8f5e8" rx="2"/>
+  <circle cx="50" cy="110" r="8" fill="#4caf50"/>
+  <rect x="40" y="120" width="20" height="10" fill="#4caf50" rx="2"/>
+  
+  <rect x="105" y="100" width="50" height="35" fill="#fff3e0" rx="2"/>
+  <circle cx="130" cy="110" r="8" fill="#ff9800"/>
+  <rect x="120" y="120" width="20" height="10" fill="#ff9800" rx="2"/>
+  
+  <!-- Letter boxes for "WORD" -->
+  <rect x="35" y="150" width="20" height="20" fill="white" stroke="#333" stroke-width="2" rx="2"/>
+  <text x="45" y="164" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">W</text>
+  
+  <rect x="60" y="150" width="20" height="20" fill="white" stroke="#333" stroke-width="2" rx="2"/>
+  <text x="70" y="164" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">O</text>
+  
+  <rect x="85" y="150" width="20" height="20" fill="white" stroke="#333" stroke-width="2" rx="2"/>
+  <text x="95" y="164" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">R</text>
+  
+  <rect x="110" y="150" width="20" height="20" fill="white" stroke="#333" stroke-width="2" rx="2"/>
+  <text x="120" y="164" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">D</text>
+  
+  <!-- TRIVIA & WORD label -->
+  <rect x="30" y="10" width="85" height="15" rx="7" fill="rgba(76,175,80,0.9)"/>
+  <text x="72.5" y="21" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">TRIVIA & WORD</text>
+</svg>
