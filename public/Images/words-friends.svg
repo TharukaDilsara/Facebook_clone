@@ -1,0 +1,44 @@
+<!-- SVG placeholder for Words With Friends game -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wordsWithFriendsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#48dbfb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#wordsWithFriendsGrad)" rx="15"/>
+  
+  <!-- Scrabble-style board -->
+  <rect x="40" y="60" width="120" height="80" fill="#2c5530" stroke="#fff" stroke-width="2" rx="5"/>
+  
+  <!-- Grid lines -->
+  <line x1="60" y1="60" x2="60" y2="140" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="80" y1="60" x2="80" y2="140" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="60" x2="100" y2="140" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="120" y1="60" x2="120" y2="140" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="140" y1="60" x2="140" y2="140" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  
+  <line x1="40" y1="80" x2="160" y2="80" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="40" y1="100" x2="160" y2="100" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="40" y1="120" x2="160" y2="120" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Letter tiles -->
+  <rect x="65" y="95" width="15" height="15" fill="#f4e4bc" stroke="#8b7355" stroke-width="1" rx="2"/>
+  <text x="72.5" y="106" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">W</text>
+  
+  <rect x="85" y="95" width="15" height="15" fill="#f4e4bc" stroke="#8b7355" stroke-width="1" rx="2"/>
+  <text x="92.5" y="106" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">O</text>
+  
+  <rect x="105" y="95" width="15" height="15" fill="#f4e4bc" stroke="#8b7355" stroke-width="1" rx="2"/>
+  <text x="112.5" y="106" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">R</text>
+  
+  <rect x="125" y="95" width="15" height="15" fill="#f4e4bc" stroke="#8b7355" stroke-width="1" rx="2"/>
+  <text x="132.5" y="106" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">D</text>
+  
+  <!-- Special squares -->
+  <rect x="45" y="65" width="10" height="10" fill="#ff6b6b" opacity="0.8" rx="1"/>
+  <rect x="145" y="125" width="10" height="10" fill="#4ecdc4" opacity="0.8" rx="1"/>
+  
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Words With</text>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Friends</text>
+</svg>

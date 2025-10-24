@@ -20,7 +20,7 @@ const Games = ({ setCurrentPage }) => {
     {
       id: 1,
       name: 'Magic Swap Puzzle',
-      image: '/Images/magic-swap.jpg',
+      image: '/Images/magic-swap.svg',
       category: 'Puzzle'
     }
   ];
@@ -29,37 +29,37 @@ const Games = ({ setCurrentPage }) => {
     {
       id: 2,
       name: 'Magic Puzzle',
-      image: '/Images/magic-puzzle.jpg',
+      image: '/Images/magic-puzzle.svg',
       category: 'Puzzle'
     },
     {
       id: 3,
       name: 'JigsawMe',
-      image: '/Images/jigsaw-me.jpg',
+      image: '/Images/jigsaw-me.svg',
       category: 'Puzzle'
     },
     {
       id: 4,
       name: 'HAHA Swap',
-      image: '/Images/haha-swap.jpg',
+      image: '/Images/haha-swap.svg',
       category: 'Puzzle'
     },
     {
       id: 5,
       name: 'AI Avatar Swap',
-      image: '/Images/ai-avatar.jpg',
+      image: '/Images/ai-avatar.svg',
       category: 'Puzzle'
     },
     {
       id: 6,
       name: 'Bubble Shooter',
-      image: '/Images/bubble-shooter.jpg',
+      image: '/Images/bubble-shooter.svg',
       category: 'Puzzle'
     },
     {
       id: 7,
       name: 'Ludo Club',
-      image: '/Images/ludo-club.jpg',
+      image: '/Images/ludo-club.svg',
       category: 'Board'
     }
   ];
@@ -68,21 +68,21 @@ const Games = ({ setCurrentPage }) => {
     {
       id: 8,
       name: 'Candy Crush Saga',
-      image: '/Images/candy-crush.jpg',
+      image: '/Images/candy-crush.svg',
       category: 'Puzzle',
       rating: 4.5
     },
     {
       id: 9,
       name: 'Words With Friends',
-      image: '/Images/words-friends.jpg',
+      image: '/Images/words-friends.svg',
       category: 'Word',
       rating: 4.3
     },
     {
       id: 10,
       name: 'Solitaire',
-      image: '/Images/solitaire.jpg',
+      image: '/Images/solitaire.svg',
       category: 'Card',
       rating: 4.7
     }
@@ -157,9 +157,7 @@ const Games = ({ setCurrentPage }) => {
             {recentlyPlayed.map((game) => (
               <div key={game.id} className="game-card recently-played-card" onClick={() => handleGameClick(game)}>
                 <div className="game-image-container">
-                  <div className="game-image-placeholder purple-gradient">
-                    <span className="game-title">{game.name}</span>
-                  </div>
+                  <img src={game.image} alt={game.name} className="game-image" />
                 </div>
               </div>
             ))}
@@ -173,14 +171,7 @@ const Games = ({ setCurrentPage }) => {
             {moreGames.map((game) => (
               <div key={game.id} className="game-card" onClick={() => handleGameClick(game)}>
                 <div className="game-image-container">
-                  <div className="game-image-placeholder">
-                    {game.id === 2 && <div className="magic-puzzle-bg"></div>}
-                    {game.id === 3 && <div className="jigsaw-bg"></div>}
-                    {game.id === 4 && <div className="haha-swap-bg"></div>}
-                    {game.id === 5 && <div className="ai-avatar-bg"></div>}
-                    {game.id === 6 && <div className="bubble-shooter-bg"></div>}
-                    {game.id === 7 && <div className="ludo-club-bg"></div>}
-                  </div>
+                  <img src={game.image} alt={game.name} className="game-image" />
                 </div>
                 <div className="game-info">
                   <h4>{game.name}</h4>
@@ -198,11 +189,7 @@ const Games = ({ setCurrentPage }) => {
             {topPicks.map((game) => (
               <div key={game.id} className="game-card" onClick={() => handleGameClick(game)}>
                 <div className="game-image-container">
-                  <div className="game-image-placeholder">
-                    {game.id === 8 && <div className="candy-crush-bg"></div>}
-                    {game.id === 9 && <div className="words-friends-bg"></div>}
-                    {game.id === 10 && <div className="solitaire-bg"></div>}
-                  </div>
+                  <img src={game.image} alt={game.name} className="game-image" />
                 </div>
                 <div className="game-info">
                   <h4>{game.name}</h4>

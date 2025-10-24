@@ -1,0 +1,39 @@
+<!-- SVG placeholder for Ludo Club game -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ludoClubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdbb2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c1c3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#ludoClubGrad)" rx="15"/>
+  
+  <!-- Ludo board outline -->
+  <rect x="50" y="50" width="100" height="100" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+  
+  <!-- Board cross pattern -->
+  <rect x="85" y="50" width="30" height="100" fill="#f0f0f0"/>
+  <rect x="50" y="85" width="100" height="30" fill="#f0f0f0"/>
+  
+  <!-- Corner triangular home areas -->
+  <path d="M50 50 L85 50 L85 85 Z" fill="#ff6b6b" opacity="0.8"/>
+  <path d="M115 50 L150 50 L115 85 Z" fill="#4ecdc4" opacity="0.8"/>
+  <path d="M50 115 L85 115 L85 150 Z" fill="#ffe66d" opacity="0.8"/>
+  <path d="M115 115 L150 150 L115 150 Z" fill="#a8e6cf" opacity="0.8"/>
+  
+  <!-- Game pieces -->
+  <circle cx="67" cy="67" r="6" fill="#ff0000"/>
+  <circle cx="133" cy="67" r="6" fill="#00ff88"/>
+  <circle cx="67" cy="133" r="6" fill="#ffd700"/>
+  <circle cx="133" cy="133" r="6" fill="#4a90e2"/>
+  
+  <!-- Dice -->
+  <rect x="160" y="30" width="20" height="20" fill="#fff" stroke="#333" stroke-width="1" rx="3"/>
+  <circle cx="165" cy="35" r="1.5" fill="#333"/>
+  <circle cx="175" cy="35" r="1.5" fill="#333"/>
+  <circle cx="165" cy="45" r="1.5" fill="#333"/>
+  <circle cx="175" cy="45" r="1.5" fill="#333"/>
+  <circle cx="170" cy="40" r="1.5" fill="#333"/>
+  
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Ludo Club</text>
+</svg>

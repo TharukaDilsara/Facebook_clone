@@ -1,0 +1,35 @@
+<!-- SVG placeholder for Candy Crush Saga game -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="candyCrushGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#candyCrushGrad)" rx="15"/>
+  
+  <!-- Candy grid -->
+  <circle cx="70" cy="60" r="15" fill="#ff4757"/>
+  <circle cx="100" cy="60" r="15" fill="#3742fa"/>
+  <circle cx="130" cy="60" r="15" fill="#2ed573"/>
+  
+  <circle cx="70" cy="90" r="15" fill="#ffa502"/>
+  <circle cx="100" cy="90" r="15" fill="#ff4757"/>
+  <circle cx="130" cy="90" r="15" fill="#3742fa"/>
+  
+  <circle cx="70" cy="120" r="15" fill="#2ed573"/>
+  <circle cx="100" cy="120" r="15" fill="#ffa502"/>
+  <circle cx="130" cy="120" r="15" fill="#ff4757"/>
+  
+  <!-- Candy details -->
+  <rect x="65" y="55" width="10" height="10" fill="#fff" opacity="0.7" rx="2"/>
+  <rect x="95" y="55" width="10" height="10" fill="#fff" opacity="0.7" rx="2"/>
+  <rect x="125" y="55" width="10" height="10" fill="#fff" opacity="0.7" rx="2"/>
+  
+  <!-- Sparkle effects -->
+  <polygon points="50,40 52,45 57,45 53,49 55,54 50,51 45,54 47,49 43,45 48,45" fill="#fff" opacity="0.8"/>
+  <polygon points="150,130 152,135 157,135 153,139 155,144 150,141 145,144 147,139 143,135 148,135" fill="#fff" opacity="0.8"/>
+  
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Candy Crush</text>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Saga</text>
+</svg>

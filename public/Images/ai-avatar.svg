@@ -1,0 +1,28 @@
+<!-- SVG placeholder for AI Avatar Swap game -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aiAvatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d299c2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#aiAvatarGrad)" rx="15"/>
+  
+  <!-- AI Robot head -->
+  <rect x="70" y="60" width="60" height="50" fill="#4a90e2" rx="15"/>
+  <circle cx="85" cy="80" r="6" fill="#00ff88"/>
+  <circle cx="115" cy="80" r="6" fill="#00ff88"/>
+  <rect x="92" y="95" width="16" height="6" fill="#00ff88" rx="3"/>
+  
+  <!-- Human avatar -->
+  <circle cx="100" cy="140" r="25" fill="#f4c2a1" stroke="#333" stroke-width="2"/>
+  <circle cx="92" cy="135" r="3" fill="#333"/>
+  <circle cx="108" cy="135" r="3" fill="#333"/>
+  <path d="M90 150 Q100 155 110 150" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Swap arrows -->
+  <path d="M50 100 L35 100 M50 100 L45 95 M50 100 L45 105" stroke="#ff6b35" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M150 100 L165 100 M150 100 L155 95 M150 100 L155 105" stroke="#ff6b35" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">AI Avatar Swap</text>
+</svg>
