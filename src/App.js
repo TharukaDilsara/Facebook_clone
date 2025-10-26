@@ -14,6 +14,7 @@ import GamingActivity from "./pages/games/GamingActivity";
 import OrdersAndPayments from "./pages/orders/OrdersAndPayments";
 import RecurringPayments from "./pages/orders/RecurringPayments";
 import OrdersActivity from "./pages/orders/OrdersActivity";
+import OrdersSettings from "./pages/orders/OrdersSettings";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -46,6 +47,8 @@ function App() {
         return <OrdersActivity setCurrentPage={setCurrentPage} />;
       case 'recurring-payments':
         return <RecurringPayments setCurrentPage={setCurrentPage} />;
+      case 'orders-settings':
+        return <OrdersSettings setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;

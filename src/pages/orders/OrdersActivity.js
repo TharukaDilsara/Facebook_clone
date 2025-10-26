@@ -127,7 +127,7 @@ const OrdersActivity = ({ setCurrentPage }) => {
             <RefreshIcon className="menu-icon" />
             <span>Recurring payments</span>
           </div>
-          <div className="orders-activity-menu-item">
+          <div className="orders-activity-menu-item" onClick={() => setCurrentPage('orders-settings')}>
             <SettingsIcon className="menu-icon" />
             <span>Settings</span>
           </div>
