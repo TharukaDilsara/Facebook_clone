@@ -1,0 +1,148 @@
+.recurring-payments-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recurring-payments-sidebar {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.recurring-payments-header {
+  margin-bottom: 30px;
+}
+
+.recurring-payments-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #050505;
+}
+
+.recurring-payments-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recurring-payments-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.recurring-payments-menu-item:hover {
+  background-color: #f0f2f5;
+}
+
+.recurring-payments-menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+  border: 2px solid #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #65676b;
+}
+
+.recurring-payments-menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.recurring-payments-menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #050505;
+}
+
+.recurring-payments-menu-item.active span {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.recurring-payments-main-content {
+  margin-left: 320px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.recurring-payments-empty-state {
+  text-align: center;
+  max-width: 400px;
+}
+
+.recurring-payments-icon {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.refresh-icon {
+  font-size: 80px;
+  color: #bdbdbd;
+  opacity: 0.8;
+}
+
+.recurring-payments-message h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .recurring-payments-sidebar {
+    width: 280px;
+  }
+  
+  .recurring-payments-main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recurring-payments-container {
+    flex-direction: column;
+  }
+  
+  .recurring-payments-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .recurring-payments-main-content {
+    margin-left: 0;
+    padding: 16px;
+    min-height: 60vh;
+  }
+  
+  .refresh-icon {
+    font-size: 60px;
+  }
+  
+  .recurring-payments-message h2 {
+    font-size: 20px;
+  }
+}

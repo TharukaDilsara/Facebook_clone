@@ -12,7 +12,8 @@ import Games from "./pages/games/Games";
 import GamingNotifications from "./pages/games/GamingNotifications";
 import GamingActivity from "./pages/games/GamingActivity";
 import OrdersAndPayments from "./pages/orders/OrdersAndPayments";
-import PaymentActivity from "./pages/orders/PaymentActivity";
+import RecurringPayments from "./pages/orders/RecurringPayments";
+import OrdersActivity from "./pages/orders/OrdersActivity";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -41,8 +42,10 @@ function App() {
         return <GamingActivity setCurrentPage={setCurrentPage} />;
       case 'orders':
         return <OrdersAndPayments setCurrentPage={setCurrentPage} />;
-      case 'payment-activity':
-        return <PaymentActivity setCurrentPage={setCurrentPage} />;
+      case 'orders-activity':
+        return <OrdersActivity setCurrentPage={setCurrentPage} />;
+      case 'recurring-payments':
+        return <RecurringPayments setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
