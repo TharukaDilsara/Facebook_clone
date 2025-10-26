@@ -1,0 +1,300 @@
+.meta-pay-support-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.meta-pay-support-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.support-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e4e6ea;
+  background-color: white;
+}
+
+.support-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0;
+}
+
+.close-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e4e6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #d8dadf;
+}
+
+.close-button svg {
+  font-size: 20px;
+  color: #65676b;
+}
+
+.support-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.support-main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  border-right: 1px solid #e4e6ea;
+}
+
+.support-main h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0 0 24px 0;
+  line-height: 1.3;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e4e6ea;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-item:hover {
+  background-color: #f8f9fa;
+  margin: 0 -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 16px;
+  color: #050505;
+  font-weight: 500;
+}
+
+.product-arrow {
+  color: #65676b;
+  font-size: 20px;
+}
+
+.support-sidebar {
+  width: 350px;
+  padding: 24px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+.common-questions-section {
+  margin-bottom: 32px;
+}
+
+.common-questions-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.question-item {
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 8px 0;
+}
+
+.question-item:hover {
+  color: #1877f2;
+}
+
+.question-item span {
+  font-size: 15px;
+  color: #050505;
+  line-height: 1.4;
+}
+
+.question-item:hover span {
+  color: #1877f2;
+}
+
+.more-support-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.support-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.support-option:hover {
+  color: #1877f2;
+}
+
+.support-icon {
+  font-size: 20px;
+  color: #65676b;
+}
+
+.support-option:hover .support-icon {
+  color: #1877f2;
+}
+
+.support-option span {
+  font-size: 15px;
+  color: #050505;
+  font-weight: 500;
+}
+
+.support-option:hover span {
+  color: #1877f2;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .meta-pay-support-modal {
+    width: 95%;
+    height: 85vh;
+  }
+  
+  .support-sidebar {
+    width: 300px;
+  }
+  
+  .support-content {
+    flex-direction: column;
+  }
+  
+  .support-main {
+    border-right: none;
+    border-bottom: 1px solid #e4e6ea;
+    max-height: 60%;
+  }
+  
+  .support-sidebar {
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e4e6ea;
+  }
+}
+
+@media (max-width: 768px) {
+  .meta-pay-support-modal {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .support-header {
+    padding: 16px 20px;
+  }
+  
+  .support-header h1 {
+    font-size: 20px;
+  }
+  
+  .support-main {
+    padding: 20px;
+  }
+  
+  .support-main h2 {
+    font-size: 18px;
+  }
+  
+  .support-sidebar {
+    padding: 20px;
+  }
+  
+  .product-item:hover {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Animation */
+.meta-pay-support-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.meta-pay-support-modal {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

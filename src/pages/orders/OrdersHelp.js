@@ -10,10 +10,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import ListIcon from '@mui/icons-material/List';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import MetaPaySupport from '../../components/MetaPaySupport/MetaPaySupport';
 
 const OrdersHelp = ({ setCurrentPage }) => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [showProductDropdown, setShowProductDropdown] = useState(false);
+  const [showMetaPaySupport, setShowMetaPaySupport] = useState(false);
 
   const products = [
     'Facebook Pay',
@@ -175,12 +177,18 @@ const OrdersHelp = ({ setCurrentPage }) => {
             <span>Browse all help topics</span>
           </div>
           
-          <div className="support-option">
+          <div className="support-option" onClick={() => setShowMetaPaySupport(true)}>
             <ContactSupportIcon className="support-icon" />
             <span>Contact us</span>
           </div>
         </div>
       </div>
+
+      {/* Meta Pay Support Modal */}
+      <MetaPaySupport 
+        isOpen={showMetaPaySupport} 
+        onClose={() => setShowMetaPaySupport(false)} 
+      />
     </div>
   );
 };
