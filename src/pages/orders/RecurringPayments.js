@@ -33,7 +33,7 @@ const RecurringPayments = ({ setCurrentPage }) => {
             <SettingsIcon className="menu-icon" />
             <span>Settings</span>
           </div>
-          <div className="recurring-payments-menu-item">
+          <div className="recurring-payments-menu-item" onClick={() => setCurrentPage('orders-help')}>
             <HelpOutlineIcon className="menu-icon" />
             <span>Help</span>
           </div>

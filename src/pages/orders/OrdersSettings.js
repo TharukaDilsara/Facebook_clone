@@ -55,7 +55,7 @@ const OrdersSettings = ({ setCurrentPage }) => {
             <SettingsIcon className="menu-icon" />
             <span>Settings</span>
           </div>
-          <div className="orders-settings-menu-item">
+          <div className="orders-settings-menu-item" onClick={() => setCurrentPage('orders-help')}>
             <HelpOutlineIcon className="menu-icon" />
             <span>Help</span>
           </div>

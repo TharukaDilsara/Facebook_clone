@@ -1,0 +1,383 @@
+.orders-help-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.orders-help-sidebar {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.orders-help-header {
+  margin-bottom: 30px;
+}
+
+.orders-help-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #050505;
+}
+
+.orders-help-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orders-help-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.orders-help-menu-item:hover {
+  background-color: #f0f2f5;
+}
+
+.orders-help-menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+  border: 2px solid #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #65676b;
+}
+
+.orders-help-menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.orders-help-menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #050505;
+}
+
+.orders-help-menu-item.active span {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.orders-help-main-content {
+  margin-left: 320px;
+  flex: 1;
+  padding: 24px;
+  max-width: 600px;
+}
+
+.payments-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.payments-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0 0 24px 0;
+}
+
+.filter-section {
+  margin-bottom: 40px;
+}
+
+.product-filter {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.filter-dropdown-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-dropdown-trigger:hover {
+  background-color: #e4e6ea;
+}
+
+.filter-dropdown-trigger span {
+  font-size: 15px;
+  color: #65676b;
+}
+
+.dropdown-arrow {
+  color: #65676b;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.filter-dropdown-trigger.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.product-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.product-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-option:hover {
+  background-color: #f8f9fa;
+}
+
+.product-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #1877f2;
+}
+
+.product-option span {
+  font-size: 15px;
+  color: #050505;
+}
+
+.filter-description {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.no-activity-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.no-activity-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.document-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #e4e6ea;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.document-header {
+  width: 40px;
+  height: 6px;
+  background-color: #1877f2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.document-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.document-line {
+  height: 3px;
+  background-color: #bcc0c4;
+  border-radius: 2px;
+}
+
+.document-line:nth-child(1) { width: 80%; }
+.document-line:nth-child(2) { width: 60%; }
+.document-line:nth-child(3) { width: 90%; }
+.document-line:nth-child(4) { width: 45%; }
+
+.no-activity-section h3 {
+  font-size: 20px;
+  color: #65676b;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.no-activity-section p {
+  font-size: 16px;
+  color: #8a8d91;
+  margin: 0;
+}
+
+.help-right-sidebar {
+  width: 350px;
+  padding: 24px 20px;
+  background-color: white;
+  border-left: 1px solid #e4e6ea;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.common-questions-section {
+  margin-bottom: 32px;
+}
+
+.common-questions-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.question-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e4e6ea;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.question-item:last-child {
+  border-bottom: none;
+}
+
+.question-item:hover {
+  color: #1877f2;
+}
+
+.question-item span {
+  font-size: 15px;
+  color: #050505;
+  line-height: 1.4;
+}
+
+.question-item:hover span {
+  color: #1877f2;
+}
+
+.support-options-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.support-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.support-option:hover {
+  color: #1877f2;
+}
+
+.support-icon {
+  font-size: 20px;
+  color: #65676b;
+}
+
+.support-option:hover .support-icon {
+  color: #1877f2;
+}
+
+.support-option span {
+  font-size: 15px;
+  color: #050505;
+  font-weight: 500;
+}
+
+.support-option:hover span {
+  color: #1877f2;
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+  .help-right-sidebar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .orders-help-sidebar {
+    width: 280px;
+  }
+  
+  .orders-help-main-content {
+    margin-left: 280px;
+  }
+  
+  .help-right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-help-container {
+    flex-direction: column;
+  }
+  
+  .orders-help-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .orders-help-main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .help-right-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

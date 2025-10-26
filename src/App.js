@@ -15,6 +15,7 @@ import OrdersAndPayments from "./pages/orders/OrdersAndPayments";
 import RecurringPayments from "./pages/orders/RecurringPayments";
 import OrdersActivity from "./pages/orders/OrdersActivity";
 import OrdersSettings from "./pages/orders/OrdersSettings";
+import OrdersHelp from "./pages/orders/OrdersHelp";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -49,6 +50,8 @@ function App() {
         return <RecurringPayments setCurrentPage={setCurrentPage} />;
       case 'orders-settings':
         return <OrdersSettings setCurrentPage={setCurrentPage} />;
+      case 'orders-help':
+        return <OrdersHelp setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;

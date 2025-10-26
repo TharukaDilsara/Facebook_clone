@@ -34,7 +34,7 @@ const OrdersAndPayments = ({ setCurrentPage }) => {
             <SettingsIcon className="menu-icon" />
             <span>Settings</span>
           </div>
-          <div className="orders-payments-menu-item">
+          <div className="orders-payments-menu-item" onClick={() => setCurrentPage('orders-help')}>
             <HelpOutlineIcon className="menu-icon" />
             <span>Help</span>
           </div>
