@@ -22,7 +22,7 @@ const OrdersAndPayments = ({ setCurrentPage }) => {
             <HomeIcon className="menu-icon" />
             <span>Home</span>
           </div>
-          <div className="orders-payments-menu-item">
+          <div className="orders-payments-menu-item" onClick={() => setCurrentPage && setCurrentPage('payment-activity')}>
             <ReceiptIcon className="menu-icon" />
             <span>Activity</span>
           </div>

@@ -12,6 +12,7 @@ import Games from "./pages/games/Games";
 import GamingNotifications from "./pages/games/GamingNotifications";
 import GamingActivity from "./pages/games/GamingActivity";
 import OrdersAndPayments from "./pages/orders/OrdersAndPayments";
+import PaymentActivity from "./pages/orders/PaymentActivity";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -40,6 +41,8 @@ function App() {
         return <GamingActivity setCurrentPage={setCurrentPage} />;
       case 'orders':
         return <OrdersAndPayments setCurrentPage={setCurrentPage} />;
+      case 'payment-activity':
+        return <PaymentActivity setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
