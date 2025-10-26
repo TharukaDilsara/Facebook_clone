@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './metaPaySupport.css';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListIcon from '@mui/icons-material/List';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 
 const MetaPaySupport = ({ isOpen, onClose }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -56,12 +54,7 @@ const MetaPaySupport = ({ isOpen, onClose }) => {
     }
   ];
 
-  const commonQuestions = [
-    "Why did my payment in a Facebook message fail?",
-    "Why is my Facebook message payment pending?",
-    "Payment methods for Meta Pay",
-    "Can I cancel a payment that I sent in a Facebook message?"
-  ];
+
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -84,7 +77,7 @@ const MetaPaySupport = ({ isOpen, onClose }) => {
 
         {/* Main Content */}
         <div className="support-content">
-          {/* Left Side - Product Selection */}
+          {/* Product Selection */}
           <div className="support-main">
             <h2>Select a product you need help with.</h2>
             
@@ -101,34 +94,6 @@ const MetaPaySupport = ({ isOpen, onClose }) => {
                   <ChevronRightIcon className="product-arrow" />
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Right Side - Common Questions */}
-          <div className="support-sidebar">
-            <div className="common-questions-section">
-              <h3>Common questions</h3>
-              <div className="questions-list">
-                {commonQuestions.map((question, index) => (
-                  <div key={index} className="question-item">
-                    <span>{question}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="more-support-section">
-              <h3>More support options</h3>
-              
-              <div className="support-option">
-                <ListIcon className="support-icon" />
-                <span>Browse all help topics</span>
-              </div>
-              
-              <div className="support-option">
-                <ContactSupportIcon className="support-icon" />
-                <span>Contact us</span>
-              </div>
             </div>
           </div>
         </div>

@@ -73,7 +73,8 @@
   flex: 1;
   padding: 24px;
   overflow-y: auto;
-  border-right: 1px solid #e4e6ea;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .support-main h2 {
@@ -125,114 +126,13 @@
   font-size: 20px;
 }
 
-.support-sidebar {
-  width: 350px;
-  padding: 24px;
-  background-color: #f8f9fa;
-  overflow-y: auto;
-}
 
-.common-questions-section {
-  margin-bottom: 32px;
-}
-
-.common-questions-section h3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #050505;
-  margin: 0 0 16px 0;
-}
-
-.questions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.question-item {
-  cursor: pointer;
-  transition: color 0.2s;
-  padding: 8px 0;
-}
-
-.question-item:hover {
-  color: #1877f2;
-}
-
-.question-item span {
-  font-size: 15px;
-  color: #050505;
-  line-height: 1.4;
-}
-
-.question-item:hover span {
-  color: #1877f2;
-}
-
-.more-support-section h3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #050505;
-  margin: 0 0 16px 0;
-}
-
-.support-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 0;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.support-option:hover {
-  color: #1877f2;
-}
-
-.support-icon {
-  font-size: 20px;
-  color: #65676b;
-}
-
-.support-option:hover .support-icon {
-  color: #1877f2;
-}
-
-.support-option span {
-  font-size: 15px;
-  color: #050505;
-  font-weight: 500;
-}
-
-.support-option:hover span {
-  color: #1877f2;
-}
 
 /* Responsive design */
 @media (max-width: 1024px) {
   .meta-pay-support-modal {
     width: 95%;
     height: 85vh;
-  }
-  
-  .support-sidebar {
-    width: 300px;
-  }
-  
-  .support-content {
-    flex-direction: column;
-  }
-  
-  .support-main {
-    border-right: none;
-    border-bottom: 1px solid #e4e6ea;
-    max-height: 60%;
-  }
-  
-  .support-sidebar {
-    width: 100%;
-    background-color: white;
-    border-top: 1px solid #e4e6ea;
   }
 }
 
@@ -257,10 +157,6 @@
   
   .support-main h2 {
     font-size: 18px;
-  }
-  
-  .support-sidebar {
-    padding: 20px;
   }
   
   .product-item:hover {
