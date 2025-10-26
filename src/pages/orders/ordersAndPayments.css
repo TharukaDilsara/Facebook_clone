@@ -1,0 +1,245 @@
+.orders-payments-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.orders-payments-sidebar {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.orders-payments-header {
+  margin-bottom: 30px;
+}
+
+.orders-payments-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #050505;
+}
+
+.orders-payments-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orders-payments-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.orders-payments-menu-item:hover {
+  background-color: #f0f2f5;
+}
+
+.orders-payments-menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #65676b;
+}
+
+.orders-payments-menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.orders-payments-menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #050505;
+}
+
+.orders-payments-menu-item.active span {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.orders-payments-main-content {
+  margin-left: 320px;
+  flex: 1;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.balances-section {
+  margin-bottom: 30px;
+}
+
+.balances-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0 0 16px 0;
+}
+
+.balance-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e6ea;
+}
+
+.balance-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.balance-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #ff9500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.balance-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0;
+}
+
+.balance-amount {
+  display: flex;
+  align-items: center;
+}
+
+.balance-amount span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #050505;
+}
+
+.activity-section {
+  margin-bottom: 30px;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.activity-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0;
+}
+
+.see-all-link {
+  font-size: 15px;
+  color: #1877f2;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.see-all-link:hover {
+  text-decoration: underline;
+}
+
+.activity-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e6ea;
+  overflow: hidden;
+}
+
+.no-activity-card {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.no-activity-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #050505;
+  margin: 0 0 8px 0;
+}
+
+.no-activity-content p {
+  font-size: 15px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .orders-payments-sidebar {
+    width: 280px;
+  }
+  
+  .orders-payments-main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-payments-container {
+    flex-direction: column;
+  }
+  
+  .orders-payments-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .orders-payments-main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .balance-card {
+    padding: 16px;
+  }
+  
+  .no-activity-card {
+    padding: 30px 16px;
+  }
+  
+  .activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

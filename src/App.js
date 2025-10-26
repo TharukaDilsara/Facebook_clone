@@ -11,6 +11,7 @@ import Feeds from "./pages/feeds/Feeds";
 import Games from "./pages/games/Games";
 import GamingNotifications from "./pages/games/GamingNotifications";
 import GamingActivity from "./pages/games/GamingActivity";
+import OrdersAndPayments from "./pages/orders/OrdersAndPayments";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -37,6 +38,8 @@ function App() {
         return <GamingNotifications setCurrentPage={setCurrentPage} />;
       case 'gaming-activity':
         return <GamingActivity setCurrentPage={setCurrentPage} />;
+      case 'orders':
+        return <OrdersAndPayments setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
