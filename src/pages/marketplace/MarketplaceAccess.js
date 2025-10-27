@@ -95,51 +95,62 @@ const MarketplaceAccess = ({ setCurrentPage }) => {
 
         {/* Access Status Card */}
         <div className="access-status-card">
-          {/* Marketplace Store Illustration */}
-          <div className="marketplace-illustration">
-            <svg width="200" height="140" viewBox="0 0 200 140" fill="none">
-              {/* Background gradient */}
-              <defs>
-                <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#e3f2fd" />
-                  <stop offset="100%" stopColor="#bbdefb" />
-                </linearGradient>
-              </defs>
-              <rect width="200" height="140" fill="url(#bgGradient)" rx="8" />
-              
-              {/* Floating diamond shapes */}
-              <g opacity="0.6">
-                <polygon points="30,25 40,35 30,45 20,35" fill="#4fc3f7" />
-                <polygon points="170,30 180,40 170,50 160,40" fill="#29b6f6" />
-                <polygon points="45,80 55,90 45,100 35,90" fill="#03a9f4" />
-                <polygon points="155,85 165,95 155,105 145,95" fill="#0288d1" />
-                <polygon points="25,110 35,120 25,130 15,120" fill="#0277bd" />
-                <polygon points="175,110 185,120 175,130 165,120" fill="#01579b" />
-              </g>
-              
-              {/* Central storefront */}
-              <g transform="translate(75, 40)">
-                {/* Store building */}
-                <rect x="0" y="20" width="50" height="40" fill="#1976d2" rx="4" />
-                <rect x="0" y="15" width="50" height="10" fill="#2196f3" rx="2" />
-                
-                {/* Store entrance */}
-                <rect x="15" y="35" width="20" height="25" fill="white" rx="2" />
-                <rect x="20" y="40" width="4" height="8" fill="#1976d2" />
-                <rect x="26" y="40" width="4" height="8" fill="#1976d2" />
-                <rect x="20" y="50" width="10" height="2" fill="#1976d2" />
-                
-                {/* Store sign */}
-                <rect x="5" y="8" width="40" height="12" fill="#0d47a1" rx="2" />
-                <circle cx="25" cy="14" r="3" fill="white" />
-              </g>
-            </svg>
-          </div>
-
           {/* Access Status Text */}
           <div className="access-status-content">
             <h3>You have full access to Marketplace</h3>
             <p>You can sell items and message sellers on Marketplace.</p>
+          </div>
+        </div>
+
+        {/* Resources and Tools Section */}
+        <div className="resources-section">
+          <h3>Resources and tools</h3>
+          
+          <div className="resource-item">
+            <div className="resource-icon">
+              <SellIcon className="icon" />
+            </div>
+            <div className="resource-content">
+              <h4>Your listings</h4>
+              <p>See your current and past listings.</p>
+            </div>
+            <ChevronRightIcon className="chevron" />
+          </div>
+
+          <div className="resource-item">
+            <div className="resource-icon">
+              <StorefrontIcon className="icon" />
+            </div>
+            <div className="resource-content">
+              <h4>Commerce Policies</h4>
+              <p>Learn more about our rules and what's allowed on Marketplace.</p>
+            </div>
+            <ChevronRightIcon className="chevron" />
+          </div>
+        </div>
+
+        {/* More About Profile Section */}
+        <div className="profile-info-section">
+          <h3>More about your profile</h3>
+          
+          <div className="profile-item">
+            <div className="profile-icon">
+              <SecurityIcon className="icon" />
+            </div>
+            <div className="profile-content">
+              <h4>Profile status</h4>
+              <p>Review your profile health</p>
+            </div>
+            <ChevronRightIcon className="chevron" />
+          </div>
+        </div>
+
+        {/* Feedback Section */}
+        <div className="feedback-section">
+          <h4>Is this information helpful for you?</h4>
+          <div className="feedback-buttons">
+            <button className="feedback-btn no">No</button>
+            <button className="feedback-btn yes">Yes</button>
           </div>
         </div>
       </div>
