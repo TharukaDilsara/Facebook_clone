@@ -5,6 +5,7 @@ import VideoPage from "./components/Navigation/VideoPage/VideoPage";
 import Marketplace from "./components/Navigation/Marketplace/Marketplace";
 import MarketplacePage from "./pages/marketplace/MarketplacePage";
 import MarketplaceNotifications from "./pages/marketplace/MarketplaceNotifications";
+import MarketplaceInbox from "./pages/marketplace/MarketplaceInbox";
 import Groups from "./pages/groups/Groups";
 import Memories from "./pages/memories/Memories";
 import Events from "./pages/events/Events";
@@ -30,6 +31,8 @@ function App() {
         return <MarketplacePage setCurrentPage={setCurrentPage} />;
       case 'marketplace-notifications':
         return <MarketplaceNotifications setCurrentPage={setCurrentPage} />;
+      case 'marketplace-inbox':
+        return <MarketplaceInbox setCurrentPage={setCurrentPage} />;
       case 'groups':
         return <Groups isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'memories':

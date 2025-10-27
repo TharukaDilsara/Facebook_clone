@@ -46,7 +46,7 @@ const MarketplaceNotifications = ({ setCurrentPage }) => {
             <NotificationsIcon className="menu-icon" />
             <span>Notifications</span>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setCurrentPage('marketplace-inbox')}>
             <InboxIcon className="menu-icon" />
             <span>Inbox</span>
           </div>
