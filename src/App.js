@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import NavBar from "./components/Navigation/NavBar";
 import VideoPage from "./components/Navigation/VideoPage/VideoPage";
 import Marketplace from "./components/Navigation/Marketplace/Marketplace";
+import MarketplacePage from "./pages/marketplace/MarketplacePage";
 import Groups from "./pages/groups/Groups";
 import Memories from "./pages/memories/Memories";
 import Events from "./pages/events/Events";
@@ -25,7 +26,7 @@ function App() {
       case 'video':
         return <VideoPage isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'marketplace':
-        return <Marketplace isOpen={true} onClose={() => setCurrentPage('home')} />;
+        return <MarketplacePage setCurrentPage={setCurrentPage} />;
       case 'groups':
         return <Groups isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'memories':
