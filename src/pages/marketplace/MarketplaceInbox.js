@@ -14,7 +14,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const MarketplaceInbox = ({ setCurrentPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeTab, setActiveTab] = useState('selling');
+  const [activeTab, setActiveTab] = useState('buying');
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
@@ -25,6 +25,64 @@ const MarketplaceInbox = ({ setCurrentPage }) => {
     'Dispatched',
     'Cash on delivery',
     'Completed'
+  ];
+
+  // Sample buying conversations data
+  const buyingConversations = [
+    {
+      id: 1,
+      sellerName: 'Vidul',
+      productTitle: 'iPhone 11 Pro',
+      subtitle: 'Listings similar to "iPhone 11 Pro"',
+      date: '05/08/2024',
+      avatar: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=50&h=50&fit=crop&crop=face',
+      productImage: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=60&h=60&fit=crop'
+    },
+    {
+      id: 2,
+      sellerName: 'Gaurawa',
+      productTitle: '',
+      subtitle: 'View similar listings',
+      date: '04/08/2024',
+      avatar: null,
+      productImage: null
+    },
+    {
+      id: 3,
+      sellerName: 'Hirun',
+      productTitle: 'iPhone 11 Pro',
+      subtitle: 'Message unavailable',
+      date: '04/08/2024',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face',
+      productImage: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=60&h=60&fit=crop'
+    },
+    {
+      id: 4,
+      sellerName: 'Sanidu',
+      productTitle: 'iPhone 11pro',
+      subtitle: 'Listings similar to "iPhone 11pro"',
+      date: '04/08/2024',
+      avatar: 'https://images.unsplash.com/photo-1539571696285-e7d0710d0fb0?w=50&h=50&fit=crop&crop=face',
+      productImage: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=60&h=60&fit=crop'
+    },
+    {
+      id: 5,
+      sellerName: 'Senura',
+      productTitle: '',
+      subtitle: 'View similar listings',
+      date: '03/08/2024',
+      avatar: null,
+      productImage: null
+    },
+    {
+      id: 6,
+      sellerName: 'Mhd',
+      productTitle: 'iPhone 11pro 256gb',
+      subtitle: 'Full set box d',
+      date: '01/08/2024',
+      avatar: 'https://images.unsplash.com/photo-1507491677315-91e80ec5a89e?w=50&h=50&fit=crop&crop=face',
+      productImage: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=60&h=60&fit=crop'
+    }
   ];
 
   return (
@@ -131,19 +189,54 @@ const MarketplaceInbox = ({ setCurrentPage }) => {
           </div>
         </div>
 
-        {/* Empty State */}
-        <div className="inbox-empty-state">
-          <div className="paper-plane-icon">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
-              <path 
-                d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" 
-                fill="#9ca3af" 
-              />
-              <circle cx="17" cy="12" r="2" fill="#3b82f6" />
-            </svg>
+        {/* Content based on active tab */}
+        {activeTab === 'selling' ? (
+          /* Empty State for Selling */
+          <div className="inbox-empty-state">
+            <div className="paper-plane-icon">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                <path 
+                  d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" 
+                  fill="#9ca3af" 
+                />
+                <circle cx="17" cy="12" r="2" fill="#3b82f6" />
+              </svg>
+            </div>
+            <h3>No chats</h3>
           </div>
-          <h3>No chats</h3>
-        </div>
+        ) : (
+          /* Conversations List for Buying */
+          <div className="conversations-list">
+            {buyingConversations.map((conversation) => (
+              <div key={conversation.id} className="conversation-item">
+                <div className="conversation-avatar">
+                  {conversation.productImage ? (
+                    <img src={conversation.productImage} alt="Product" />
+                  ) : (
+                    <div className="default-avatar">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#e4e6ea"/>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#65676b"/>
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                <div className="conversation-content">
+                  <div className="conversation-header">
+                    <h4 className="seller-name">
+                      {conversation.sellerName}
+                      {conversation.productTitle && (
+                        <span className="product-title"> · {conversation.productTitle}</span>
+                      )}
+                    </h4>
+                    <span className="conversation-date">{conversation.date}</span>
+                  </div>
+                  <p className="conversation-subtitle">{conversation.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
