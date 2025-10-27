@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './marketplace.css';
+import './marketplaceNotifications.css';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SearchIcon from '@mui/icons-material/Search';
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -12,59 +12,13 @@ import AddIcon from '@mui/icons-material/Add';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const MarketplacePage = ({ setCurrentPage }) => {
+const MarketplaceNotifications = ({ setCurrentPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Sample marketplace items based on your screenshot
-  const todaysPicks = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1574755393849-623942496936?w=400&h=300&fit=crop',
-      price: 'LKR48,000',
-      title: 'Iphone Xs 256GB',
-      location: 'Homagama, Sri Lanka'
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
-      price: 'LKR375',
-      title: 'Used Books for Sale - සරල සිංහල කථන',
-      location: 'Homagama, Sri Lanka'
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop',
-      price: 'LKR27',
-      title: 'Car for Sale',
-      location: 'Homagama, Sri Lanka'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop',
-      price: 'LKR145,000',
-      title: 'Wooden Furniture Set',
-      location: 'Homagama, Sri Lanka'
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
-      price: 'LKR85,000',
-      title: 'Gaming Chair - Professional',
-      location: 'Homagama, Sri Lanka'
-    },
-    {
-      id: 6,
-      image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop',
-      price: 'LKR275,000',
-      title: 'Honda Motorcycle CB150R',
-      location: 'Homagama, Sri Lanka'
-    }
-  ];
-
   return (
-    <div className="marketplace-page">
+    <div className="marketplace-notifications-page">
       {/* Left Sidebar */}
-      <div className="marketplace-sidebar">
+      <div className="marketplace-notifications-sidebar">
         <div className="marketplace-header">
           <h1>Marketplace</h1>
           <SettingsIcon className="settings-icon" />
@@ -84,11 +38,11 @@ const MarketplacePage = ({ setCurrentPage }) => {
 
         {/* Menu Items */}
         <div className="marketplace-menu">
-          <div className="menu-item active">
+          <div className="menu-item" onClick={() => setCurrentPage('marketplace')}>
             <StorefrontIcon className="menu-icon" />
             <span>Browse all</span>
           </div>
-          <div className="menu-item" onClick={() => setCurrentPage('marketplace-notifications')}>
+          <div className="menu-item active">
             <NotificationsIcon className="menu-icon" />
             <span>Notifications</span>
           </div>
@@ -132,34 +86,29 @@ const MarketplacePage = ({ setCurrentPage }) => {
       </div>
 
       {/* Main Content */}
-      <div className="marketplace-main">
-        {/* Header with Location */}
-        <div className="main-header">
-          <h2>Today's picks</h2>
-          <div className="location-badge">
-            <LocationOnIcon className="badge-location-icon" />
-            <span>Homagama • 1 km</span>
-          </div>
+      <div className="marketplace-notifications-main">
+        <div className="notifications-header">
+          <h2>Notifications</h2>
         </div>
 
-        {/* Products Grid */}
-        <div className="products-grid">
-          {todaysPicks.map((item) => (
-            <div key={item.id} className="product-card">
-              <div className="product-image">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <div className="product-info">
-                <div className="product-price">{item.price}</div>
-                <div className="product-title">{item.title}</div>
-                <div className="product-location">{item.location}</div>
-              </div>
-            </div>
-          ))}
+        {/* Empty State */}
+        <div className="notifications-empty-state">
+          <div className="notification-bell-icon">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+              {/* Bell shape */}
+              <path 
+                d="M12 2C13.1 2 14 2.9 14 4C16.8 4.7 19 7.2 19 10.5V16L21 18V19H3V18L5 16V10.5C5 7.2 7.2 4.7 10 4C10 2.9 10.9 2 12 2Z" 
+                fill="#9ca3af" 
+              />
+              {/* Bell clapper */}
+              <circle cx="12" cy="21" r="2" fill="#3b82f6" />
+            </svg>
+          </div>
+          <h3>You have no notifications.</h3>
         </div>
       </div>
     </div>
   );
 };
 
-export default MarketplacePage;
+export default MarketplaceNotifications;
