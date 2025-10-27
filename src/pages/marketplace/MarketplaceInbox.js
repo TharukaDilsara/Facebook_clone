@@ -120,7 +120,7 @@ const MarketplaceInbox = ({ setCurrentPage }) => {
             <InboxIcon className="menu-icon" />
             <span>Inbox</span>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setCurrentPage('marketplace-access')}>
             <SecurityIcon className="menu-icon" />
             <span>Marketplace access</span>
           </div>
