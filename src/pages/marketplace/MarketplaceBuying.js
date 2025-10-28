@@ -130,6 +130,19 @@ const MarketplaceBuying = ({ setCurrentPage }) => {
             </div>
             <p className="empty-state-message">You do not have any saved items.</p>
           </div>
+        ) : selectedTab === 'alerts' ? (
+          /* Empty State for Your Alerts */
+          <div className="empty-state">
+            <div className="empty-state-icon">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <path d="M40 10C35 10 31 14 31 19V25C31 30 28 34 24 36C22 37 21 39 21 41V44C21 46 23 48 25 48H55C57 48 59 46 59 44V41C59 39 58 37 56 36C52 34 49 30 49 25V19C49 14 45 10 40 10Z" fill="#8A8D91"/>
+                <path d="M34 52C34 55 37 58 40 58C43 58 46 55 46 52H34Z" fill="#8A8D91"/>
+                <circle cx="52" cy="20" r="4" fill="#1877F2"/>
+              </svg>
+            </div>
+            <h3 className="empty-state-title">Your alerts</h3>
+            <p className="empty-state-message">Your search alerts will be shown here.</p>
+          </div>
         ) : (
           /* Empty State for other tabs */
           <div className="empty-state">
