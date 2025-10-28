@@ -128,7 +128,7 @@ const MarketplaceBuying = ({ setCurrentPage }) => {
           <h3>Marketplace profile</h3>
           <div className="profile-info">
             <div className="profile-avatar">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Profile" />
+              <img src="/images/1.png" alt="Tharuka Dilsara" />
             </div>
             <div className="profile-details">
               <h4>Tharuka Dilsara</h4>
