@@ -105,20 +105,42 @@ const MarketplaceBuying = ({ setCurrentPage }) => {
 
       {/* Main Content */}
       <div className="buying-main-content">
-        {/* Listings Grid */}
-        <div className="listings-grid">
-          {listings.map((listing) => (
-            <div key={listing.id} className="listing-card">
-              <div className="listing-image">
-                <img src={listing.image} alt={listing.title} />
+        {selectedTab === 'recent' ? (
+          /* Listings Grid for Recent Activity */
+          <div className="listings-grid">
+            {listings.map((listing) => (
+              <div key={listing.id} className="listing-card">
+                <div className="listing-image">
+                  <img src={listing.image} alt={listing.title} />
+                </div>
+                <div className="listing-info">
+                  <h3>{listing.title}</h3>
+                  <p className="listing-price">{listing.price}</p>
+                </div>
               </div>
-              <div className="listing-info">
-                <h3>{listing.title}</h3>
-                <p className="listing-price">{listing.price}</p>
-              </div>
+            ))}
+          </div>
+        ) : selectedTab === 'saved' ? (
+          /* Empty State for Saved Items */
+          <div className="empty-state">
+            <div className="empty-state-icon">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M12 8L52 28L12 48V32L32 28L12 24V8Z" fill="#65676B"/>
+              </svg>
             </div>
-          ))}
-        </div>
+            <p className="empty-state-message">You do not have any saved items.</p>
+          </div>
+        ) : (
+          /* Empty State for other tabs */
+          <div className="empty-state">
+            <div className="empty-state-icon">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M12 8L52 28L12 48V32L32 28L12 24V8Z" fill="#65676B"/>
+              </svg>
+            </div>
+            <p className="empty-state-message">No items to show.</p>
+          </div>
+        )}
       </div>
 
       {/* Right Sidebar */}
