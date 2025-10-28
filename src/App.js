@@ -7,6 +7,7 @@ import MarketplacePage from "./pages/marketplace/MarketplacePage";
 import MarketplaceNotifications from "./pages/marketplace/MarketplaceNotifications";
 import MarketplaceInbox from "./pages/marketplace/MarketplaceInbox";
 import MarketplaceAccess from "./pages/marketplace/MarketplaceAccess";
+import MarketplaceBuying from "./pages/marketplace/MarketplaceBuying";
 import Groups from "./pages/groups/Groups";
 import Memories from "./pages/memories/Memories";
 import Events from "./pages/events/Events";
@@ -36,6 +37,8 @@ function App() {
         return <MarketplaceInbox setCurrentPage={setCurrentPage} />;
       case 'marketplace-access':
         return <MarketplaceAccess setCurrentPage={setCurrentPage} />;
+      case 'marketplace-buying':
+        return <MarketplaceBuying setCurrentPage={setCurrentPage} />;
       case 'groups':
         return <Groups isOpen={true} onClose={() => setCurrentPage('home')} />;
       case 'memories':

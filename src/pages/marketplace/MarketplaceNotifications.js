@@ -54,7 +54,7 @@ const MarketplaceNotifications = ({ setCurrentPage }) => {
             <SecurityIcon className="menu-icon" />
             <span>Marketplace access</span>
           </div>
-          <div className="menu-item">
+          <div className="menu-item" onClick={() => setCurrentPage('marketplace-buying')}>
             <ShoppingBagIcon className="menu-icon" />
             <span>Buying</span>
             <ChevronRightIcon className="chevron-icon" />

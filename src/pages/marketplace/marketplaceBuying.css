@@ -1,0 +1,402 @@
+.marketplace-buying-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Left Sidebar */
+.buying-sidebar {
+  width: 360px;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e4e6ea;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.buying-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  color: #1877f2;
+  cursor: pointer;
+  margin-right: 12px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.back-icon:hover {
+  background-color: #e7f3ff;
+}
+
+.buying-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.marketplace-label {
+  font-size: 14px;
+  color: #65676b;
+  margin-bottom: 2px;
+}
+
+.buying-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0;
+}
+
+.buying-menu {
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 4px;
+}
+
+.menu-item:hover {
+  background-color: #f2f2f2;
+}
+
+.menu-item.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  color: #65676b;
+  font-size: 20px;
+}
+
+.menu-item.active .menu-icon {
+  color: #1877f2;
+}
+
+.menu-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1c1e21;
+}
+
+.menu-item.active span {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.create-listing-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background-color: #e7f3ff;
+  color: #1877f2;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-listing-btn:hover {
+  background-color: #d0ebff;
+}
+
+.add-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Main Content */
+.buying-main-content {
+  margin-left: 360px;
+  padding: 20px;
+  flex: 1;
+  max-width: calc(100% - 720px);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.listing-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.listing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.listing-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.listing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listing-info {
+  padding: 12px;
+}
+
+.listing-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 4px 0;
+}
+
+.listing-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0;
+}
+
+/* Right Sidebar */
+.buying-right-sidebar {
+  width: 360px;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.profile-card, .help-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.profile-card h3, .help-section h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0 0 16px 0;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 4px 0;
+}
+
+.profile-details p {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0;
+}
+
+.create-listing-profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.create-listing-profile-btn:hover {
+  background-color: #166fe5;
+}
+
+.see-profile-btn {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #e4e6ea;
+  color: #1c1e21;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.see-profile-btn:hover {
+  background-color: #d8dadf;
+}
+
+.help-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.help-item:hover {
+  background-color: #f2f2f2;
+}
+
+.help-icon {
+  color: #65676b;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.help-item span {
+  font-size: 14px;
+  color: #1c1e21;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .buying-right-sidebar {
+    display: none;
+  }
+  
+  .buying-main-content {
+    max-width: calc(100% - 360px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .buying-sidebar {
+    width: 320px;
+  }
+  
+  .buying-main-content {
+    margin-left: 320px;
+    max-width: calc(100% - 320px);
+  }
+}
+
+@media (max-width: 900px) {
+  .marketplace-buying-page {
+    flex-direction: column;
+  }
+  
+  .buying-sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e4e6ea;
+    padding: 16px;
+  }
+  
+  .buying-main-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 16px;
+  }
+  
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  
+  .buying-right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .buying-sidebar {
+    padding: 12px;
+  }
+  
+  .buying-title h1 {
+    font-size: 20px;
+  }
+  
+  .menu-item {
+    padding: 10px;
+  }
+  
+  .menu-item span {
+    font-size: 14px;
+  }
+  
+  .create-listing-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .buying-main-content {
+    padding: 12px;
+  }
+  
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  
+  .listing-image {
+    height: 150px;
+  }
+  
+  .listing-info {
+    padding: 10px;
+  }
+  
+  .listing-info h3 {
+    font-size: 14px;
+  }
+  
+  .listing-price {
+    font-size: 16px;
+  }
+}
