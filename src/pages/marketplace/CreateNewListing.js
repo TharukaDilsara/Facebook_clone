@@ -8,6 +8,13 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 const CreateNewListing = ({ setCurrentPage }) => {
   const [selectedListingType, setSelectedListingType] = useState(null);
 
+  // Handle clicking outside the modal to close it
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      setCurrentPage('marketplace-buying');
+    }
+  };
+
   const listingTypes = [
     {
       id: 'item',
@@ -54,7 +61,7 @@ const CreateNewListing = ({ setCurrentPage }) => {
   ];
 
   return (
-    <div className="create-listing-modal">
+    <div className="create-listing-modal" onClick={handleOverlayClick}>
       <div className="create-listing-container">
         {/* Left Sidebar */}
         <div className="create-listing-sidebar">

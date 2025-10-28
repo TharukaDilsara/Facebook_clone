@@ -67,7 +67,7 @@ const MarketplaceAccess = ({ setCurrentPage }) => {
         </div>
 
         {/* Create New Listing Button */}
-        <button className="create-listing-btn">
+        <button className="create-listing-btn" onClick={() => setCurrentPage('create-new-listing')}>
           <AddIcon className="add-icon" />
           Create new listing
         </button>
