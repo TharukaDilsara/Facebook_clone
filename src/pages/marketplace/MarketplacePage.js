@@ -20,6 +20,14 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import YardIcon from '@mui/icons-material/Yard';
+import BrushIcon from '@mui/icons-material/Brush';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import BuildIcon from '@mui/icons-material/Build';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import PetsIcon from '@mui/icons-material/Pets';
+import SportsIcon from '@mui/icons-material/Sports';
+import ToysIcon from '@mui/icons-material/Toys';
 
 const MarketplacePage = ({ setCurrentPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -160,6 +168,42 @@ const MarketplacePage = ({ setCurrentPage }) => {
             <div className="category-item">
               <YardIcon className="category-icon" />
               <span>Garden and outdoors</span>
+            </div>
+            <div className="category-item">
+              <BrushIcon className="category-icon" />
+              <span>Hobbies</span>
+            </div>
+            <div className="category-item">
+              <HomeWorkIcon className="category-icon" />
+              <span>Home goods</span>
+            </div>
+            <div className="category-item">
+              <BuildIcon className="category-icon" />
+              <span>Home improvement supplies</span>
+            </div>
+            <div className="category-item">
+              <MusicNoteIcon className="category-icon" />
+              <span>Musical instruments</span>
+            </div>
+            <div className="category-item">
+              <LocalOfferIcon className="category-icon" />
+              <span>Office supplies</span>
+            </div>
+            <div className="category-item">
+              <PetsIcon className="category-icon" />
+              <span>Pet supplies</span>
+            </div>
+            <div className="category-item">
+              <HomeIcon className="category-icon" />
+              <span>Property for sale</span>
+            </div>
+            <div className="category-item">
+              <SportsIcon className="category-icon" />
+              <span>Sporting goods</span>
+            </div>
+            <div className="category-item">
+              <ToysIcon className="category-icon" />
+              <span>Toys and games</span>
             </div>
           </div>
         </div>
