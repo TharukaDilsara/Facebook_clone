@@ -97,7 +97,7 @@ const MarketplaceBuying = ({ setCurrentPage }) => {
         </div>
 
         {/* Create New Listing Button */}
-        <button className="create-listing-btn">
+        <button className="create-listing-btn" onClick={() => setCurrentPage('create-new-listing')}>
           <AddIcon className="add-icon" />
           Create new listing
         </button>
@@ -170,7 +170,7 @@ const MarketplaceBuying = ({ setCurrentPage }) => {
               <p>No active listings</p>
             </div>
           </div>
-          <button className="create-listing-profile-btn">
+          <button className="create-listing-profile-btn" onClick={() => setCurrentPage('create-new-listing')}>
             <AddIcon className="add-icon" />
             Create new listing
           </button>
