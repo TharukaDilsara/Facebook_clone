@@ -11,6 +11,15 @@ import SellIcon from '@mui/icons-material/Sell';
 import AddIcon from '@mui/icons-material/Add';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import HomeIcon from '@mui/icons-material/Home';
+import CategoryIcon from '@mui/icons-material/Category';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import YardIcon from '@mui/icons-material/Yard';
 
 const MarketplacePage = ({ setCurrentPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -109,6 +118,49 @@ const MarketplacePage = ({ setCurrentPage }) => {
             <SellIcon className="menu-icon" />
             <span>Selling</span>
             <ChevronRightIcon className="chevron-icon" />
+          </div>
+        </div>
+
+        {/* Categories Section */}
+        <div className="categories-section">
+          <h3>Categories</h3>
+          <div className="categories-menu">
+            <div className="category-item">
+              <DirectionsCarIcon className="category-icon" />
+              <span>Vehicles</span>
+            </div>
+            <div className="category-item">
+              <HomeIcon className="category-icon" />
+              <span>Property for rent</span>
+            </div>
+            <div className="category-item">
+              <CategoryIcon className="category-icon" />
+              <span>Classifieds</span>
+            </div>
+            <div className="category-item">
+              <CheckroomIcon className="category-icon" />
+              <span>Clothing</span>
+            </div>
+            <div className="category-item">
+              <PhoneAndroidIcon className="category-icon" />
+              <span>Electronics</span>
+            </div>
+            <div className="category-item">
+              <SportsEsportsIcon className="category-icon" />
+              <span>Entertainment</span>
+            </div>
+            <div className="category-item">
+              <FavoriteIcon className="category-icon" />
+              <span>Family</span>
+            </div>
+            <div className="category-item">
+              <CardGiftcardIcon className="category-icon" />
+              <span>Free stuff</span>
+            </div>
+            <div className="category-item">
+              <YardIcon className="category-icon" />
+              <span>Garden and outdoors</span>
+            </div>
           </div>
         </div>
 
