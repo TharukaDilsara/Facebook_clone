@@ -109,6 +109,50 @@ export default function MessengerKids({ setCurrentPage }) {
                 </p>
               </div>
             </div>
+
+            {/* Messaging and Video Calling Section */}
+            <div className="messaging-section">
+              <div className="messaging-content">
+                <h3>Messaging and video calling made just for kids</h3>
+                <p>
+                  Kid-friendly filters, reactions and sound effects make video chats with friends and family even better.
+                </p>
+              </div>
+              <div className="messaging-visual">
+                <div className="video-chat-demo">
+                  <div className="chat-effects">
+                    <span className="effect-emoji">😂</span>
+                    <span className="effect-emoji">🎮</span>
+                    <span className="effect-emoji">😱</span>
+                    <span className="effect-emoji">💜</span>
+                  </div>
+                  <div className="colorful-shapes">
+                    <div className="shape shape-1"></div>
+                    <div className="shape shape-2"></div>
+                    <div className="shape shape-3"></div>
+                    <div className="shape shape-4"></div>
+                    <div className="shape shape-5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Kids Device Section */}
+            <div className="device-section">
+              <div className="device-visual">
+                <div className="kids-photos">
+                  <img src="/Images/1.png" alt="Happy child 1" className="kid-photo photo-1" />
+                  <img src="/Images/2.png" alt="Happy child 2" className="kid-photo photo-2" />
+                  <img src="/Images/1.png" alt="Happy child 3" className="kid-photo photo-3" />
+                </div>
+              </div>
+              <div className="device-content">
+                <h3>Kids use the app on their own device</h3>
+                <p>
+                  You can chat with your child directly from your Messenger app.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Download Section */}
