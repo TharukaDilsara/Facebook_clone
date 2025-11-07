@@ -570,6 +570,94 @@
   font-size: 16px;
   color: #65676b;
   line-height: 1.4;
+  margin: 0 0 24px 0;
+}
+
+/* App Icons */
+.app-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.app-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messenger-icon {
+  background-color: #0084ff;
+  color: white;
+}
+
+.messenger-icon .icon {
+  font-size: 28px;
+}
+
+.messenger-kids-icon {
+  background: linear-gradient(45deg, #00d4ff, #0084ff);
+  position: relative;
+}
+
+.kids-icon-bg {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kids-icon-text {
+  font-size: 20px;
+}
+
+/* Create Account Section */
+.create-account-section {
+  text-align: center;
+  padding: 48px 32px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-account-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0 0 24px 0;
+}
+
+.create-account-main-btn {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+  min-width: 200px;
+  transition: background-color 0.2s;
+}
+
+.create-account-main-btn:hover {
+  background-color: #166fe5;
+}
+
+.disclaimer-text {
+  font-size: 14px;
+  color: #65676b;
   margin: 0;
 }
 
@@ -650,5 +738,19 @@
   
   .kids-photos {
     transform: scale(0.8);
+  }
+  
+  .create-account-section {
+    margin-top: 32px;
+    padding: 32px 16px;
+  }
+  
+  .create-account-section h2 {
+    font-size: 24px;
+  }
+  
+  .app-icons {
+    justify-content: center;
+    margin-top: 16px;
   }
 }

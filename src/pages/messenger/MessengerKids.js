@@ -151,8 +151,30 @@ export default function MessengerKids({ setCurrentPage }) {
                 <p>
                   You can chat with your child directly from your Messenger app.
                 </p>
+                {/* App Icons */}
+                <div className="app-icons">
+                  <div className="app-icon messenger-icon">
+                    <ChatIcon className="icon" />
+                  </div>
+                  <div className="app-icon messenger-kids-icon">
+                    <div className="kids-icon-bg">
+                      <span className="kids-icon-text">👶</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Create Account Section */}
+          <div className="create-account-section">
+            <h2>Create a Messenger Kids account for your child</h2>
+            <button className="create-account-main-btn" onClick={handleCreateAccount}>
+              Create Account
+            </button>
+            <p className="disclaimer-text">
+              This won't create a Facebook profile for your child.
+            </p>
           </div>
 
           {/* Download Section */}
