@@ -23,6 +23,7 @@ import RecurringPayments from "./pages/orders/RecurringPayments";
 import OrdersActivity from "./pages/orders/OrdersActivity";
 import OrdersSettings from "./pages/orders/OrdersSettings";
 import OrdersHelp from "./pages/orders/OrdersHelp";
+import MessengerKids from "./pages/messenger/MessengerKids";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -71,6 +72,8 @@ function App() {
         return <OrdersSettings setCurrentPage={setCurrentPage} />;
       case 'orders-help':
         return <OrdersHelp setCurrentPage={setCurrentPage} />;
+      case 'messengerKids':
+        return <MessengerKids setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
