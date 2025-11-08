@@ -5,12 +5,34 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import AdCentreModal from '../../components/AdCentreModal/AdCentreModal';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChatIcon from '@mui/icons-material/Chat';
 import EditIcon from '@mui/icons-material/Edit';
 
 const AdCentre = ({ setCurrentPage }) => {
   const [activeTab, setActiveTab] = useState('all-ads');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleAdvertiseClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCreateAds = () => {
+    // Navigate to Choose Ad Type page
+    setCurrentPage('chooseAdType');
+    setIsModalOpen(false);
+  };
+
+  const handleManageAds = () => {
+    // Handle manage ads functionality
+    console.log('Manage ads clicked');
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="ad-centre-page">
@@ -64,7 +86,7 @@ const AdCentre = ({ setCurrentPage }) => {
         </div>
 
         {/* Advertise Button */}
-        <button className="advertise-btn">
+        <button className="advertise-btn" onClick={handleAdvertiseClick}>
           <CampaignIcon className="btn-icon" />
           Advertise
         </button>
@@ -110,7 +132,7 @@ const AdCentre = ({ setCurrentPage }) => {
             <p>
               Answer a few questions about your business and goals and we'll make recommendations to help you choose the right ad, audience and budget.
             </p>
-            <button className="get-started-btn">Get Started</button>
+            <button className="get-started-btn" onClick={handleAdvertiseClick}>Get Started</button>
           </div>
 
           {/* Summary Section */}
@@ -146,7 +168,7 @@ const AdCentre = ({ setCurrentPage }) => {
               <div className="no-ads-text">
                 <h4>You have not created any ads yet</h4>
                 <p>Metrics for individual ads will appear here once you get started.</p>
-                <button className="advertise-center-btn">Advertise</button>
+                <button className="advertise-center-btn" onClick={handleAdvertiseClick}>Advertise</button>
               </div>
             </div>
           </div>
@@ -191,13 +213,19 @@ const AdCentre = ({ setCurrentPage }) => {
             </div>
           </div>
 
-          <div className="advertise-section">
-            <button className="advertise-side-btn">Advertise</button>
+            <div className="advertise-section">
+              <button className="advertise-side-btn" onClick={handleAdvertiseClick}>Advertise</button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default AdCentre;
+        {/* Modal */}
+        <AdCentreModal 
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          onCreateAds={handleCreateAds}
+          onManageAds={handleManageAds}
+        />
+      </div>
+    );
+  };export default AdCentre;

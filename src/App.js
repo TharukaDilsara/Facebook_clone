@@ -25,6 +25,7 @@ import OrdersSettings from "./pages/orders/OrdersSettings";
 import OrdersHelp from "./pages/orders/OrdersHelp";
 import MessengerKids from "./pages/messenger/MessengerKids";
 import AdCentre from "./pages/ads/AdCentre";
+import ChooseAdType from "./pages/ads/ChooseAdType";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -77,6 +78,8 @@ function App() {
         return <MessengerKids setCurrentPage={setCurrentPage} />;
       case 'adCentre':
         return <AdCentre setCurrentPage={setCurrentPage} />;
+      case 'chooseAdType':
+        return <ChooseAdType setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;

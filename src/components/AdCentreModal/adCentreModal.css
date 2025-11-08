@@ -1,0 +1,215 @@
+/* Ad Centre Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.ad-centre-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px 16px;
+  border-bottom: 1px solid #E4E6EA;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1C1E21;
+  margin: 0;
+}
+
+.close-btn {
+  background: #F0F2F5;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background: #E4E6EA;
+}
+
+.close-btn svg {
+  color: #65676B;
+  font-size: 20px;
+}
+
+/* Content */
+.modal-content {
+  padding: 24px 32px 32px;
+}
+
+/* Illustration */
+.modal-illustration {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-illustration svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text Content */
+.modal-text {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.modal-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1C1E21;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.modal-text p {
+  font-size: 16px;
+  color: #65676B;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Action Buttons */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.manage-ads-btn,
+.create-ads-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.manage-ads-btn {
+  background-color: #E4E6EA;
+  color: #1C1E21;
+}
+
+.manage-ads-btn:hover {
+  background-color: #D8DADF;
+}
+
+.create-ads-btn {
+  background-color: #1877F2;
+  color: white;
+}
+
+.create-ads-btn:hover {
+  background-color: #166FE5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .ad-centre-modal {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 20px 24px 16px;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .modal-content {
+    padding: 20px 24px 24px;
+  }
+  
+  .modal-illustration svg {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .modal-text h3 {
+    font-size: 18px;
+  }
+  
+  .modal-text p {
+    font-size: 15px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .manage-ads-btn,
+  .create-ads-btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 16px 20px 12px;
+  }
+  
+  .modal-header h2 {
+    font-size: 18px;
+  }
+  
+  .modal-content {
+    padding: 16px 20px 20px;
+  }
+  
+  .modal-text {
+    margin-bottom: 24px;
+  }
+  
+  .modal-text h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .modal-text p {
+    font-size: 14px;
+  }
+}
