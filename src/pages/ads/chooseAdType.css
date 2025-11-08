@@ -91,6 +91,18 @@
   font-size: 16px;
   font-weight: 600;
   color: #1c1e21;
+  margin-bottom: 2px;
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+}
+
+.public-icon {
+  font-size: 14px !important;
+  color: #65676b;
+  margin-right: 4px;
 }
 
 .profile-subtitle {
@@ -196,29 +208,36 @@
 /* Ad Type Grid */
 .ad-type-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   margin-bottom: 40px;
+  max-width: 600px;
 }
 
 .ad-type-card {
-  border: 2px solid #e4e6ea;
+  border: 1px solid #e4e6ea;
   border-radius: 12px;
-  padding: 24px;
+  padding: 32px 24px;
   text-align: center;
   transition: all 0.2s;
+  cursor: pointer;
+  background: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ad-type-card:hover {
   border-color: #1877f2;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
-  width: 60px;
-  height: 60px;
-  background: #e7f3ff;
+  width: 56px;
+  height: 56px;
+  background: #f0f2f5;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -227,12 +246,20 @@
 }
 
 .card-icon .icon {
-  color: #1877f2;
-  font-size: 28px;
+  color: #42526e;
+  font-size: 24px;
+}
+
+.card-icon.facebook-icon {
+  background: #1877f2;
+}
+
+.card-icon.facebook-icon .icon {
+  color: white;
 }
 
 .ad-type-card h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #1c1e21;
   margin: 0 0 8px 0;
@@ -242,61 +269,8 @@
   font-size: 14px;
   color: #65676b;
   line-height: 1.4;
-  margin: 0 0 20px 0;
-}
-
-.select-button {
-  background: #1877f2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.select-button:hover {
-  background: #166fe5;
-}
-
-/* Help Section */
-.help-section {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 24px;
-  text-align: center;
-}
-
-.help-section h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1c1e21;
-  margin: 0 0 8px 0;
-}
-
-.help-section p {
-  font-size: 14px;
-  color: #65676b;
-  margin: 0 0 16px 0;
-  line-height: 1.4;
-}
-
-.help-button {
-  background: white;
-  color: #1877f2;
-  border: 1px solid #1877f2;
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.help-button:hover {
-  background: #e7f3ff;
+  margin: 0;
+  max-width: 200px;
 }
 
 /* Responsive Design */
@@ -325,6 +299,7 @@
   }
   
   .ad-type-card {
-    padding: 20px;
+    padding: 24px 20px;
+    height: auto;
   }
 }

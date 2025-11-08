@@ -3,6 +3,8 @@ import './chooseAdType.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditIcon from '@mui/icons-material/Edit';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import PublicIcon from '@mui/icons-material/Public';
 
 const ChooseAdType = ({ setCurrentPage }) => {
   const [selectedAdType, setSelectedAdType] = useState(null);
@@ -12,7 +14,7 @@ const ChooseAdType = ({ setCurrentPage }) => {
       id: 'choose-ad-type',
       icon: <EditIcon />,
       title: 'Choose ad type',
-      description: 'Start creating your own ad type to promote your profile',
+      description: 'Get started by selecting your own ad type to promote your profile',
       isActive: true
     },
     {
@@ -50,7 +52,10 @@ const ChooseAdType = ({ setCurrentPage }) => {
               />
               <div className="profile-details">
                 <span className="profile-name">Tharuka Dilsara</span>
-                <span className="profile-subtitle">2 credits</span>
+                <div className="profile-status">
+                  <PublicIcon className="public-icon" />
+                  <span className="profile-subtitle">Public</span>
+                </div>
               </div>
             </div>
           </div>
@@ -94,31 +99,24 @@ const ChooseAdType = ({ setCurrentPage }) => {
 
             {/* Ad Type Options */}
             <div className="ad-type-grid">
-              <div className="ad-type-card">
+              <div className="ad-type-card create-new">
                 <div className="card-icon">
                   <EditIcon className="icon" />
                 </div>
-                <h3>Choose ad type</h3>
-                <p>Start creating your own ad type to promote your profile</p>
-                <button className="select-button">Select</button>
+                <h3>Create new ad</h3>
+                <p>Make an ad using text, photos or videos to promote your profile</p>
               </div>
 
-              <div className="ad-type-card">
-                <div className="card-icon">
-                  <TrendingUpIcon className="icon" />
+              <div className="ad-type-card boost-content">
+                <div className="card-icon facebook-icon">
+                  <FacebookIcon className="icon" />
                 </div>
-                <h3>Boost content</h3>
-                <p>Create an ad from your profile content</p>
-                <button className="select-button">Select</button>
+                <h3>Boost Facebook content</h3>
+                <p>Get more people to see and engage with your posts</p>
               </div>
             </div>
 
-            {/* Help Section */}
-            <div className="help-section">
-              <h3>Need help choosing?</h3>
-              <p>Learn more about the different ad types and which one might work best for your goals.</p>
-              <button className="help-button">Get help</button>
-            </div>
+            {/* Remove the help section for cleaner design */}
           </div>
         </div>
       </div>
