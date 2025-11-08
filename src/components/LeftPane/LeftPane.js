@@ -30,7 +30,7 @@ export default function LeftPane({ setCurrentPage }) {
   
   const handleMenuClick = (menuItem) => {
     console.log(`Clicked on ${menuItem}`);
-    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events' || menuItem === 'friends' || menuItem === 'feeds' || menuItem === 'games' || menuItem === 'orders' || menuItem === 'marketplace' || menuItem === 'recentAds' || menuItem === 'messengerKids')) {
+    if (setCurrentPage && (menuItem === 'memories' || menuItem === 'groups' || menuItem === 'events' || menuItem === 'friends' || menuItem === 'feeds' || menuItem === 'games' || menuItem === 'orders' || menuItem === 'marketplace' || menuItem === 'recentAds' || menuItem === 'messengerKids' || menuItem === 'adCentre')) {
       if (menuItem === 'playGames') {
         setCurrentPage('games');
       } else if (menuItem === 'recentAds') {
