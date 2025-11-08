@@ -1,0 +1,392 @@
+/* Select Facebook Content Page Styles */
+.select-facebook-content-page {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  margin-top: 56px; /* Account for navbar */
+}
+
+/* Header */
+.page-header {
+  background: white;
+  border-bottom: 1px solid #dadde1;
+  padding: 16px 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.facebook-logo {
+  margin-right: 16px;
+}
+
+.fb-circle {
+  width: 40px;
+  height: 40px;
+  background: #1877f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0;
+}
+
+/* Content Type Dropdown */
+.content-type-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-type-label {
+  font-size: 16px;
+  color: #1c1e21;
+  font-weight: 500;
+}
+
+.content-type-dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: #f0f2f5;
+  border: 1px solid #dadde1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #1c1e21;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-button:hover {
+  background: #e4e6ea;
+}
+
+.dropdown-arrow {
+  font-size: 20px !important;
+  color: #65676b;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #dadde1;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  padding: 10px 12px;
+  font-size: 16px;
+  color: #1c1e21;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f0f2f5;
+}
+
+.dropdown-item.selected {
+  background: #e7f3ff;
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.dropdown-item:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown-item:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+  width: 280px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e6ea;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 2px;
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+}
+
+.public-icon {
+  font-size: 14px !important;
+  color: #65676b;
+  margin-right: 4px;
+}
+
+.profile-subtitle {
+  font-size: 14px;
+  color: #65676b;
+}
+
+.profile-dropdown-arrow {
+  color: #65676b;
+  font-size: 20px !important;
+}
+
+/* Sidebar Menu */
+.sidebar-menu h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0 0 16px 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f2f2f2;
+}
+
+.menu-item.active {
+  background-color: #e7f3ff;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.menu-icon svg {
+  color: #1877f2;
+  font-size: 20px;
+}
+
+.menu-content {
+  flex: 1;
+}
+
+.menu-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 4px;
+}
+
+.menu-description {
+  font-size: 13px;
+  color: #65676b;
+  line-height: 1.3;
+}
+
+/* Content Area */
+.content-area {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  padding: 32px;
+}
+
+.back-button {
+  background: #f0f2f5;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background: #e4e6ea;
+}
+
+.back-button svg {
+  color: #65676b;
+  font-size: 20px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.empty-state-icon {
+  margin-bottom: 32px;
+}
+
+.empty-state-icon svg {
+  opacity: 0.7;
+}
+
+.empty-state h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.empty-state > p {
+  font-size: 16px;
+  color: #65676b;
+  margin: 0 0 32px 0;
+  line-height: 1.4;
+}
+
+.create-ad-button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 32px;
+}
+
+.create-ad-button:hover {
+  background: #166fe5;
+}
+
+.help-text {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.help-text p {
+  font-size: 14px;
+  color: #65676b;
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .content-type-section {
+    align-self: flex-end;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  .left-sidebar {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .content-wrapper {
+    padding: 24px 16px;
+  }
+  
+  .empty-state {
+    padding: 20px 0;
+  }
+  
+  .empty-state h2 {
+    font-size: 20px;
+  }
+}

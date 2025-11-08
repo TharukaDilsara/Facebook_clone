@@ -7,24 +7,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import PublicIcon from '@mui/icons-material/Public';
 
 const ChooseAdType = ({ setCurrentPage }) => {
-  const [selectedAdType, setSelectedAdType] = useState(null);
-
-  const adTypes = [
-    {
-      id: 'choose-ad-type',
-      icon: <EditIcon />,
-      title: 'Choose ad type',
-      description: 'Get started by selecting your own ad type to promote your profile',
-      isActive: true
-    },
-    {
-      id: 'boost-content',
-      icon: <TrendingUpIcon />,
-      title: 'Boost content',
-      description: 'Create an ad from your profile content'
-    }
-  ];
-
   return (
     <div className="choose-ad-type-page">
       {/* Header */}
@@ -63,21 +45,25 @@ const ChooseAdType = ({ setCurrentPage }) => {
           <div className="sidebar-menu">
             <h3>Advertise</h3>
             
-            {adTypes.map((adType) => (
-              <div 
-                key={adType.id}
-                className={`menu-item ${adType.isActive ? 'active' : ''}`}
-                onClick={() => setSelectedAdType(adType.id)}
-              >
-                <div className="menu-icon">
-                  {adType.icon}
-                </div>
-                <div className="menu-content">
-                  <div className="menu-title">{adType.title}</div>
-                  <div className="menu-description">{adType.description}</div>
-                </div>
+            <div className="menu-item active">
+              <div className="menu-icon">
+                <EditIcon />
               </div>
-            ))}
+              <div className="menu-content">
+                <div className="menu-title">Choose ad type</div>
+                <div className="menu-description">Get started by selecting your own ad type to promote your profile</div>
+              </div>
+            </div>
+
+            <div className="menu-item" onClick={() => setCurrentPage('selectFacebookContent')}>
+              <div className="menu-icon">
+                <TrendingUpIcon />
+              </div>
+              <div className="menu-content">
+                <div className="menu-title">Boost content</div>
+                <div className="menu-description">Create an ad from your profile content</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,7 +93,10 @@ const ChooseAdType = ({ setCurrentPage }) => {
                 <p>Make an ad using text, photos or videos to promote your profile</p>
               </div>
 
-              <div className="ad-type-card boost-content">
+              <div 
+                className="ad-type-card boost-content"
+                onClick={() => setCurrentPage('selectFacebookContent')}
+              >
                 <div className="card-icon facebook-icon">
                   <FacebookIcon className="icon" />
                 </div>

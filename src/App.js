@@ -26,6 +26,7 @@ import OrdersHelp from "./pages/orders/OrdersHelp";
 import MessengerKids from "./pages/messenger/MessengerKids";
 import AdCentre from "./pages/ads/AdCentre";
 import ChooseAdType from "./pages/ads/ChooseAdType";
+import SelectFacebookContent from "./pages/ads/SelectFacebookContent";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -80,6 +81,8 @@ function App() {
         return <AdCentre setCurrentPage={setCurrentPage} />;
       case 'chooseAdType':
         return <ChooseAdType setCurrentPage={setCurrentPage} />;
+      case 'selectFacebookContent':
+        return <SelectFacebookContent setCurrentPage={setCurrentPage} />;
       case 'home':
       default:
         return <Home setCurrentPage={setCurrentPage} />;
