@@ -5,6 +5,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ChatIcon from '@mui/icons-material/Chat';
+import EditIcon from '@mui/icons-material/Edit';
 
 const AdCentre = ({ setCurrentPage }) => {
   const [activeTab, setActiveTab] = useState('all-ads');
@@ -127,8 +130,24 @@ const AdCentre = ({ setCurrentPage }) => {
           {/* Recent Ads Section */}
           <div className="recent-ads-section">
             <h3>Recent ads</h3>
-            <div className="no-ads-message">
-              <p>You haven't created any ads yet. Get started with your first ad campaign!</p>
+            <div className="no-ads-content">
+              <div className="no-ads-illustration">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                  <rect x="20" y="30" width="80" height="60" rx="8" fill="#E3F2FD" />
+                  <rect x="30" y="40" width="25" height="15" rx="2" fill="#1877F2" />
+                  <rect x="60" y="40" width="40" height="4" rx="2" fill="#BDC3C7" />
+                  <rect x="60" y="48" width="30" height="3" rx="1.5" fill="#BDC3C7" />
+                  <rect x="30" y="60" width="60" height="3" rx="1.5" fill="#BDC3C7" />
+                  <rect x="30" y="68" width="45" height="3" rx="1.5" fill="#BDC3C7" />
+                  <circle cx="100" cy="25" r="8" fill="#FFE0B2" />
+                  <circle cx="15" cy="70" r="6" fill="#C8E6C9" />
+                </svg>
+              </div>
+              <div className="no-ads-text">
+                <h4>You have not created any ads yet</h4>
+                <p>Metrics for individual ads will appear here once you get started.</p>
+                <button className="advertise-center-btn">Advertise</button>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +159,35 @@ const AdCentre = ({ setCurrentPage }) => {
             <div className="activity-item">
               <BarChartIcon className="activity-icon" />
               <span>Recommendations</span>
-              <button className="edit-btn">✏️</button>
+              <EditIcon className="edit-btn" />
+            </div>
+          </div>
+
+          <div className="tools-section">
+            <h3>Tools</h3>
+            
+            <div className="tool-item">
+              <CreditCardIcon className="tool-icon" />
+              <div className="tool-content">
+                <div className="tool-title">Billing and payments</div>
+                <div className="tool-description">Set up a payment method to create ads.</div>
+              </div>
+            </div>
+
+            <div className="tool-item">
+              <SettingsIcon className="tool-icon" />
+              <div className="tool-content">
+                <div className="tool-title">Ad account settings</div>
+                <div className="tool-description">Manage settings such as your account contact and account roles.</div>
+              </div>
+            </div>
+
+            <div className="tool-item">
+              <ChatIcon className="tool-icon" />
+              <div className="tool-content">
+                <div className="tool-title">Stay connected on chat</div>
+                <div className="tool-description">Allow Meta to send you communications related to your ads on Messenger.</div>
+              </div>
             </div>
           </div>
 

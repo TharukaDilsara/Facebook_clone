@@ -298,15 +298,46 @@
   margin-bottom: 24px;
 }
 
-.no-ads-message {
+.no-ads-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 40px 20px;
 }
 
-.no-ads-message p {
+.no-ads-illustration {
+  margin-bottom: 24px;
+}
+
+.no-ads-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 12px;
+}
+
+.no-ads-text p {
   font-size: 16px;
   color: #65676b;
-  margin: 0;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.advertise-center-btn {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.advertise-center-btn:hover {
+  background-color: #166fe5;
 }
 
 /* Right Sidebar */
@@ -352,11 +383,9 @@
 }
 
 .edit-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
   color: #65676b;
+  font-size: 18px !important;
+  cursor: pointer;
   padding: 4px;
   border-radius: 4px;
   transition: background-color 0.2s;
@@ -364,6 +393,66 @@
 
 .edit-btn:hover {
   background-color: #e4e6ea;
+}
+
+/* Tools Section */
+.tools-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tools-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin-bottom: 16px;
+}
+
+.tool-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.tool-item:hover {
+  background-color: #f8f9fa;
+}
+
+.tool-item:last-child {
+  margin-bottom: 0;
+}
+
+.tool-icon {
+  margin-right: 12px;
+  margin-top: 2px;
+  color: #65676b;
+  font-size: 20px !important;
+  flex-shrink: 0;
+}
+
+.tool-content {
+  flex: 1;
+}
+
+.tool-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.tool-description {
+  font-size: 13px;
+  color: #65676b;
+  line-height: 1.3;
 }
 
 .advertise-section {
