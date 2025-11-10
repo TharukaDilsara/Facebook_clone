@@ -14,6 +14,8 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [country, setCountry] = useState('LK, USD');
   const [budget, setBudget] = useState(5.00);
   const [advantagePlacements, setAdvantagePlacements] = useState(true);
+  const [metaPixel, setMetaPixel] = useState(false);
+  const [paymentMethodExpanded, setPaymentMethodExpanded] = useState(true);
 
   const handleCertifyCompliance = () => {
     console.log('Certify Compliance clicked');
@@ -49,6 +51,10 @@ const CreateNewAd = ({ setCurrentPage }) => {
 
   const handleBudgetChange = (event) => {
     setBudget(parseFloat(event.target.value));
+  };
+
+  const handlePaymentMethodClick = () => {
+    console.log('Payment method clicked');
   };
 
   const handleNeedHelp = () => {
@@ -377,6 +383,84 @@ const CreateNewAd = ({ setCurrentPage }) => {
               <p className="placement-description">
                 Let us maximise your budget across Facebook, Messenger, Instagram and Meta Audience Network to help show your ad to more people.
               </p>
+            </div>
+          </div>
+
+          {/* Meta Pixel Section */}
+          <div className="meta-pixel-section">
+            <div className="pixel-header">
+              <div className="pixel-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="2" fill="#65676B"/>
+                  <rect x="7" y="7" width="10" height="10" rx="1" fill="white"/>
+                  <rect x="9" y="9" width="6" height="6" rx="1" fill="#65676B"/>
+                </svg>
+              </div>
+              <div className="pixel-content">
+                <span className="pixel-label">Meta pixel</span>
+                <span className="pixel-status">No pixel</span>
+              </div>
+              <div className="toggle-switch">
+                <input
+                  type="checkbox"
+                  id="meta-pixel"
+                  checked={metaPixel}
+                  onChange={(e) => setMetaPixel(e.target.checked)}
+                />
+                <label htmlFor="meta-pixel" className="toggle-label">
+                  <span className="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Payment Method Required Section */}
+          <div className="payment-method-required-section">
+            <div 
+              className="payment-warning-header" 
+              onClick={() => setPaymentMethodExpanded(!paymentMethodExpanded)}
+            >
+              <div className="warning-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" fill="#FFB800"/>
+                  <path d="M10 6V11" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="10" cy="14" r="1" fill="white"/>
+                </svg>
+              </div>
+              <div className="warning-content">
+                <h3>Payment method required</h3>
+              </div>
+              <div className="expand-icon">
+                {paymentMethodExpanded ? '−' : '+'}
+              </div>
+            </div>
+            
+            {paymentMethodExpanded && (
+              <div className="payment-warning-body">
+                <p>
+                  When you publish your ad, you'll be asked to add a payment method to your ad account. This payment method will be charged for any amount spent beyond the value of your ad credit.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Payment Method Section */}
+          <div className="payment-method-section">
+            <div className="payment-method-dropdown" onClick={handlePaymentMethodClick}>
+              <div className="payment-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect x="2" y="5" width="16" height="10" rx="2" fill="#65676B"/>
+                  <rect x="4" y="7" width="4" height="2" rx="1" fill="white"/>
+                  <rect x="4" y="11" width="8" height="1" rx="0.5" fill="white"/>
+                  <rect x="4" y="13" width="6" height="1" rx="0.5" fill="white"/>
+                </svg>
+              </div>
+              <span className="payment-method-text">Payment method</span>
+              <div className="dropdown-arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="#65676B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           </div>
 
