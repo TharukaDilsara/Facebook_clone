@@ -19,8 +19,8 @@ const SelectFacebookContent = ({ setCurrentPage }) => {
   };
 
   const handleCreateAd = () => {
-    // Navigate to create ad page or show create ad functionality
-    console.log('Create ad clicked');
+    // Navigate to create new ad page
+    setCurrentPage('createNewAd');
   };
 
   return (

@@ -1,0 +1,393 @@
+/* Create New Ad Page Styles */
+.create-new-ad-page {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  margin-top: 56px; /* Account for navbar */
+}
+
+/* Header */
+.page-header {
+  background: white;
+  border-bottom: 1px solid #dadde1;
+  padding: 20px 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin: 0;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  padding: 32px 20px;
+}
+
+/* Left Content */
+.left-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Certification Section */
+.certification-section {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.certification-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.certification-header:hover {
+  background-color: #f8f9fa;
+}
+
+.certification-icon {
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.error-icon {
+  color: #e41e3f;
+  font-size: 20px !important;
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 8px 0;
+}
+
+.certification-content p {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.expand-icon {
+  font-size: 20px;
+  color: #65676b;
+  margin-left: 12px;
+  font-weight: 300;
+}
+
+.certification-body {
+  padding: 0 20px 20px;
+  border-top: 1px solid #e4e6ea;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.certify-button {
+  background: #e4e6ea;
+  color: #1c1e21;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.certify-button:hover {
+  background: #d8dadf;
+}
+
+/* Goal Section */
+.goal-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.goal-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 8px 0;
+}
+
+.goal-description {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0 0 20px 0;
+}
+
+.goal-selection {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e4e6ea;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.goal-icon {
+  margin-right: 16px;
+}
+
+.goal-content {
+  flex: 1;
+}
+
+.goal-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 4px 0;
+}
+
+.goal-content p {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.change-button {
+  background: #e4e6ea;
+  color: #1c1e21;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.change-button:hover {
+  background: #d8dadf;
+}
+
+/* Ad Creative Section */
+.ad-creative-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.creative-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.creative-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 8px 0 0;
+}
+
+.info-icon {
+  color: #65676b;
+  font-size: 18px !important;
+}
+
+.creative-description {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0 0 20px 0;
+}
+
+.use-post-button {
+  background: none;
+  color: #1877f2;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.use-post-button:hover {
+  text-decoration: none;
+}
+
+/* Footer Section */
+.footer-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #65676b;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.terms-link {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help-button {
+  background: none;
+  border: none;
+  color: #65676b;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.help-button:hover {
+  background: #f0f2f5;
+}
+
+.help-icon {
+  font-size: 18px !important;
+}
+
+.publish-button {
+  background: #e4e6ea;
+  color: #1c1e21;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.publish-button:hover {
+  background: #d8dadf;
+}
+
+/* Right Content - Ad Preview */
+.right-content {
+  width: 350px;
+}
+
+.ad-preview-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.ad-preview-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c1e21;
+  margin: 0 0 20px 0;
+}
+
+.preview-placeholder {
+  border: 2px dashed #dadde1;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.preview-content p {
+  font-size: 14px;
+  color: #65676b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .right-content {
+    width: 100%;
+  }
+  
+  .ad-preview-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px 16px;
+  }
+  
+  .page-header h1 {
+    font-size: 24px;
+  }
+  
+  .header-content {
+    padding: 0 16px;
+  }
+  
+  .certification-header {
+    padding: 16px;
+  }
+  
+  .goal-section,
+  .ad-creative-section,
+  .footer-section,
+  .ad-preview-section {
+    padding: 20px;
+  }
+  
+  .footer-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .publish-button {
+    width: 100%;
+  }
+}

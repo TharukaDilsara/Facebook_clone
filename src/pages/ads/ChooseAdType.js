@@ -85,7 +85,10 @@ const ChooseAdType = ({ setCurrentPage }) => {
 
             {/* Ad Type Options */}
             <div className="ad-type-grid">
-              <div className="ad-type-card create-new">
+              <div 
+                className="ad-type-card create-new"
+                onClick={() => setCurrentPage('createNewAd')}
+              >
                 <div className="card-icon">
                   <EditIcon className="icon" />
                 </div>
