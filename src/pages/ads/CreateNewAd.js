@@ -6,6 +6,9 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 const CreateNewAd = ({ setCurrentPage }) => {
   const [certificationExpanded, setCertificationExpanded] = useState(true);
+  const [advantageCreative, setAdvantageCreative] = useState(true);
+  const [specialAdCategory, setSpecialAdCategory] = useState(false);
+  const [selectedAudience, setSelectedAudience] = useState('advantage');
 
   const handleCertifyCompliance = () => {
     console.log('Certify Compliance clicked');
@@ -62,6 +65,82 @@ const CreateNewAd = ({ setCurrentPage }) => {
                 </button>
               </div>
             )}
+          </div>
+
+          {/* Advantage+ Creative Section */}
+          <div className="advantage-creative-section">
+            <div className="section-header">
+              <div className="section-title">
+                <h3>Advantage+ creative</h3>
+                <InfoIcon className="info-icon" />
+              </div>
+              <div className="toggle-switch">
+                <input
+                  type="checkbox"
+                  id="advantage-creative"
+                  checked={advantageCreative}
+                  onChange={(e) => setAdvantageCreative(e.target.checked)}
+                />
+                <label htmlFor="advantage-creative" className="toggle-label">
+                  <span className="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <p className="section-description">
+              Leverage Facebook's data to automatically deliver different ad creative variations to{' '}
+              <span className="highlight-text">people</span> when likely to improve performance.
+            </p>
+          </div>
+
+          {/* Special Ad Category Section */}
+          <div className="special-ad-category-section">
+            <div className="section-header">
+              <div className="section-title">
+                <h3>Special ad category</h3>
+                <InfoIcon className="info-icon" />
+              </div>
+              <div className="toggle-switch">
+                <input
+                  type="checkbox"
+                  id="special-ad-category"
+                  checked={specialAdCategory}
+                  onChange={(e) => setSpecialAdCategory(e.target.checked)}
+                />
+                <label htmlFor="special-ad-category" className="toggle-label">
+                  <span className="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <p className="section-description">
+              Ads about financial products and services, employment, housing, or social issues, elections or politics
+            </p>
+          </div>
+
+          {/* Audience Section */}
+          <div className="audience-section">
+            <div className="section-title">
+              <h3>Audience</h3>
+              <InfoIcon className="info-icon" />
+            </div>
+            <p className="section-subtitle">Who should see your ad?</p>
+            
+            <div className="audience-options">
+              <div 
+                className={`audience-option ${selectedAudience === 'advantage' ? 'selected' : ''}`}
+                onClick={() => setSelectedAudience('advantage')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <div className="option-content">
+                  <h4>Advantage+ audience</h4>
+                  <p>
+                    Let our ad technology automatically find your audience and adjust over time to reach more people who are likely to respond to your ad.{' '}
+                    <a href="#" className="learn-more-link">Learn more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Goal Section */}
@@ -121,8 +200,57 @@ const CreateNewAd = ({ setCurrentPage }) => {
           </div>
         </div>
 
-        {/* Right Content - Ad Preview */}
+        {/* Right Content - Ad Preview and Results */}
         <div className="right-content">
+          {/* Estimated Daily Results */}
+          <div className="estimated-results-section">
+            <h3>Estimated daily results</h3>
+            
+            <div className="result-item">
+              <div className="result-header">
+                <span className="result-label">
+                  <a href="#" className="accounts-centre-link">Accounts Centre accounts</a> reached
+                </span>
+                <InfoIcon className="info-icon-small" />
+              </div>
+              <div className="result-value">7.2K-20.8K</div>
+            </div>
+
+            <div className="result-item">
+              <div className="result-header">
+                <span className="result-label">Follows or likes</span>
+                <InfoIcon className="info-icon-small" />
+              </div>
+              <div className="result-value">107-311</div>
+            </div>
+          </div>
+
+          {/* Payment Summary */}
+          <div className="payment-summary-section">
+            <h3>Payment summary</h3>
+            <p className="payment-description">
+              Your ad runs continuously on an average daily budget.
+            </p>
+
+            <div className="budget-item">
+              <span className="budget-label">Budget</span>
+              <span className="budget-value">$5.00 USD</span>
+            </div>
+
+            <div className="budget-item">
+              <span className="budget-label">Daily total budget</span>
+              <span className="budget-value">$5.00 USD</span>
+            </div>
+
+            <div className="billing-info">
+              <p>
+                We use data about you and your ad account to provide you with ads billing and spending options.{' '}
+                <a href="#" className="learn-more-link">Learn more</a>
+              </p>
+            </div>
+          </div>
+
+          {/* Ad Preview */}
           <div className="ad-preview-section">
             <h3>Ad preview</h3>
             <div className="preview-placeholder">
