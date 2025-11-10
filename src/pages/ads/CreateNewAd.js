@@ -12,6 +12,8 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [selectedTargeting, setSelectedTargeting] = useState('');
   const [selectedDuration, setSelectedDuration] = useState('continuous');
   const [country, setCountry] = useState('LK, USD');
+  const [budget, setBudget] = useState(5.00);
+  const [advantagePlacements, setAdvantagePlacements] = useState(true);
 
   const handleCertifyCompliance = () => {
     console.log('Certify Compliance clicked');
@@ -39,6 +41,14 @@ const CreateNewAd = ({ setCurrentPage }) => {
 
   const handleChangeCurrency = () => {
     console.log('Change currency clicked');
+  };
+
+  const handleEditBudget = () => {
+    console.log('Edit budget clicked');
+  };
+
+  const handleBudgetChange = (event) => {
+    setBudget(parseFloat(event.target.value));
   };
 
   const handleNeedHelp = () => {
@@ -302,6 +312,71 @@ const CreateNewAd = ({ setCurrentPage }) => {
               <button className="change-button" onClick={handleChangeCurrency}>
                 Change
               </button>
+            </div>
+
+            {/* Budget Input and Slider */}
+            <div className="budget-input-section">
+              <div className="budget-display">
+                <span className="currency-symbol">$</span>
+                <span className="budget-amount">{budget.toFixed(2)}</span>
+                <button className="edit-budget-btn" onClick={handleEditBudget}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474L8.5 11.06l-3.33.886.886-3.33L11.013 1.427z" fill="currentColor"/>
+                    <path d="M1.75 13.25a.75.75 0 000 1.5h12.5a.75.75 0 000-1.5H1.75z" fill="currentColor"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div className="budget-slider-container">
+                <span className="slider-min">$2.00</span>
+                <div className="slider-wrapper">
+                  <input
+                    type="range"
+                    min="2"
+                    max="500"
+                    step="0.01"
+                    value={budget}
+                    onChange={handleBudgetChange}
+                    className="budget-slider"
+                  />
+                </div>
+                <span className="slider-max">$500.00</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Placements Section */}
+          <div className="placements-section">
+            <div className="section-title">
+              <h3>Placements</h3>
+              <InfoIcon className="info-icon" />
+            </div>
+
+            <div className="placements-content">
+              <div className="placement-header">
+                <div className="placement-info">
+                  <span className="recommended-tag">Recommended</span>
+                  <div className="placement-title">
+                    <span>Advantage+ placements</span>
+                    <InfoIcon className="info-icon-small" />
+                  </div>
+                </div>
+                <div className="toggle-switch">
+                  <input
+                    type="checkbox"
+                    id="advantage-placements"
+                    checked={advantagePlacements}
+                    onChange={(e) => setAdvantagePlacements(e.target.checked)}
+                  />
+                  <label htmlFor="advantage-placements" className="toggle-label">
+                    <span className="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <p className="placement-description">
+                Let us maximise your budget across Facebook, Messenger, Instagram and Meta Audience Network to help show your ad to more people.
+              </p>
             </div>
           </div>
 
