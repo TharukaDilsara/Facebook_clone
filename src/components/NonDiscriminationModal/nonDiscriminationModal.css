@@ -1,0 +1,180 @@
+/* Non-discrimination Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.non-discrimination-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.close-btn svg {
+  color: #65676B;
+  font-size: 24px;
+}
+
+/* Header Illustration */
+.modal-illustration {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 0;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.modal-illustration svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Content */
+.modal-content {
+  padding: 32px 40px 40px;
+}
+
+.modal-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1C1E21;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.policy-text {
+  margin-bottom: 32px;
+}
+
+.policy-text p {
+  font-size: 16px;
+  color: #1C1E21;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.policy-link {
+  color: #1877F2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.policy-link:hover {
+  text-decoration: underline;
+}
+
+/* Accept Button */
+.accept-button {
+  background: #1877F2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+  margin: 0 auto;
+  min-width: 120px;
+}
+
+.accept-button:hover {
+  background: #166FE5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .non-discrimination-modal {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+  
+  .close-btn {
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .modal-content {
+    padding: 24px 20px 32px;
+  }
+  
+  .modal-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .policy-text p {
+    font-size: 15px;
+  }
+  
+  .modal-illustration svg {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px 16px 24px;
+  }
+  
+  .modal-content h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .policy-text {
+    margin-bottom: 24px;
+  }
+  
+  .accept-button {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}

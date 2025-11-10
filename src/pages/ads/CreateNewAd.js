@@ -3,6 +3,7 @@ import './createNewAd.css';
 import ErrorIcon from '@mui/icons-material/Error';
 import InfoIcon from '@mui/icons-material/Info';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import NonDiscriminationModal from '../../components/NonDiscriminationModal/NonDiscriminationModal';
 
 const CreateNewAd = ({ setCurrentPage }) => {
   const [certificationExpanded, setCertificationExpanded] = useState(true);
@@ -16,9 +17,20 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [advantagePlacements, setAdvantagePlacements] = useState(true);
   const [metaPixel, setMetaPixel] = useState(false);
   const [paymentMethodExpanded, setPaymentMethodExpanded] = useState(true);
+  const [isNonDiscriminationModalOpen, setIsNonDiscriminationModalOpen] = useState(false);
 
   const handleCertifyCompliance = () => {
-    console.log('Certify Compliance clicked');
+    setIsNonDiscriminationModalOpen(true);
+  };
+
+  const handleCloseNonDiscriminationModal = () => {
+    setIsNonDiscriminationModalOpen(false);
+  };
+
+  const handleAcceptNonDiscrimination = () => {
+    console.log('Non-discrimination policy accepted');
+    setIsNonDiscriminationModalOpen(false);
+    // You can add logic here to update the certification status
   };
 
   const handleChangeGoal = () => {
@@ -586,11 +598,16 @@ const CreateNewAd = ({ setCurrentPage }) => {
                 <p>Your ad preview will appear here once you add creative content.</p>
               </div>
             </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default CreateNewAd;
+        {/* Non-discrimination Modal */}
+        <NonDiscriminationModal 
+          isOpen={isNonDiscriminationModalOpen}
+          onClose={handleCloseNonDiscriminationModal}
+          onAccept={handleAcceptNonDiscrimination}
+        />
+      </div>
+    );
+  };export default CreateNewAd;
