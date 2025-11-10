@@ -9,6 +9,7 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [advantageCreative, setAdvantageCreative] = useState(true);
   const [specialAdCategory, setSpecialAdCategory] = useState(false);
   const [selectedAudience, setSelectedAudience] = useState('advantage');
+  const [selectedTargeting, setSelectedTargeting] = useState('');
 
   const handleCertifyCompliance = () => {
     console.log('Certify Compliance clicked');
@@ -24,6 +25,14 @@ const CreateNewAd = ({ setCurrentPage }) => {
 
   const handlePublish = () => {
     console.log('Publish clicked');
+  };
+
+  const handleCreateNew = () => {
+    console.log('Create new clicked');
+  };
+
+  const handleEditAudience = () => {
+    console.log('Edit audience clicked');
   };
 
   const handleNeedHelp = () => {
@@ -124,6 +133,75 @@ const CreateNewAd = ({ setCurrentPage }) => {
             </div>
             <p className="section-subtitle">Who should see your ad?</p>
             
+            {/* Audience Details */}
+            <div className="audience-details-section">
+              <div className="audience-details-header">
+                <div>
+                  <h4>Audience details</h4>
+                  <InfoIcon className="info-icon-small" />
+                </div>
+                <button className="edit-button" onClick={handleEditAudience}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474L8.5 11.06l-3.33.886.886-3.33L11.013 1.427z" fill="currentColor"/>
+                    <path d="M1.75 13.25a.75.75 0 000 1.5h12.5a.75.75 0 000-1.5H1.75z" fill="currentColor"/>
+                  </svg>
+                </button>
+              </div>
+              
+              <div className="audience-details-content">
+                <div className="detail-item">
+                  <span className="detail-label">Location:</span>
+                  <span className="detail-value">Sri Lanka</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Minimum age:</span>
+                  <span className="detail-value">18</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Advantage+ audience:</span>
+                  <span className="detail-value">On</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Targeting Options */}
+            <div className="targeting-options">
+              <div 
+                className={`targeting-option ${selectedTargeting === 'targeting' ? 'selected' : ''}`}
+                onClick={() => setSelectedTargeting('targeting')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <span className="targeting-label">People you choose through targeting</span>
+              </div>
+
+              <div 
+                className={`targeting-option ${selectedTargeting === 'followers' ? 'selected' : ''}`}
+                onClick={() => setSelectedTargeting('followers')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <span className="targeting-label">People who follow your profile</span>
+              </div>
+
+              <div 
+                className={`targeting-option ${selectedTargeting === 'similar' ? 'selected' : ''}`}
+                onClick={() => setSelectedTargeting('similar')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <span className="targeting-label">People who follow your profile and people similar to them</span>
+              </div>
+            </div>
+
+            {/* Create New Button */}
+            <button className="create-new-button" onClick={handleCreateNew}>
+              Create new
+            </button>
+            
             <div className="audience-options">
               <div 
                 className={`audience-option ${selectedAudience === 'advantage' ? 'selected' : ''}`}
@@ -141,6 +219,15 @@ const CreateNewAd = ({ setCurrentPage }) => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Ad Transparency Section */}
+          <div className="ad-transparency-section">
+            <h3>Ad transparency</h3>
+            <p>
+              Let your audience know who benefits from and pays for this ad. This information may be displayed publicly on ads and in{' '}
+              <a href="#" className="meta-ad-library-link">Meta's Ad Library</a> when the ads are running or longer in some cases.
+            </p>
           </div>
 
           {/* Goal Section */}
