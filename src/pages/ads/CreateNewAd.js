@@ -10,6 +10,8 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [specialAdCategory, setSpecialAdCategory] = useState(false);
   const [selectedAudience, setSelectedAudience] = useState('advantage');
   const [selectedTargeting, setSelectedTargeting] = useState('');
+  const [selectedDuration, setSelectedDuration] = useState('continuous');
+  const [country, setCountry] = useState('LK, USD');
 
   const handleCertifyCompliance = () => {
     console.log('Certify Compliance clicked');
@@ -33,6 +35,10 @@ const CreateNewAd = ({ setCurrentPage }) => {
 
   const handleEditAudience = () => {
     console.log('Edit audience clicked');
+  };
+
+  const handleChangeCurrency = () => {
+    console.log('Change currency clicked');
   };
 
   const handleNeedHelp = () => {
@@ -227,6 +233,82 @@ const CreateNewAd = ({ setCurrentPage }) => {
             <p>
               Let your audience know who benefits from and pays for this ad. This information may be displayed publicly on ads and in{' '}
               <a href="#" className="meta-ad-library-link">Meta's Ad Library</a> when the ads are running or longer in some cases.
+            </p>
+          </div>
+
+          {/* Duration Section */}
+          <div className="duration-section">
+            <div className="section-title">
+              <h3>Duration</h3>
+              <InfoIcon className="info-icon" />
+            </div>
+            
+            <div className="duration-info">
+              <div className="info-header">
+                <div className="info-icon-blue">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="7" fill="#1877F2"/>
+                    <path d="M8 4v4l3 2" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <span className="info-text">This ad will run continuously on a daily budget</span>
+                <button className="close-info">×</button>
+              </div>
+              <p className="info-description">
+                Running an ad continuously can help improve performance by giving it more time to reach people likely to respond. If you prefer, you can set an end date instead.
+              </p>
+            </div>
+
+            <div className="duration-options">
+              <div 
+                className={`duration-option ${selectedDuration === 'continuous' ? 'selected' : ''}`}
+                onClick={() => setSelectedDuration('continuous')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <div className="duration-content">
+                  <h4>Run this ad continuously</h4>
+                  <p>Your ad will continue to run on a daily budget unless you pause it, which you can do at any time.</p>
+                </div>
+              </div>
+
+              <div 
+                className={`duration-option ${selectedDuration === 'end-date' ? 'selected' : ''}`}
+                onClick={() => setSelectedDuration('end-date')}
+              >
+                <div className="radio-button">
+                  <div className="radio-inner"></div>
+                </div>
+                <div className="duration-content">
+                  <h4>Choose when this ad will end</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Daily Budget Section */}
+          <div className="daily-budget-section">
+            <div className="section-title">
+              <h3>Daily budget</h3>
+              <InfoIcon className="info-icon" />
+            </div>
+
+            <div className="currency-selector">
+              <div className="currency-info">
+                <span className="currency-label">Country, currency</span>
+                <span className="currency-value">{country}</span>
+              </div>
+              <button className="change-button" onClick={handleChangeCurrency}>
+                Change
+              </button>
+            </div>
+          </div>
+
+          {/* Bottom Summary */}
+          <div className="bottom-summary">
+            <p>
+              Estimated 7.2K-20.8K <a href="#" className="accounts-centre-link">Accounts Centre accounts</a> reached per day
             </p>
           </div>
 
