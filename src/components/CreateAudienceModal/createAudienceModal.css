@@ -1,0 +1,53 @@
+.create-audience-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.create-audience-modal {
+  width: 620px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.cam-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cam-header h2 { margin: 0; font-size: 18px; }
+.cam-close { background: transparent; border: none; font-size: 20px; cursor: pointer; }
+
+.cam-body { padding: 16px 20px; }
+.cam-label { display:block; font-weight:600; margin-bottom:6px; }
+.cam-input { width:100%; padding:8px 10px; border:1px solid #ddd; border-radius:6px; margin-bottom:12px; }
+.cam-sub { color:#666; font-size:13px; margin-top:4px; }
+.cam-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.cam-section { margin-bottom:12px; }
+.cam-options label { margin-right:12px; font-weight:400; }
+.cam-age { display:flex; align-items:center; }
+.cam-age-input { width:80px; padding:6px 8px; border:1px solid #ddd; border-radius:6px; }
+.cam-age-sep { margin:0 8px; }
+
+.cam-footer { display:flex; justify-content:flex-end; gap:10px; padding:12px 20px; border-top:1px solid #eee; }
+.cam-cancel { background:transparent; border:1px solid #ccc; padding:8px 14px; border-radius:6px; cursor:pointer; }
+.cam-save { background:#1877f2; color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; }
+
+.cam-save:hover { filter:brightness(0.95); }
+
+@media (max-width: 480px) {
+  .create-audience-modal { width: 94%; }
+}

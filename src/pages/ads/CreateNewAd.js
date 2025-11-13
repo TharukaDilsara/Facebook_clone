@@ -4,6 +4,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 import InfoIcon from '@mui/icons-material/Info';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import NonDiscriminationModal from '../../components/NonDiscriminationModal/NonDiscriminationModal';
+import CreateAudienceModal from '../../components/CreateAudienceModal/CreateAudienceModal';
 
 const CreateNewAd = ({ setCurrentPage }) => {
   const [certificationExpanded, setCertificationExpanded] = useState(true);
@@ -18,6 +19,16 @@ const CreateNewAd = ({ setCurrentPage }) => {
   const [metaPixel, setMetaPixel] = useState(false);
   const [paymentMethodExpanded, setPaymentMethodExpanded] = useState(true);
   const [isNonDiscriminationModalOpen, setIsNonDiscriminationModalOpen] = useState(false);
+
+  const [isCreateAudienceOpen, setIsCreateAudienceOpen] = useState(false);
+
+  const handleCloseCreateAudience = () => setIsCreateAudienceOpen(false);
+
+  const handleSaveAudience = (payload) => {
+    console.log('Saved audience', payload);
+    // Here you could add logic to add the new audience to a list or set it as the selected audience
+    setIsCreateAudienceOpen(false);
+  };
 
   const handleCertifyCompliance = () => {
     setIsNonDiscriminationModalOpen(true);
@@ -46,7 +57,8 @@ const CreateNewAd = ({ setCurrentPage }) => {
   };
 
   const handleCreateNew = () => {
-    console.log('Create new clicked');
+    // open create audience modal
+    setIsCreateAudienceOpen(true);
   };
 
   const handleEditAudience = () => {
@@ -601,6 +613,14 @@ const CreateNewAd = ({ setCurrentPage }) => {
             </div>
           </div>
         </div>
+
+        {/* Non-discrimination Modal */}
+        {/* Create Audience Modal */}
+        <CreateAudienceModal
+          isOpen={isCreateAudienceOpen}
+          onClose={handleCloseCreateAudience}
+          onSave={handleSaveAudience}
+        />
 
         {/* Non-discrimination Modal */}
         <NonDiscriminationModal 
