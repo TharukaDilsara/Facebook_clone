@@ -6,6 +6,8 @@ export default function CreateAudienceModal({ isOpen, onClose, onSave }) {
   const [advantageOn, setAdvantageOn] = useState(true);
   const [gender, setGender] = useState('all');
   const [ageRange, setAgeRange] = useState([18, 65]);
+  const [locations, setLocations] = useState('');
+  const [detailedTargeting, setDetailedTargeting] = useState('');
 
   const handleSave = () => {
     const payload = {
@@ -13,6 +15,8 @@ export default function CreateAudienceModal({ isOpen, onClose, onSave }) {
       advantageOn,
       gender,
       ageRange,
+      locations,
+      detailedTargeting,
     };
     if (onSave) onSave(payload);
   };
@@ -52,33 +56,95 @@ export default function CreateAudienceModal({ isOpen, onClose, onSave }) {
           </div>
 
           <div className="cam-section">
-            <label className="cam-label">Gender</label>
-            <div className="cam-options">
-              <label><input type="radio" name="cam-gender" checked={gender === 'all'} onChange={() => setGender('all')} /> All</label>
-              <label><input type="radio" name="cam-gender" checked={gender === 'men'} onChange={() => setGender('men')} /> Men</label>
-              <label><input type="radio" name="cam-gender" checked={gender === 'women'} onChange={() => setGender('women')} /> Women</label>
+            <div className="cam-label-with-info">
+              <label className="cam-label">Gender</label>
+              <span className="cam-info-icon">ⓘ</span>
+            </div>
+            <div className="cam-gender-cards">
+              <button 
+                type="button"
+                className={`cam-gender-card ${gender === 'all' ? 'selected' : ''}`} 
+                onClick={() => setGender('all')}
+              >
+                All
+              </button>
+              <button 
+                type="button"
+                className={`cam-gender-card ${gender === 'men' ? 'selected' : ''}`} 
+                onClick={() => setGender('men')}
+              >
+                Men
+              </button>
+              <button 
+                type="button"
+                className={`cam-gender-card ${gender === 'women' ? 'selected' : ''}`} 
+                onClick={() => setGender('women')}
+              >
+                Women
+              </button>
             </div>
           </div>
 
           <div className="cam-section">
-            <label className="cam-label">Age range</label>
-            <div className="cam-age">
+            <div className="cam-label-with-info">
+              <label className="cam-label">Age</label>
+              <span className="cam-info-icon">ⓘ</span>
+            </div>
+            <div className="cam-age-slider">
+              <div className="cam-age-controls">
+                <span className="cam-age-value">{ageRange[0]}</span>
+                <div className="cam-slider-container">
+                  <input
+                    type="range"
+                    min="18"
+                    max="65"
+                    value={ageRange[0]}
+                    onChange={(e) => setAgeRange([Number(e.target.value), Math.max(Number(e.target.value), ageRange[1])])}
+                    className="cam-slider cam-slider-min"
+                  />
+                  <input
+                    type="range"
+                    min="18"
+                    max="65"
+                    value={ageRange[1]}
+                    onChange={(e) => setAgeRange([ageRange[0], Math.max(ageRange[0], Number(e.target.value))])}
+                    className="cam-slider cam-slider-max"
+                  />
+                </div>
+                <span className="cam-age-value">{ageRange[1] === 65 ? '65+' : ageRange[1]}</span>
+              </div>
+              <p className="cam-age-note">
+                When using audience targeting such as gender or interests, you can only target people over the age of 18. <a href="#" className="cam-link">Learn more</a>
+              </p>
+            </div>
+          </div>
+
+          <div className="cam-section">
+            <div className="cam-label-with-info">
+              <label className="cam-label">Locations</label>
+              <span className="cam-info-icon">ⓘ</span>
+            </div>
+            <div className="cam-locations-input">
               <input
-                type="number"
-                min="13"
-                max="120"
-                value={ageRange[0]}
-                onChange={(e) => setAgeRange([Math.max(13, Number(e.target.value)), ageRange[1]])}
-                className="cam-age-input"
+                className="cam-input"
+                value={locations}
+                onChange={(e) => setLocations(e.target.value)}
+                placeholder="Enter locations..."
               />
-              <span className="cam-age-sep">—</span>
+            </div>
+          </div>
+
+          <div className="cam-section">
+            <div className="cam-label-with-info">
+              <label className="cam-label">Detailed targeting</label>
+              <span className="cam-info-icon">ⓘ</span>
+            </div>
+            <div className="cam-detailed-targeting">
               <input
-                type="number"
-                min="13"
-                max="120"
-                value={ageRange[1]}
-                onChange={(e) => setAgeRange([ageRange[0], Math.min(120, Number(e.target.value))])}
-                className="cam-age-input"
+                className="cam-input"
+                value={detailedTargeting}
+                onChange={(e) => setDetailedTargeting(e.target.value)}
+                placeholder="Add demographics, interests or behaviors..."
               />
             </div>
           </div>

@@ -33,14 +33,80 @@
 
 .cam-body { padding: 16px 20px; }
 .cam-label { display:block; font-weight:600; margin-bottom:6px; }
+.cam-label-with-info { display:flex; align-items:center; gap:6px; margin-bottom:8px; }
+.cam-info-icon { color:#666; font-size:14px; cursor:help; }
 .cam-input { width:100%; padding:8px 10px; border:1px solid #ddd; border-radius:6px; margin-bottom:12px; }
 .cam-sub { color:#666; font-size:13px; margin-top:4px; }
 .cam-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-.cam-section { margin-bottom:12px; }
-.cam-options label { margin-right:12px; font-weight:400; }
-.cam-age { display:flex; align-items:center; }
-.cam-age-input { width:80px; padding:6px 8px; border:1px solid #ddd; border-radius:6px; }
-.cam-age-sep { margin:0 8px; }
+.cam-section { margin-bottom:20px; }
+.cam-gender-cards { display:flex; gap:8px; }
+.cam-gender-card {
+  flex:1;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fff;
+  cursor:pointer;
+  text-align:center;
+  font-weight:500;
+  transition:all 0.2s;
+}
+.cam-gender-card.selected {
+  border-color:#1877f2;
+  background:#e3f2fd;
+  color:#1877f2;
+}
+.cam-gender-card:hover {
+  border-color:#1877f2;
+}
+
+.cam-age-controls { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+.cam-age-value { min-width:30px; font-weight:600; }
+.cam-slider-container {
+  flex:1;
+  position:relative;
+  height:20px;
+}
+.cam-slider {
+  position:absolute;
+  width:100%;
+  height:4px;
+  background:#ddd;
+  border-radius:2px;
+  appearance:none;
+  outline:none;
+}
+.cam-slider::-webkit-slider-thumb {
+  appearance:none;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#1877f2;
+  cursor:pointer;
+  border:2px solid #fff;
+  box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.cam-slider::-moz-range-thumb {
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#1877f2;
+  cursor:pointer;
+  border:2px solid #fff;
+  box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.cam-age-note {
+  color:#666;
+  font-size:13px;
+  line-height:1.4;
+  margin:0;
+}
+.cam-link { color:#1877f2; text-decoration:none; }
+.cam-link:hover { text-decoration:underline; }
+
+.cam-locations-input .cam-input, .cam-detailed-targeting .cam-input {
+  margin-bottom:0;
+}
 
 .cam-footer { display:flex; justify-content:flex-end; gap:10px; padding:12px 20px; border-top:1px solid #eee; }
 .cam-cancel { background:transparent; border:1px solid #ccc; padding:8px 14px; border-radius:6px; cursor:pointer; }
